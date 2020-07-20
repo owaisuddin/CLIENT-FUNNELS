@@ -12,10 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
+Route::post('/', 'Auth\LoginController@login')->name('login_cred');
 
-Route::get('/step1','AuraController@step1');
-Route::get('/step2','AuraController@step2');
-Route::get('/step3','AuraController@step3');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
