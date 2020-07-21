@@ -25,3 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/my-account', 'AccountController@show')->name('home');
+Route::post('/update_profile', 'AccountController@update')->name('update_profile');
