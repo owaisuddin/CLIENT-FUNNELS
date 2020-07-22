@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('profile_image')->nullable(true);
-            $table->string('booked_call_change')->default(1);
+            $table->string('booked_call_changed')->default(1);
             $table->string('new_call_booked')->default(1);
             $table->string('questionanaire_completed')->default(1);
             $table->rememberToken();
