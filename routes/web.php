@@ -28,3 +28,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/my-account', 'AccountController@show')->name('home');
 Route::post('/update_profile', 'AccountController@update')->name('update_profile');
+
+Route::get('/campaigns', 'CampaignController@show')->name('campaigns');
+Route::post('/startCampaign', 'CampaignController@startCampaign')->name('startCampaign');
+Route::get('/edit-campaign/{id}', 'CampaignController@edit');
+
+
+

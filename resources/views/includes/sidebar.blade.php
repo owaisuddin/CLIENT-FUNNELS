@@ -28,12 +28,12 @@
             </li>
 
 
-            {{--<li class="nav-item  active">--}}
-                {{--<a class="nav-link" href="https://www.clientfunnels.io/campaigns">--}}
-                    {{--<i class="material-icons">build</i>--}}
-                    {{--<p> Campaigns </p>--}}
-                {{--</a>--}}
-            {{--</li>--}}
+            <li class="nav-item">
+                <a class="nav-link" href="/campaigns">
+                    <i class="material-icons">build</i>
+                    <p> Campaigns </p>
+                </a>
+            </li>
 
 
             {{--<li class="nav-item ">--}}

@@ -29,9 +29,10 @@
 <link href="https://www.clientfunnels.io/css/custom.css?v=1.0.2" rel="stylesheet">
 
 <link href="https://www.clientfunnels.io/vendor/slim-image-cropper/css/slim.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/js/custom.js?v=1.1.4"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 <script>
     $(document).ready(function () {
