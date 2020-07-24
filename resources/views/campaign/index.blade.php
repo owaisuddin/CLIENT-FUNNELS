@@ -551,32 +551,32 @@
 
                         if (!campaign_ids.length) return clearInterval(render_status);
 
-                        api(
-                            "Campaign",
-                            "q_campaign_video_status_text",
-                            {
-                                campaign_ids: campaign_ids
-                            },
-                            function (result) {
-                                if (!result) return clearInterval(render_status);
-
-                                $.each(result, function (campaign_id, data) {
-                                    list_table.rows().every(function (rowIdx, tableLoop, rowLoop) {
-                                        row = $(this.node());
-                                        c_td = row.find(
-                                            "td.campaign-video-render-status[data-campaign-id='" + campaign_id + "']"
-                                        );
-
-                                        if (c_td && c_td.length) {
-                                            c_td.data("status", data.status);
-                                            list_table.cell(c_td).data(data.html);
-                                        }
-                                    });
-                                });
-
-                                list_table.columns.adjust().draw();
-                            }
-                        );
+                        // api(
+                        //     "Campaign",
+                        //     "q_campaign_video_status_text",
+                        //     {
+                        //         campaign_ids: campaign_ids
+                        //     },
+                        //     function (result) {
+                        //         if (!result) return clearInterval(render_status);
+                        //
+                        //         $.each(result, function (campaign_id, data) {
+                        //             list_table.rows().every(function (rowIdx, tableLoop, rowLoop) {
+                        //                 row = $(this.node());
+                        //                 c_td = row.find(
+                        //                     "td.campaign-video-render-status[data-campaign-id='" + campaign_id + "']"
+                        //                 );
+                        //
+                        //                 if (c_td && c_td.length) {
+                        //                     c_td.data("status", data.status);
+                        //                     list_table.cell(c_td).data(data.html);
+                        //                 }
+                        //             });
+                        //         });
+                        //
+                        //         list_table.columns.adjust().draw();
+                        //     }
+                        // );
                     }
 
                     var render_status = setInterval(update_render_statuses, 0xea60);
@@ -753,7 +753,7 @@
 
     <script type="text/javascript">
         var BASE_URL = "https://www.clientfunnels.io/",
-            API_URL = "https://www.clientfunnels.io/api/",
+            API_URL = "{{env('APP_URL')}}",
             DEFAULT_MESSAGE = "We could not process your request right now, please try again or contact us";
     </script>
 

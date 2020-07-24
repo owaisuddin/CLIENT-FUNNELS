@@ -5258,34 +5258,33 @@
         });
     });
 </script>
+    <script type="text/javascript">
+        var BASE_URL = "https://www.clientfunnels.io/",
+            API_URL = "{{env('APP_URL')}}",
+            DEFAULT_MESSAGE = "We could not process your request right now, please try again or contact us";
+    </script>
 
-<script type="text/javascript">
-    var BASE_URL = "https://www.clientfunnels.io/",
-        API_URL = "https://www.clientfunnels.io/api/",
-        DEFAULT_MESSAGE = "We could not process your request right now, please try again or contact us";
-</script>
-
-<script type="text/javascript">
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "2cb97914-9f14-45af-aa69-5c75e2abe437";
-    (function() {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-</script>
-<script>
-    $crisp.push(["set", "user:email", ["helenahillfit@gmail.com"]]);
-    $crisp.push(["set", "user:company", ["Silko Ltd t/a Body Glow Coaching"]]);
-    $crisp.push(["set", "user:nickname", ["sHelena Hill"]]);
-    $crisp.push(["set", "user:avatar", ["https://www.clientfunnels.io/uploads/profile_image/236/profile_image.jpeg?1595371709"]]);
-    $crisp.push(["set", "session:data", [
-        [
-            ["user_id", "236"],
-            ["company_id", "192"],
-        ]
-    ]]);
-</script>
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "2cb97914-9f14-45af-aa69-5c75e2abe437";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    <script>
+        $crisp.push(["set", "user:email", ["helenahillfit@gmail.com"]]);
+        $crisp.push(["set", "user:company", ["Silko Ltd t/a Body Glow Coaching"]]);
+        $crisp.push(["set", "user:nickname", ["sHelena Hill"]]);
+        $crisp.push(["set", "user:avatar", ["https://www.clientfunnels.io/uploads/profile_image/236/profile_image.jpeg?1595371709"]]);
+        $crisp.push(["set", "session:data", [
+            [
+                ["user_id", "236"],
+                ["company_id", "192"],
+            ]
+        ]]);
+    </script>
 @endsection
