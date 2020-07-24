@@ -14,14 +14,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.clientfunnels.io/img/icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="https://www.clientfunnels.io/img/icons/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.clientfunnels.io/img/icons/favicon-16x16.png">
-<link rel="manifest" href="https://www.clientfunnels.io/img/icons/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="https://www.clientfunnels.io/img/icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <!--     Fonts and icons     -->
 <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
-<link rel="stylesheet" href="https://www.clientfunnels.io/vendor/fontawesome/css/all.min.css">
 
 <!-- CSS Files -->
 <link href="https://www.clientfunnels.io/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet">
@@ -32,7 +30,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/js/custom.js?v=1.1.4"></script>
-
 
 <script>
     $(document).ready(function () {
