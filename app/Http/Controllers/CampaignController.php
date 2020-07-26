@@ -2,9 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
+use App\CampaignCommunication;
+use App\CampaignContent;
+use App\CampaignPublish;
 use App\Campaigns;
+use App\LeadPage;
+use App\Questionnaire;
+use App\Rapport;
+use App\WebinarHolding;
+use App\WebinarRoom;
 use Illuminate\Http\Request;
-use Validator, Hash, Auth, Session, Redirect;
+use Validator, Hash, Auth, Session, Redirect,DB;
 
 class CampaignController extends Controller
 {
@@ -100,5 +109,83 @@ class CampaignController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function editCampaign(Request $request){
+        $values = array();
+        parse_str($request->get('form_data'),$values);
+
+        $leadPage = [
+            'campaign_id' => $values['campaign_id'],
+            'title' => $values['lead_page']['title'],
+            'subheading' => $values['lead_page']['subheading'],
+            'training_start_text' => $values['lead_page']['training_starts_text'],
+            'learn_title' => $values['lead_page']['learn_title'],
+            'learn_list' => serialize($values['lead_page']['learn_list']),
+            'image' => $values['lead_page']['image'],
+            'presenter_title' => $values['lead_page']['presenter_title'],
+            'presenter_name' => $values['lead_page']['presenter_name'],
+            'presenter_text' => $values['lead_page']['presenter_text'],
+        ] ;
+
+        $questionnaire = [
+            'campaign_id' => $values['campaign_id'],
+            'title' => $values['questionnaire']['title'],
+            'description' => $values['questionnaire']['description'],
+            'questions' => serialize($values['questionnaire_questions']),
+        ];
+
+        $indoctrination = [
+            'campaign_id' => $values['campaign_id'],
+            'text' => $values['indoctrination']['page']['text'],
+            'title' => $values['indoctrination']['page']['title'],
+            'indoctrination_video_id' => $values['indoctrination']['page']['subheading'],
+            'display' => $values['indoctrination']['display'],
+            'option' => $values['indoctrination']['option'],
+            'link' => $values['indoctrination']['link']
+        ];
+
+        $campaignContent = [
+            'campaign_id' => $values['campaign_id'],
+            'webinar_video_id' => $values['webinar_video_id']
+        ];
+
+        $campaignCommunication = [
+            'campaign_id' => $values['campaign_id'],
+            'emails' => serialize($values['coms']['emails']),
+            'texts' => serialize($values['coms']['texts']),
+        ];
+
+        $cmapaignPublish = [
+            'campaign_id' => $values['campaign_id'],
+            'campaign_name' => $values['campaign_name'],
+            'campaign_name' => $values['campaign_status'],
+            'campaign_name' => $values['campaign_notes'],
+        ];
+
+        $values['holding_page']['campaign_id'] = $values['campaign_id'];
+        $values['webinar_popup']['campaign_id'] = $values['campaign_id'];
+        $values['booking_options']['campaign_id'] = $values['campaign_id'];
+
+        DB::beginTransaction();
+
+        try {
+            CampaignContent::create($campaignContent);
+            CampaignCommunication::create($campaignCommunication);
+            CampaignPublish::create($cmapaignPublish);
+            CampaignPublish::create();
+            Rapport::create($indoctrination);
+            WebinarHolding::create($values['holding_page']);
+            WebinarRoom::create($values['webinar_popup']);
+            Booking::create($values['booking_options']);
+            Questionnaire::create($questionnaire);
+            LeadPage::create($leadPage);
+            DB::commit();
+            // all good
+        } catch (\Exception $e) {
+            DB::rollback();
+            // something went wrong
+        }
+        return env('APP_URL').'/campaigns';
     }
 }

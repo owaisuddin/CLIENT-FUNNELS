@@ -4976,6 +4976,7 @@
                         sec_warning_wrap = save_edit_campaign_modal.find(".save-edit-campaign-warnings");
 
                     //Conf Save
+
                     if ($(this).hasClass("confirm-save-campaign")) {
 
                         save_edit_campaign_modal.modal("hide");
@@ -5004,18 +5005,33 @@
 
                         loading_modal("open", "Saving Campaign");
 
-                        api("Campaign", "save_edit_campaign", form_data, function(result) {
-
-                            loading_modal("close");
-
-                            if (!result) return false;
-
-                            setFormSubmitting();
-
-                            swal_alert("success", "Campaign Updated", "Click OK to go back to campaigns list", function() {
-                                window.location.href = result.url;
-                            });
+                        $.ajax({
+                            type: 'POST',
+                            url: '/editCampaign',
+                            data: {
+                                '_token': '<?php echo csrf_token() ?>',
+                                'form_data': form_data
+                            },
+                            success: function (result) {
+                                setFormSubmitting();
+                                alert(result);
+                                swal_alert("success", "Campaign Updated", "Click OK to go back to campaigns list", function() {
+                                    window.location.href = result;
+                                });
+                            }
                         });
+                        // api("Campaign", "save_edit_campaign", form_data, function(result) {
+                        //
+                        //     loading_modal("close");
+                        //
+                        //     if (!result) return false;
+                        //
+                        //     setFormSubmitting();
+                        //
+                        //     swal_alert("success", "Campaign Updated", "Click OK to go back to campaigns list", function() {
+                        //         window.location.href = result.url;
+                        //     });
+                        // });
 
                         return false;
                     }

@@ -14,7 +14,7 @@ class CreateWebinarHoldingsTable extends Migration
     public function up()
     {
         Schema::create('webinar_holdings', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('campaign_id')->nullable(false);
             $table->string('title')->nullable(true);
             $table->string('subheading')->nullable(true);

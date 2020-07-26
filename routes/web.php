@@ -32,6 +32,7 @@ Route::post('/update_profile', 'AccountController@update')->name('update_profile
 Route::get('/campaigns', 'CampaignController@show')->name('campaigns');
 Route::post('/startCampaign', 'CampaignController@startCampaign')->name('startCampaign');
 Route::get('/edit-campaign/{id}', 'CampaignController@edit');
+Route::post('/editCampaign', 'CampaignController@editCampaign')->name('editCampaign');
 
 
 
