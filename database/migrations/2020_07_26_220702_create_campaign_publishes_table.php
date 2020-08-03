@@ -18,7 +18,7 @@ class CreateCampaignPublishesTable extends Migration
             $table->integer('campaign_id');
             $table->string('campaign_name');
             $table->string('campaign_status')->default(true);
-            $table->string('campaign_notes');
+            $table->longText('campaign_notes')->nullable(true);
             $table->timestamps();
         });
     }

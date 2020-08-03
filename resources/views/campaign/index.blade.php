@@ -135,12 +135,12 @@
                                                     </td>
                                                     <td>
                                                         Webinar URL:
-                                                        <a href="https://www.clientfunnels.io/webinar/lead/736"
+                                                        <a href="{{$campaign->webinar_url}}"
                                                            target="_blank" title="View Webinar Lead Page">
                                                             {{$campaign->webinar_url}}</a>
                                                         <hr/>
                                                         Booking URL:
-                                                        <a href="https://www.clientfunnels.io/booking/736"
+                                                        <a href="{{$campaign->booking_url}}"
                                                            target="_blank" title="Booking Page">
                                                             {{$campaign->booking_url}}</a>
 
@@ -154,7 +154,7 @@
                                                         Created: {{date("F j, Y, g:i a", strtotime($campaign->created_at))}}<br>By: <span
                                                                 class="label label-success">You</span></td>
                                                     <td>
-                                                        <a href="https://www.clientfunnels.io/campaigns/view/736"
+                                                        <a href="/viewCampaign/{{$campaign->id}}"
                                                            class="btn btn-success m-b">
                                                             <i class="fa fa-eye"></i> View
                                                         </a>

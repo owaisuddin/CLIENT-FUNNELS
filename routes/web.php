@@ -33,6 +33,12 @@ Route::get('/campaigns', 'CampaignController@show')->name('campaigns');
 Route::post('/startCampaign', 'CampaignController@startCampaign')->name('startCampaign');
 Route::get('/edit-campaign/{id}', 'CampaignController@edit');
 Route::post('/editCampaign', 'CampaignController@editCampaign')->name('editCampaign');
+Route::get('/viewCampaign/{id}', 'CampaignController@index')->name('showCampaign');
+Route::get('/webinar/lead/{id}', 'WebinarController@index')->name('showWebinar');
+Route::get('/booking/{id}', 'WebinarController@bookingWebinar')->name('bookingWebinar');
+Route::post('/booking_webinar/{id}', 'WebinarController@saveBookingWebinar')->name('bookingWebinar');
+Route::post('/webinar_registration/{id}', 'WebinarController@registrationWebinar')->name('registrationWebinar');
+Route::post('/getCampaignDetail', 'WebinarController@getCampaignDetail')->name('getCampaignDetail');
 
 
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWebinarRoomsTable extends Migration
+class WebinarBooking extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateWebinarRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('webinar_rooms', function (Blueprint $table) {
+        Schema::create('webinar_bookings', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('campaign_id');
-            $table->integer('on')->default(1);
-            $table->integer('minutes')->default(0);
-            $table->integer('seconds')->default(0);
+            $table->string('name');
+            $table->string('email');
+            $table->string('country_code');
+            $table->string('mobile');
+            $table->string('call_slot');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateWebinarRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('webinar_rooms');
+        //
     }
 }

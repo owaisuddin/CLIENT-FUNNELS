@@ -16,13 +16,13 @@ class CreateRapportsTable extends Migration
         Schema::create('rapports', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('campaign_id');
-            $table->integer('display_rapport_page')->default(1);
-            $table->string('indoctrination_option')->default('page');
-            $table->string('external_link')->nullable(false);
+            $table->integer('display')->default(1);
+            $table->string('indoctrination_video_id')->default('page');
+            $table->string('link')->nullable(false);
             $table->string('title')->nullable(false);
             $table->string('subheading')->nullable(false);
-            $table->string('page_text')->nullable(false);
-            $table->string('video')->nullable(false);
+            $table->string('text')->nullable(false);
+            $table->string('option')->nullable(false);
             $table->timestamps();
         });
     }

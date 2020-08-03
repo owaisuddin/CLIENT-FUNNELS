@@ -19,6 +19,7 @@ class CreateWebinarHoldingsTable extends Migration
             $table->string('title')->nullable(true);
             $table->string('subheading')->nullable(true);
             $table->string('schedule_text')->nullable(true);
+            $table->string('preview_video_id')->nullable(true);
             $table->string('event_begin_text')->nullable(true);
             $table->string('video')->nullable(true);
             $table->timestamps();

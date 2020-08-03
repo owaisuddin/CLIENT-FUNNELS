@@ -14,15 +14,11 @@ class CreateBookingsTable extends Migration
     public function up()
     {
         Schema::create('bookings', function (Blueprint $table) {
-            $table->integer('id');
+            $table->increments('id');
             $table->integer('campaign_id');
             $table->String('title')->default(false);
-            $table->String('helper_text')->default(false);
-            $table->integer('mobile')->default(1);
-            $table->integer('best_number_ask')->default(false);
-            $table->integer('best_number_required')->default(false);
-            $table->integer('additional_info_ask')->default(false);
-            $table->integer('additional_info_required')->default(false);
+            $table->String('helper')->default(false);
+            $table->integer('mobile_required')->default(1);
             $table->timestamps();
         });
     }

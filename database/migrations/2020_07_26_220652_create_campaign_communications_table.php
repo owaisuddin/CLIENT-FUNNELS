@@ -16,8 +16,8 @@ class CreateCampaignCommunicationsTable extends Migration
         Schema::create('campaign_communications', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('campaign_id');
-            $table->string('emails');
-            $table->string('texts');
+            $table->longText('emails');
+            $table->longText('texts');
             $table->timestamps();
         });
     }

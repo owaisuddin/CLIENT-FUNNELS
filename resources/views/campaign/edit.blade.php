@@ -136,7 +136,7 @@
                                     </div>
 
                                     <form id="edit-campaign-form" onSubmit="return false;">
-                                        <input type="hidden" name="campaign_id" value="741" />
+                                        <input type="hidden" name="campaign_id" value="{{$id}}" />
                                         <div class="card-header text-center">
 
                                             <h3 class="card-title">
@@ -2619,7 +2619,7 @@
 <script src="https://www.clientfunnels.io/js/default.js?v=1.1.2"></script>
 <script src="https://www.clientfunnels.io/vendor/select2/select2.js"></script>
 <script src="https://www.clientfunnels.io/js/plugins/jquery.dataTables.min.js"></script>
-<script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>
+{{--<script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>--}}
 
 <script src="https://www.clientfunnels.io/js/custom.js?v=1.1.4"></script>
 

@@ -18,17 +18,13 @@ class CreateLeadPagesTable extends Migration
             $table->integer('campaign_id')->nullable(false);
             $table->string('title')->nullable(true);
             $table->string('subheading')->nullable(true);
-            $table->string('training_start_text')->nullable(true);
-            $table->string('learn_title')->nullable(true);
-            $table->string('learn_list_1')->nullable(true);
-            $table->string('learn_list_2')->nullable(true);
-            $table->string('learn_list_3')->nullable(true);
-            $table->string('learn_list_4')->nullable(true);
-            $table->string('learn_list_5')->nullable(true);
-            $table->string('presenter_image')->nullable(true);
-            $table->string('presenter_title')->nullable(true);
-            $table->string('presenter_name')->nullable(true);
-            $table->string('presenter_text')->nullable(true);
+            $table->longText('training_start_text')->nullable(true);
+            $table->longText('learn_title')->nullable(true);
+            $table->longText('learn_list')->nullable(true);
+            $table->longText('presenter_image')->nullable(true);
+            $table->longText('presenter_title')->nullable(true);
+            $table->longText('presenter_name')->nullable(true);
+            $table->longText('presenter_text')->nullable(true);
             $table->timestamps();
         });
     }

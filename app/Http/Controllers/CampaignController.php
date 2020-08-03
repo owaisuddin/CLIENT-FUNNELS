@@ -22,9 +22,11 @@ class CampaignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request,$id)
     {
-        //
+        $campaign = Campaigns::with('webinarRegistration','webinarBooking')->where('id',$id)->first();
+
+        return view('campaign.view')->with(compact('campaign',$campaign));
     }
 
     /**
@@ -139,7 +141,8 @@ class CampaignController extends Controller
             'campaign_id' => $values['campaign_id'],
             'text' => $values['indoctrination']['page']['text'],
             'title' => $values['indoctrination']['page']['title'],
-            'indoctrination_video_id' => $values['indoctrination']['page']['subheading'],
+            'subheading' => $values['indoctrination']['page']['subheading'],
+            'indoctrination_video_id' => $values['indoctrination']['page']['indoctrination_video_id'],
             'display' => $values['indoctrination']['display'],
             'option' => $values['indoctrination']['option'],
             'link' => $values['indoctrination']['link']
@@ -156,7 +159,7 @@ class CampaignController extends Controller
             'texts' => serialize($values['coms']['texts']),
         ];
 
-        $cmapaignPublish = [
+        $campaignPublish = [
             'campaign_id' => $values['campaign_id'],
             'campaign_name' => $values['campaign_name'],
             'campaign_name' => $values['campaign_status'],
@@ -172,8 +175,7 @@ class CampaignController extends Controller
         try {
             CampaignContent::create($campaignContent);
             CampaignCommunication::create($campaignCommunication);
-            CampaignPublish::create($cmapaignPublish);
-            CampaignPublish::create();
+            CampaignPublish::create($campaignPublish);
             Rapport::create($indoctrination);
             WebinarHolding::create($values['holding_page']);
             WebinarRoom::create($values['webinar_popup']);

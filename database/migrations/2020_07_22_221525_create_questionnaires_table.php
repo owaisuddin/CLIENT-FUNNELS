@@ -18,6 +18,7 @@ class CreateQuestionnairesTable extends Migration
             $table->integer('campaign_id');
             $table->String('title')->default(false);
             $table->String('description')->default(false);
+            $table->longText('questions')->nullable(true);
             $table->timestamps();
         });
     }
