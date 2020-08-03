@@ -4982,10 +4982,10 @@
                         save_edit_campaign_modal.modal("hide");
 
                         //Lead Page Image
-                        var image_obj = $("#edit-campaign-lp-ri").slim('dataBase64'),
-                            image_data = image_obj ? image_obj[0].output.image : false;
-
-                        edit_campaign_form.find("input[name='lead_page[image]']").val(image_data ? image_data : "");
+                        // var image_obj = $("#edit-campaign-lp-ri").slim('dataBase64'),
+                        //     image_data = image_obj ? image_obj[0].output.image : false;
+                        //
+                        // edit_campaign_form.find("input[name='lead_page[image]']").val(image_data ? image_data : "");
 
                         //Clear Slim
                         edit_campaign_form.find("input[name='slim[]']").val("");
