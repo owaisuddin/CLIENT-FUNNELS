@@ -21,7 +21,6 @@ class WebinarRegistration extends Migration
             $table->string('stage');
             $table->string('webinar_watched');
             $table->string('booked_call');
-            $table->string('stage');
             $table->timestamps();
         });
     }

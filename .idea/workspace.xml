@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/campaign/view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/booking.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/completed.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/congratulation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/lead.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/client-funnel-github.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/client-funnel-github.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Campaigns.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaigns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221417_create_lead_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221417_create_lead_pages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221441_create_webinar_holdings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221441_create_webinar_holdings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221449_create_webinar_rooms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221449_create_webinar_rooms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221500_create_bookings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221500_create_bookings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221525_create_questionnaires_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221525_create_questionnaires_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_221538_create_rapports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_221538_create_rapports_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_26_220652_create_campaign_communications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_26_220652_create_campaign_communications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_26_220702_create_campaign_publishes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_26_220702_create_campaign_publishes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +205,7 @@
       <workItem from="1596111443990" duration="7997000" />
       <workItem from="1596153116547" duration="10034000" />
       <workItem from="1596235035870" duration="293000" />
-      <workItem from="1596402896021" duration="28508000" />
+      <workItem from="1596402896021" duration="28932000" />
     </task>
     <servers />
   </component>
