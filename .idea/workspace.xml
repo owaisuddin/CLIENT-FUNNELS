@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +207,8 @@
       <workItem from="1596111443990" duration="7997000" />
       <workItem from="1596153116547" duration="10034000" />
       <workItem from="1596235035870" duration="293000" />
-      <workItem from="1596402896021" duration="29468000" />
+      <workItem from="1596402896021" duration="30397000" />
+      <workItem from="1596669154152" duration="1337000" />
     </task>
     <servers />
   </component>
@@ -217,10 +220,10 @@
       <screen x="0" y="28" width="1366" height="712" />
     </state>
     <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1366.712@0.28.1366.712" timestamp="1596112583960" />
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl" timestamp="1596173794009">
+    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl" timestamp="1596523513162">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1596173794009" />
+    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1596523513162" />
     <state x="339" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1596153127949">
       <screen x="0" y="28" width="1366" height="712" />
     </state>

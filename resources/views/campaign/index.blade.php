@@ -147,9 +147,9 @@
                                                     </td>
                                                     <td>
                                                         <strong>Page Views: {{$campaign->page_views}}</strong><br>
-                                                        <strong>Registrations: {{$campaign->registrations}}</strong><br>
-                                                        <strong>Call Bookings: {{$campaign->bookings}}</strong><br>
-                                                        <strong>Call Closed: {{$campaign->call_closed}}</strong>
+                                                        <strong>Registrations: {{count($campaign->webinarRegistration)}}</strong><br>
+                                                        <strong>Call Bookings: {{count($campaign->webinarBooking)}}</strong><br>
+                                                        <strong>Call Closed: {{$campaign->call_bookings}}</strong>
                                                         <hr/>
                                                         Created: {{date("F j, Y, g:i a", strtotime($campaign->created_at))}}<br>By: <span
                                                                 class="label label-success">You</span></td>

@@ -58,7 +58,8 @@ class CampaignController extends Controller
      */
     public function show()
     {
-        $campaigns = Campaigns::all();
+        $campaigns = Campaigns::with('webinarRegistration','webinarBooking', 'campaignPublish')->get();
+
         return view('campaign.index')->with('campaigns',$campaigns);
     }
 
