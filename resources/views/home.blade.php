@@ -1,6 +1,38 @@
 @extends('layouts.app')
-
 @section('content')
+    <script src="https://www.clientfunnels.io/js/core/jquery.min.js"></script>
+    <script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        //Line Chart INIT
+        new Chart(document.getElementById('campaign-stats').getContext('2d'), {
+            type: 'horizontalBar',
+            data: statsData,
+            options: {
+                elements: {
+                    rectangle: {
+                        borderWidth: 2,
+                    }
+                },
+                responsive: true,
+                legend: {
+                    display: false,
+                },
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                },
+                scaleBeginAtZero: true,
+                tooltips: {enabled: false},
+                hover: {mode: null},
+            }
+        });
+    });
+</script>
     <div class="main-panel">
 
         <!-- Navbar -->
@@ -85,7 +117,7 @@
                                     </div>
                                     <h2 class="card-title text-center">
                                         All Campaign Statistics This
-                                        Week 14th-21st Jul				</h2>
+                                        Week 14th-21st Jul	{{date('M')}}	{{date("d", strtotime("-1 week"))}}	{{date('d')}}	</h2>
                                 </div>
                                 <div class="card-body">
 
@@ -98,11 +130,11 @@
                                                     labels: ['Optin Rate', 'View Rate', 'Calls Booked', 'Calls Closed'],
                                                     datasets: [
                                                         {
-                                                            label: 'Optin Rate (13%)',
+                                                            label: 'Optin Rate (33%)',
                                                             backgroundColor: 'rgba(255,0,0,0.5)',
                                                             borderColor: 'rgba(255,0,0)',
                                                             borderWidth: 1,
-                                                            data: [13,0,0,0]
+                                                            data: [82,0,0,0]
                                                         }
                                                         ,
                                                         {
@@ -138,7 +170,7 @@
                                                     <strong class="text-danger">Optin Rate</strong><br>
                                                     <small>
                                                         <div class="row">
-                                                            <div class="col-sm-4 text-danger">Current: 13%</div>
+                                                            <div class="col-sm-4 text-danger">Current: 19%</div>
                                                             <div class="col-sm-4 text-info">Target: 20%</div>
                                                             <div class="col-sm-4">Total: 16</div>
                                                         </div>

@@ -96,6 +96,9 @@
 <script src="{{ asset('js/plugins/sweetalert2.js') }}"></script>
 <script src="{{ asset('js/material.js') }}"></script>
 <script src="{{ asset('js/home-login.js') }}"></script>
+<script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
+<script src="https://www.clientfunnels.io/js/app-dashboard.js?v=1.1.0"></script>
+
 
 <script>
     $(document).ready(function () {
