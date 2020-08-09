@@ -20,6 +20,8 @@ class CreateCampaignsTable extends Migration
             $table->string('status')->default('active');
             $table->string('webinar_url');
             $table->string('booking_url');
+            $table->string('preview_video')->nullable(true);
+            $table->string('webinar_video')->nullable(true);
             $table->integer('page_views')->default(0);
             $table->integer('registrations')->default(0);
             $table->integer('call_bookings')->default(0);

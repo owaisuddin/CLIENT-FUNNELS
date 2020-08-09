@@ -3197,11 +3197,13 @@
 
                     //Send to sever
                     var formData = new FormData(),
-                        campaign_id = $("input[name='campaign_id']").val();
+                    campaign_id = $("input[name='campaign_id']").val();
+                    console.log($("#new-whp-file-upload")[0].files[0]);
                     formData.append('webinar', $("#new-whp-file-upload")[0].files[0]);
                     formData.append('campaign_id', campaign_id);
+                    formData.append('_token' , '<?php echo csrf_token(); ?>');
 
-                    var uploadURL = API_URL + "Campaign/new_webinar_video"; //Upload URL
+                    var uploadURL = "/new_webinar_video"; //Upload URL
                     var whp_jqXHR = $.ajax({
                         xhr: function() {
                             var xhrobj = $.ajaxSettings.xhr();

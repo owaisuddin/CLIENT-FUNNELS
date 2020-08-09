@@ -10,6 +10,7 @@ use App\Campaigns;
 use App\LeadPage;
 use App\Questionnaire;
 use App\Rapport;
+use App\User;
 use App\WebinarHolding;
 use App\WebinarRoom;
 use Illuminate\Http\Request;
@@ -115,6 +116,7 @@ class CampaignController extends Controller
     }
 
     public function editCampaign(Request $request){
+
         $values = array();
         parse_str($request->get('form_data'),$values);
 
@@ -190,5 +192,21 @@ class CampaignController extends Controller
             // something went wrong
         }
         return env('APP_URL').'/campaigns';
+    }
+
+    public function newWebinarVideo(Request $request){
+
+        $file_info = $request->file('webinar');
+        $filename = $file_info->getClientOriginalName();
+        $path = public_path().'/uploads/';
+        $file = $file_info;
+        $file->move($path, $filename);
+        Campaigns::where('id',$request->get('campaign_id'))->update(['preview_video'=>$filename]);
+
+        return array(
+          'result' => 'success',
+          'message' => 'upload video successfully',
+          'return_data' => $file_info
+        );
     }
 }

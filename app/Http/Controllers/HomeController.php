@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Campaigns;
+use App\WebinarRegistration;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $campaign_count = Campaigns::all()->count();
+        $registration_count = WebinarRegistration::all()->count();
+        return view('home')->with(compact('registration_count','campaign_count'));
     }
 }

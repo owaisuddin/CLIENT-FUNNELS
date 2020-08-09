@@ -18,9 +18,9 @@ class WebinarRegistration extends Migration
             $table->integer('campaign_id');
             $table->string('first_name');
             $table->string('email');
-            $table->string('stage')->default('');
-            $table->string('webinar_watched');
-            $table->string('booked_call');
+            $table->string('stage')->default('Webinar');
+            $table->string('webinar_watched')->default('Not Watched');
+            $table->string('booked_call')->default('No');
             $table->timestamps();
         });
     }

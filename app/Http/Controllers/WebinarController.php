@@ -41,8 +41,13 @@ class WebinarController extends Controller
 
     public function registrationWebinar(Request $request){
         $webinar_info = WebinarRegistration::create($request->all());
+        $campaign = Campaigns::where('id',$request->get('campaign_id'))->first();
+        return view('webinar.congratulation')->with(compact('webinar_info','campaign'));
+    }
 
-        return view('webinar.congratulation')->with('webinar_info',$webinar_info);
+    public function getCampaignVideo(Request $request){
+        $campaign_id = $request->get('form_data');
+        dd($request->get('form_data'));
     }
     /**
      * Show the form for creating a new resource.

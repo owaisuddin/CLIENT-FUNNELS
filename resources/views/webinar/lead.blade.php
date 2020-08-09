@@ -1735,6 +1735,11 @@
                                     seconds = parseInt(timer % 60, 10);
 
                                     minutes = minutes < 10 ? "0" + minutes : minutes;
+                                    localStorage.setItem('minutes',minutes);
+                                    if(seconds == 0 && minutes == 0){
+                                        localStorage.setItem('minutes',5);
+                                        timer = 300;
+                                    }
                                     seconds = seconds < 10 ? "0" + seconds : seconds;
                                     $('#min').html(minutes);
                                     $('#sec').html(seconds);
@@ -1747,9 +1752,16 @@
                             }
 
                             window.onload = function () {
-                                var fiveMinutes = 60 * 15,
+                                if(localStorage.getItem('minutes')){
+                                    var fiveMinutes = 60 * parseInt(localStorage.getItem('minutes')),
                                     display = document.querySelector('#min');
-                                startTimer(fiveMinutes, display);
+                                    startTimer(fiveMinutes, display);
+                                }else{
+                                    localStorage.setItem('minutes',15);
+                                    var fiveMinutes = 60 * 15,
+                                    display = document.querySelector('#min');
+                                    startTimer(fiveMinutes, display);
+                                }
                             };
                         </script>
 

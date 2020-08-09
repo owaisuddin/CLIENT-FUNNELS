@@ -76,13 +76,16 @@
         </div>
 
     </section>
-
     <!-- Event Section -->
     <section class="form-section">
         <div class="container-fluid">
             <div class="row  justify-content-center align-items-center">
-
                 <div class="col-md-6" id="preview-webinar-video-col">
+                    <video width="550"  controls autoplay>
+                        <source src="{{asset('/uploads/'.$campaign['preview_video'])}}" type="video/mp4">
+                        <source src="{{asset('/uploads/'.$campaign['preview_video'])}}" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
                 </div>
                 <div class="col-md-6 bgwhite atheight">
                     <div class="webinar-dtl">
@@ -98,11 +101,27 @@
                                     seconds = parseInt(timer % 60, 10);
 
                                     minutes = minutes < 10 ? "0" + minutes : minutes;
+                                    localStorage.setItem('minutes',minutes);
                                     seconds = seconds < 10 ? "0" + seconds : seconds;
                                     $('#min').html(minutes);
                                     $('#sec').html(seconds);
                                     // display.textContent = $('#min').html(minutes) + ":" + $('#sec').html(seconds);
-
+                                    localStorage.setItem('minutes',minutes);
+                                    if(seconds == 0 && minutes == 0){
+                                        // localStorage.setItem('minutes',5);
+                                        // timer = 300;
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '/webinar_video',
+                                            data: {
+                                                '_token': '<?php echo csrf_token() ?>',
+                                                'form_data': "{{$webinar_info['campaign_id']}}",
+                                            },
+                                            success: function (result) {
+                                                window.location.href = result;
+                                            }
+                                        });
+                                    }
                                     if (--timer < 0) {
                                         timer = duration;
                                     }
@@ -110,9 +129,16 @@
                             }
 
                             window.onload = function () {
-                                var fiveMinutes = 60 * 15,
-                                    display = document.querySelector('#min');
-                                startTimer(fiveMinutes, display);
+                                if(localStorage.getItem('minutes')){
+                                    var fiveMinutes = 60 * parseInt(localStorage.getItem('minutes')),
+                                        display = document.querySelector('#min');
+                                    startTimer(fiveMinutes, display);
+                                }else{
+                                    localStorage.setItem('minutes',15);
+                                    var fiveMinutes = 60 * 15,
+                                        display = document.querySelector('#min');
+                                    startTimer(fiveMinutes, display);
+                                }
                             };
                         </script>
                         <div id="timer">

@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/webinar/webinar_video.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WebinarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WebinarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_203834_create_campaigns_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_203834_create_campaigns_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_113128_webinar_registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/webinar/congratulation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/congratulation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/webinar/lead.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/lead.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +132,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../point_of_sale" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -211,6 +220,7 @@
       <workItem from="1596669154152" duration="1448000" />
       <workItem from="1596750901680" duration="6364000" />
       <workItem from="1596816161115" duration="14000" />
+      <workItem from="1596883395902" duration="19072000" />
     </task>
     <servers />
   </component>
@@ -218,21 +228,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596112583960">
+    <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596970006476">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1366.712@0.28.1366.712" timestamp="1596112583960" />
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl" timestamp="1596523513162">
+    <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1366.712@0.28.1366.712" timestamp="1596970006476" />
+    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl" timestamp="1596896027680">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1596523513162" />
+    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1596896027680" />
     <state x="339" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1596153127949">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
     <state x="339" y="212" key="com.intellij.ide.util.TipDialog/0.28.1366.712@0.28.1366.712" timestamp="1596153127949" />
-    <state x="346" y="31" width="672" height="676" key="search.everywhere.popup" timestamp="1596493218205">
+    <state x="328" y="116" width="709" height="536" key="find.popup" timestamp="1596971825346">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="346" y="31" width="672" height="676" key="search.everywhere.popup/0.28.1366.712@0.28.1366.712" timestamp="1596493218205" />
+    <state x="328" y="116" width="709" height="536" key="find.popup/0.28.1366.712@0.28.1366.712" timestamp="1596971825346" />
+    <state x="346" y="169" key="run.anything.popup" timestamp="1596970344470">
+      <screen x="0" y="28" width="1366" height="712" />
+    </state>
+    <state x="346" y="169" key="run.anything.popup/0.28.1366.712@0.28.1366.712" timestamp="1596970344470" />
+    <state x="346" y="31" width="672" height="676" key="search.everywhere.popup" timestamp="1596885237369">
+      <screen x="0" y="28" width="1366" height="712" />
+    </state>
+    <state x="346" y="31" width="672" height="676" key="search.everywhere.popup/0.28.1366.712@0.28.1366.712" timestamp="1596885237369" />
   </component>
 </project>

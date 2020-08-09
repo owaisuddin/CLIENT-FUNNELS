@@ -39,6 +39,8 @@ Route::get('/booking/{id}', 'WebinarController@bookingWebinar')->name('bookingWe
 Route::post('/booking_webinar/{id}', 'WebinarController@saveBookingWebinar')->name('bookingWebinar');
 Route::post('/webinar_registration/{id}', 'WebinarController@registrationWebinar')->name('registrationWebinar');
 Route::post('/getCampaignDetail', 'WebinarController@getCampaignDetail')->name('getCampaignDetail');
+Route::post('/webinar_video', 'WebinarController@getCampaignVideo')->name('webinarVideo');
+Route::post('/new_webinar_video', 'CampaignController@newWebinarVideo')->name('newWebinarVideo');
 
 
 
