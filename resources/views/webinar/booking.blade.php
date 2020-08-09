@@ -2416,24 +2416,40 @@
                             <select class="form-control" name="call_slot"
                                      title=" Slot*" tabindex="-1">
                                 <option value="">--- Select ---</option>
-                                <option value="5:00 PM - 4th August 2020">
-                                    5:00 PM - 4th August 2020
-                                </option>
-                                <option value="7:00 PM - 4th August 2020">
-                                    7:00 PM - 4th August 2020
-                                </option>
-                                <option value="9:00 PM - 4th August 2020">
-                                    9:00 PM - 4th August 2020
-                                </option>
-                                <option value="11:00 PM - 4th August 2020">
-                                    11:00 PM - 4th August 2020
-                                </option>
-                                <option value="1:00 PM - 5th August 2020">
-                                    1:00 PM - 5th August 2020
-                                </option>
-                                <option value="5:00 PM - 5th August 2020">
-                                    5:00 PM - 5th August 2020
-                                </option>
+                                <option value="2:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                    2:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                <option value="5:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                    5:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                <option value="7:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                    7:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                <option value="5:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                    5:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                <option value="7:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                    7:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                <option value="9:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                    9:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                <option value="11:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                    11:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                <option value="1:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                    1:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                <option value="5:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                    5:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                <option value="7:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                    7:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                <option value="1:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                    1:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                <option value="5:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                    5:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                <option value="7:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                    7:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                <option value="1:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                    1:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                <option value="5:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                    5:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                <option value="7:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                    7:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                <option value="3:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                    3:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
                             </select>
                             @error('call_slot')
                             <div class="alert alert-danger">{{ $message }}</div>

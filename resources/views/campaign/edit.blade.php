@@ -3418,7 +3418,7 @@
                     formData.append('webinar', $("#new-ind-file-upload")[0].files[0]);
                     formData.append('campaign_id', campaign_id);
 
-                    var uploadURL = API_URL + "Campaign/new_webinar_video"; //Upload URL
+                    var uploadURL = "/new_campaign_video";
                     var ind_jqXHR = $.ajax({
                         xhr: function() {
                             var xhrobj = $.ajaxSettings.xhr();
@@ -4233,8 +4233,9 @@
                         campaign_id = $("input[name='campaign_id']").val();
                     formData.append('webinar', $("#new-webinar-file-upload")[0].files[0]);
                     formData.append('campaign_id', campaign_id);
+                    formData.append('_token' , '<?php echo csrf_token(); ?>');
 
-                    var uploadURL = API_URL + "Campaign/new_webinar_video"; //Upload URL
+                    var uploadURL = "/new_campaign_video"; //Upload URL
                     var jqXHR = $.ajax({
                         xhr: function() {
                             var xhrobj = $.ajaxSettings.xhr();

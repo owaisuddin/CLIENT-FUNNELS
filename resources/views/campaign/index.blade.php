@@ -130,8 +130,16 @@
                                                     <td>{{$campaign->name}}</td>
                                                     <td class="campaign-video-render-status" data-campaign-id="{{$campaign->id}}"
                                                         data-status="1">
-                                                        <img src="https://www.clientfunnels.io/img/loading-hc.gif"
-                                                             class="img-fluid" style="max-height: 50px;"/>
+{{--                                                        <img src="https://www.clientfunnels.io/img/loading-hc.gif"--}}
+{{--                                                             class="img-fluid" style="max-height: 50px;"/>--}}
+                                                        @if(empty($campaign->preview_video) && empty($campaign->webinar_video))
+                                                            <span class="badge badge-danger">No Video Selected</span>
+                                                        @elseif(!empty($campaign->preview_video) && !empty($campaign->webinar_video))
+                                                            <span class="badge badge-success">2 Videos Ready</span>
+                                                        @else
+                                                            <span class="badge badge-success">1 Videos Ready</span>
+                                                        @endif
+
                                                     </td>
                                                     <td>
                                                         Webinar URL:
@@ -159,7 +167,7 @@
                                                             <i class="fa fa-eye"></i> View
                                                         </a>
 
-                                                        <a href="https://www.clientfunnels.io/campaigns/edit-campaign/736"
+                                                        <a href="{{env('APP_URL').'/edit-campaign/'.$campaign->id}}"
                                                            class="btn btn-warning m-b">
                                                             <i class="fa fa-wrench"></i> Edit
                                                         </a>

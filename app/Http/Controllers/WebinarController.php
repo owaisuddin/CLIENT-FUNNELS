@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Campaigns;
+use App\LeadPage;
+use App\Questionnaire;
 use App\WebinarBooking;
+use App\webinarCallSlot;
+use App\WebinarQuestions;
 use App\WebinarRegistration;
 use Illuminate\Http\Request;
 
@@ -34,9 +38,9 @@ class WebinarController extends Controller
             'call_slot' => 'required',
         ]);
 
-        WebinarBooking::create($request->all());
-
-        return view('webinar.completed');
+        $webinar_info = WebinarBooking::create($request->all());
+        $campaign = Questionnaire::where('campaign_id',$request->get('campaign_id'))->first();
+        return view('webinar.questions')->with(compact('campaign','webinar_info'));
     }
 
     public function registrationWebinar(Request $request){
@@ -45,9 +49,17 @@ class WebinarController extends Controller
         return view('webinar.congratulation')->with(compact('webinar_info','campaign'));
     }
 
-    public function getCampaignVideo(Request $request){
-        $campaign_id = $request->get('form_data');
-        dd($request->get('form_data'));
+    public function getCampaignVideo(Request $request,$id){
+        $campaign = Campaigns::where('id',$id)->first();
+        $lead_pages = LeadPage::where('campaign_id',$id)->first();
+
+        return view('webinar.webinar_video')->with(compact('campaign','lead_pages'));
+    }
+
+    public function callSlot(Request $request){
+        $webinar_info = WebinarBooking::create($request->all());
+        $campaign = Questionnaire::where('campaign_id',$request->get('campaign_id'))->first();
+        return view('webinar.questions')->with(compact('campaign','webinar_info'));
     }
     /**
      * Show the form for creating a new resource.
@@ -65,9 +77,12 @@ class WebinarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function submitQuestion(Request $request)
     {
-        //
+        $request['questions'] = serialize($request['questions']);
+        $request['answers'] = serialize($request['answers']);
+        $campaign = Questionnaire::where('campaign_id',$request->get('campaign_id'))->first();
+        return view('webinar.after_call_slot')->with(compact('campaign'));
     }
 
     /**

@@ -59,7 +59,7 @@ class CampaignController extends Controller
      */
     public function show()
     {
-        $campaigns = Campaigns::with('webinarRegistration','webinarBooking', 'campaignPublish')->get();
+        $campaigns = Campaigns::with('webinarRegistration','webinarBooking', 'campaignPublish')->where('is_deleted',0)->get();
 
         return view('campaign.index')->with('campaigns',$campaigns);
     }
@@ -112,7 +112,8 @@ class CampaignController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Campaigns::where('id',$id)->update(['is_deleted'=>1]);
+        return redirect('campaigns');
     }
 
     public function editCampaign(Request $request){
@@ -207,6 +208,21 @@ class CampaignController extends Controller
           'result' => 'success',
           'message' => 'upload video successfully',
           'return_data' => $file_info
+        );
+    }
+
+    public function newCampaignVideo(Request $request){
+        $file_info = $request->file('webinar');
+        $filename = $file_info->getClientOriginalName();
+        $path = public_path().'/uploads/';
+        $file = $file_info;
+        $file->move($path, $filename);
+        Campaigns::where('id',$request->get('campaign_id'))->update(['webinar_video'=>$filename]);
+
+        return array(
+            'result' => 'success',
+            'message' => 'upload video successfully',
+            'return_data' => $file_info
         );
     }
 }

@@ -64,7 +64,8 @@
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=239781813894908&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 
-    <style>@-webkit-keyframes swal2-show {
+    <style>
+        @-webkit-keyframes swal2-show {
                0% {
                    -webkit-transform: scale(0.7);
                    transform: scale(0.7); }
@@ -1198,7 +1199,8 @@
                 transform: rotate(0deg); }
             100% {
                 -webkit-transform: rotate(360deg);
-                transform: rotate(360deg); } }</style></head>
+                transform: rotate(360deg); } }
+    </style></head>
 
 <body class="greybg">
 
@@ -1208,7 +1210,7 @@
         <div class="row align-items-center">
             <div class="col-md-12 col-sm-12 col-12 logo-dark">
 					<span class="clr-wh pl-5 pt-3" id="webinar-preview-title">
-						<h1>How TARGET MARKET/ If You Are A.. Can Get PLEASURE &amp; PLEASURE WITHOUT HAVING TO Using SECRET SAUCE</h1>
+                      <h1>{!! urldecode($lead_pages['title']) !!}</h1>
 					</span>
             </div>
         </div>
@@ -1222,12 +1224,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 video-webinar-col atheight">
-                    <div height="1022" width="1013" poster="https://www.clientfunnels.io/uploads/company-webinars/192/ade9b9dcb0ded40fe1a499e3f314b567.png" preload="auto" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered vid1-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-has-started vjs-paused vjs-ended vjs-user-inactive" id="vid1" style="margin: 0 auto" lang="en" role="region" aria-label="Video Player"><video style="margin: 0 auto" id="vid1_html5_api" class="vjs-tech" preload="auto" poster="https://www.clientfunnels.io/uploads/company-webinars/192/ade9b9dcb0ded40fe1a499e3f314b567.png" tabindex="-1">
-
-                            <source src="https://d3fas7jkmq1zf1.cloudfront.net/192/mp4/ade9b9dcb0ded40fe1a499e3f314b567.mp4" type="video/mp4; application/x-mpegURL;">
-                            <source src="https://d3fas7jkmq1zf1.cloudfront.net/192/webm/ade9b9dcb0ded40fe1a499e3f314b567.webm" type="video/webm; application/x-mpegURL;">
-
-                        </video><div class="vjs-poster" tabindex="-1" aria-disabled="false" style="background-image: url(&quot;https://www.clientfunnels.io/uploads/company-webinars/192/ade9b9dcb0ded40fe1a499e3f314b567.png&quot;);"></div><div class="vjs-text-track-display" aria-live="off" aria-atomic="true"></div><div class="vjs-loading-spinner" dir="ltr"><span class="vjs-control-text">Video Player is loading.</span></div><button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Play Video</span></button><div class="vjs-control-bar" dir="ltr"><button class="vjs-play-control vjs-control vjs-button vjs-paused vjs-ended" type="button" title="Replay" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Replay</span></button><div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal"><button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Mute</span></button><div class="vjs-volume-control vjs-control vjs-volume-horizontal"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Volume Level" aria-live="polite" aria-valuetext="100%"><div class="vjs-volume-level"><span class="vjs-control-text"></span></div></div></div></div><div class="vjs-current-time vjs-time-control vjs-control"><span class="vjs-control-text">Current Time&nbsp;</span><span class="vjs-current-time-display" aria-live="off">0:13</span></div><div class="vjs-time-control vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-control vjs-control"><span class="vjs-control-text">Duration&nbsp;</span><span class="vjs-duration-display" aria-live="off">0:13</span></div><div class="vjs-progress-control vjs-control"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar" aria-valuetext="0:13 of 0:13"><div class="vjs-load-progress"><span class="vjs-control-text"><span>Loaded</span>: 0%</span></div><div class="vjs-mouse-display" style="left: 258.077px;"><div class="vjs-time-tooltip" style="right: -14.6796px;">0:03</div></div><div class="vjs-play-progress vjs-slider-bar" style="width: 100%;"><div class="vjs-time-tooltip" style="right: -17.7155px;">0:13</div><span class="vjs-control-text"><span>Progress</span>: 0%</span></div></div></div><div class="vjs-live-control vjs-control vjs-hidden"><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type&nbsp;</span>LIVE</div></div><div class="vjs-remaining-time vjs-time-control vjs-control"><span class="vjs-control-text">Remaining Time&nbsp;</span><span class="vjs-remaining-time-display" aria-live="off">-0:00</span></div><div class="vjs-custom-control-spacer vjs-spacer ">&nbsp;</div><div class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Playback Rate" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Playback Rate</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"></ul></div><div class="vjs-playback-rate-value">1x</div></div><div class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Chapters" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Chapters</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-title" tabindex="-1">Chapters</li></ul></div></div><div class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Descriptions" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Descriptions</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemcheckbox" aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">descriptions off</span><span class="vjs-control-text" aria-live="polite">, selected</span></li></ul></div></div><div class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Captions" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Captions</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-texttrack-settings" tabindex="-1" role="menuitem" aria-disabled="false"><span class="vjs-menu-item-text">captions settings</span><span class="vjs-control-text" aria-live="polite">, opens captions settings dialog</span></li><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemcheckbox" aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">captions off</span><span class="vjs-control-text" aria-live="polite">, selected</span></li></ul></div></div><div class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Audio Track" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Audio Track</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"></ul></div></div><button class="vjs-fullscreen-control vjs-control vjs-button" type="button" title="Fullscreen" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Fullscreen</span></button></div><div class="vjs-error-display vjs-modal-dialog vjs-hidden " tabindex="-1" aria-describedby="vid1_component_358_description" aria-hidden="true" aria-label="Modal Window" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="vid1_component_358_description">This is a modal window.</p><div class="vjs-modal-dialog-content" role="document"></div></div><div class="vjs-modal-dialog vjs-hidden  vjs-text-track-settings" tabindex="-1" aria-describedby="vid1_component_364_description" aria-hidden="true" aria-label="Caption Settings Dialog" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="vid1_component_364_description">Beginning of dialog window. Escape will cancel and close the window.</p><div class="vjs-modal-dialog-content" role="document"><div class="vjs-track-settings-colors"><fieldset class="vjs-fg-color vjs-track-setting"><legend id="captions-text-legend-vid1_component_364">Text</legend><label id="captions-foreground-color-vid1_component_364" class="vjs-label">Color</label><select aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364"><option id="captions-foreground-color-vid1_component_364-White" value="#FFF" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-White">White</option><option id="captions-foreground-color-vid1_component_364-Black" value="#000" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Black">Black</option><option id="captions-foreground-color-vid1_component_364-Red" value="#F00" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Red">Red</option><option id="captions-foreground-color-vid1_component_364-Green" value="#0F0" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Green">Green</option><option id="captions-foreground-color-vid1_component_364-Blue" value="#00F" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Blue">Blue</option><option id="captions-foreground-color-vid1_component_364-Yellow" value="#FF0" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Yellow">Yellow</option><option id="captions-foreground-color-vid1_component_364-Magenta" value="#F0F" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Magenta">Magenta</option><option id="captions-foreground-color-vid1_component_364-Cyan" value="#0FF" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-color-vid1_component_364 captions-foreground-color-vid1_component_364-Cyan">Cyan</option></select><span class="vjs-text-opacity vjs-opacity"><label id="captions-foreground-opacity-vid1_component_364" class="vjs-label">Transparency</label><select aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-opacity-vid1_component_364"><option id="captions-foreground-opacity-vid1_component_364-Opaque" value="1" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-opacity-vid1_component_364 captions-foreground-opacity-vid1_component_364-Opaque">Opaque</option><option id="captions-foreground-opacity-vid1_component_364-SemiTransparent" value="0.5" aria-labelledby="captions-text-legend-vid1_component_364 captions-foreground-opacity-vid1_component_364 captions-foreground-opacity-vid1_component_364-SemiTransparent">Semi-Transparent</option></select></span></fieldset><fieldset class="vjs-bg-color vjs-track-setting"><legend id="captions-background-vid1_component_364">Background</legend><label id="captions-background-color-vid1_component_364" class="vjs-label">Color</label><select aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364"><option id="captions-background-color-vid1_component_364-Black" value="#000" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Black">Black</option><option id="captions-background-color-vid1_component_364-White" value="#FFF" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-White">White</option><option id="captions-background-color-vid1_component_364-Red" value="#F00" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Red">Red</option><option id="captions-background-color-vid1_component_364-Green" value="#0F0" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Green">Green</option><option id="captions-background-color-vid1_component_364-Blue" value="#00F" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Blue">Blue</option><option id="captions-background-color-vid1_component_364-Yellow" value="#FF0" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Yellow">Yellow</option><option id="captions-background-color-vid1_component_364-Magenta" value="#F0F" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Magenta">Magenta</option><option id="captions-background-color-vid1_component_364-Cyan" value="#0FF" aria-labelledby="captions-background-vid1_component_364 captions-background-color-vid1_component_364 captions-background-color-vid1_component_364-Cyan">Cyan</option></select><span class="vjs-bg-opacity vjs-opacity"><label id="captions-background-opacity-vid1_component_364" class="vjs-label">Transparency</label><select aria-labelledby="captions-background-vid1_component_364 captions-background-opacity-vid1_component_364"><option id="captions-background-opacity-vid1_component_364-Opaque" value="1" aria-labelledby="captions-background-vid1_component_364 captions-background-opacity-vid1_component_364 captions-background-opacity-vid1_component_364-Opaque">Opaque</option><option id="captions-background-opacity-vid1_component_364-SemiTransparent" value="0.5" aria-labelledby="captions-background-vid1_component_364 captions-background-opacity-vid1_component_364 captions-background-opacity-vid1_component_364-SemiTransparent">Semi-Transparent</option><option id="captions-background-opacity-vid1_component_364-Transparent" value="0" aria-labelledby="captions-background-vid1_component_364 captions-background-opacity-vid1_component_364 captions-background-opacity-vid1_component_364-Transparent">Transparent</option></select></span></fieldset><fieldset class="vjs-window-color vjs-track-setting"><legend id="captions-window-vid1_component_364">Window</legend><label id="captions-window-color-vid1_component_364" class="vjs-label">Color</label><select aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364"><option id="captions-window-color-vid1_component_364-Black" value="#000" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Black">Black</option><option id="captions-window-color-vid1_component_364-White" value="#FFF" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-White">White</option><option id="captions-window-color-vid1_component_364-Red" value="#F00" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Red">Red</option><option id="captions-window-color-vid1_component_364-Green" value="#0F0" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Green">Green</option><option id="captions-window-color-vid1_component_364-Blue" value="#00F" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Blue">Blue</option><option id="captions-window-color-vid1_component_364-Yellow" value="#FF0" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Yellow">Yellow</option><option id="captions-window-color-vid1_component_364-Magenta" value="#F0F" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Magenta">Magenta</option><option id="captions-window-color-vid1_component_364-Cyan" value="#0FF" aria-labelledby="captions-window-vid1_component_364 captions-window-color-vid1_component_364 captions-window-color-vid1_component_364-Cyan">Cyan</option></select><span class="vjs-window-opacity vjs-opacity"><label id="captions-window-opacity-vid1_component_364" class="vjs-label">Transparency</label><select aria-labelledby="captions-window-vid1_component_364 captions-window-opacity-vid1_component_364"><option id="captions-window-opacity-vid1_component_364-Transparent" value="0" aria-labelledby="captions-window-vid1_component_364 captions-window-opacity-vid1_component_364 captions-window-opacity-vid1_component_364-Transparent">Transparent</option><option id="captions-window-opacity-vid1_component_364-SemiTransparent" value="0.5" aria-labelledby="captions-window-vid1_component_364 captions-window-opacity-vid1_component_364 captions-window-opacity-vid1_component_364-SemiTransparent">Semi-Transparent</option><option id="captions-window-opacity-vid1_component_364-Opaque" value="1" aria-labelledby="captions-window-vid1_component_364 captions-window-opacity-vid1_component_364 captions-window-opacity-vid1_component_364-Opaque">Opaque</option></select></span></fieldset></div><div class="vjs-track-settings-font"><fieldset class="vjs-font-percent vjs-track-setting"><legend id="captions-font-size-vid1_component_364" class="">Font Size</legend><select aria-labelledby="captions-font-size-vid1_component_364"><option id="captions-font-size-vid1_component_364-50" value="0.50" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-50">50%</option><option id="captions-font-size-vid1_component_364-75" value="0.75" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-75">75%</option><option id="captions-font-size-vid1_component_364-100" value="1.00" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-100">100%</option><option id="captions-font-size-vid1_component_364-125" value="1.25" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-125">125%</option><option id="captions-font-size-vid1_component_364-150" value="1.50" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-150">150%</option><option id="captions-font-size-vid1_component_364-175" value="1.75" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-175">175%</option><option id="captions-font-size-vid1_component_364-200" value="2.00" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-200">200%</option><option id="captions-font-size-vid1_component_364-300" value="3.00" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-300">300%</option><option id="captions-font-size-vid1_component_364-400" value="4.00" aria-labelledby="captions-font-size-vid1_component_364 captions-font-size-vid1_component_364-400">400%</option></select></fieldset><fieldset class="vjs-edge-style vjs-track-setting"><legend id="vid1_component_364" class="">Text Edge Style</legend><select aria-labelledby="vid1_component_364"><option id="vid1_component_364-None" value="none" aria-labelledby="vid1_component_364 vid1_component_364-None">None</option><option id="vid1_component_364-Raised" value="raised" aria-labelledby="vid1_component_364 vid1_component_364-Raised">Raised</option><option id="vid1_component_364-Depressed" value="depressed" aria-labelledby="vid1_component_364 vid1_component_364-Depressed">Depressed</option><option id="vid1_component_364-Uniform" value="uniform" aria-labelledby="vid1_component_364 vid1_component_364-Uniform">Uniform</option><option id="vid1_component_364-Dropshadow" value="dropshadow" aria-labelledby="vid1_component_364 vid1_component_364-Dropshadow">Dropshadow</option></select></fieldset><fieldset class="vjs-font-family vjs-track-setting"><legend id="captions-font-family-vid1_component_364" class="">Font Family</legend><select aria-labelledby="captions-font-family-vid1_component_364"><option id="captions-font-family-vid1_component_364-ProportionalSansSerif" value="proportionalSansSerif" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-ProportionalSansSerif">Proportional Sans-Serif</option><option id="captions-font-family-vid1_component_364-MonospaceSansSerif" value="monospaceSansSerif" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-MonospaceSansSerif">Monospace Sans-Serif</option><option id="captions-font-family-vid1_component_364-ProportionalSerif" value="proportionalSerif" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-ProportionalSerif">Proportional Serif</option><option id="captions-font-family-vid1_component_364-MonospaceSerif" value="monospaceSerif" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-MonospaceSerif">Monospace Serif</option><option id="captions-font-family-vid1_component_364-Casual" value="casual" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-Casual">Casual</option><option id="captions-font-family-vid1_component_364-Script" value="script" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-Script">Script</option><option id="captions-font-family-vid1_component_364-SmallCaps" value="small-caps" aria-labelledby="captions-font-family-vid1_component_364 captions-font-family-vid1_component_364-SmallCaps">Small Caps</option></select></fieldset></div><div class="vjs-track-settings-controls"><button class="vjs-default-button" title="restore all settings to the default values">Reset<span class="vjs-control-text"> restore all settings to the default values</span></button><button class="vjs-done-button">Done</button></div></div><button class="vjs-close-button vjs-control vjs-button" type="button" aria-disabled="false" title="Close Modal Dialog"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Close Modal Dialog</span></button><p class="vjs-control-text">End of dialog window.</p></div></div>
+                    <video width="1200"  controls autoplay>
+                        <source src="{{asset('/uploads/'.$campaign['webinar_video'])}}" type="video/mp4">
+                        <source src="{{asset('/uploads/'.$campaign['webinar_video'])}}" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
 
                 </div>
             </div>
@@ -1250,9 +1251,617 @@
                                     <div class="col-sm-12 text-center">
                                         <h4>Book A Call Now.</h4>
                                         <hr>
-                                        <a href="javascript:void(0)" class="hvr-sweep-to-top wow flipInX webinar-book-now" data-wow-delay="0.2s">Book Now</a>
+                                        <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#exampleModal" style="margin: 15px">
+                                            Book Now
+                                        </button>
                                     </div>
-                                </div>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Please Select A Suitable Call Slot Below</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="modal-messages"></div>
+                                                        <div class="modal-loading" style="display: none" id="slot_loader">
+                                                            <img src="https://www.clientfunnels.io/img/loading-blob.gif" class="img-responsive modal-img-center">
+                                                            Booking Your Call
+                                                        </div>
+
+                                                        <form id="new-booking-form" class="form-horizontal live-form-validation"
+                                                        method="post" action="{{ url('/call_slot') }}">
+                                                            @csrf
+                                                            <input type="hidden" name="campaign_id" value="{{$campaign['id']}}">
+                                                            <div class="modal-body">
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <p>Enter Your Details below to book a call with us.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <label for="new-booking-name" class="bmd-label-floating"> Name <span class="required">*</span></label>
+                                                                            <input type="text" class="form-control" id="new-booking-name" required="true" name="name" value="owais uddin gilani" maxlength="50">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <label for="new-booking-email" class="bmd-label-floating"> Email <span class="required">*</span></label>
+                                                                            <input type="email" class="form-control" id="new-booking-email" required="true" name="email" value="owaisuddingilani@gmail.com" maxlength="100">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-8">
+                                                                        <label for="new-booking-mobile" class="bmd-label-floating"> Country Code <span class="required">*</span></label>
+                                                                        <select class="form-control" required style="width: 100%" name="country_code">
+                                                                            <option value="">--- Country Code ---</option>
+                                                                            <option value="AD" data-flag-url="https://www.clientfunnels.io/img/flags/ad.png">
+                                                                                +376 - Andorra										</option>
+                                                                            <option value="AE" data-flag-url="https://www.clientfunnels.io/img/flags/ae.png">
+                                                                                +971 - United Arab Emirates										</option>
+                                                                            <option value="AF" data-flag-url="https://www.clientfunnels.io/img/flags/af.png">
+                                                                                +93 - Afghanistan										</option>
+                                                                            <option value="AG" data-flag-url="https://www.clientfunnels.io/img/flags/ag.png">
+                                                                                +1268 - Antigua and Barbuda										</option>
+                                                                            <option value="AI" data-flag-url="https://www.clientfunnels.io/img/flags/ai.png">
+                                                                                +1264 - Anguilla										</option>
+                                                                            <option value="AL" data-flag-url="https://www.clientfunnels.io/img/flags/al.png">
+                                                                                +355 - Albania										</option>
+                                                                            <option value="AM" data-flag-url="https://www.clientfunnels.io/img/flags/am.png">
+                                                                                +374 - Armenia										</option>
+                                                                            <option value="AO" data-flag-url="https://www.clientfunnels.io/img/flags/ao.png">
+                                                                                +244 - Angola										</option>
+                                                                            <option value="AQ" data-flag-url="https://www.clientfunnels.io/img/flags/aq.png">
+                                                                                +672 - Antarctica										</option>
+                                                                            <option value="AR" data-flag-url="https://www.clientfunnels.io/img/flags/ar.png">
+                                                                                +54 - Argentina										</option>
+                                                                            <option value="AS" data-flag-url="https://www.clientfunnels.io/img/flags/as.png">
+                                                                                +1684 - American Samoa										</option>
+                                                                            <option value="AT" data-flag-url="https://www.clientfunnels.io/img/flags/at.png">
+                                                                                +43 - Austria										</option>
+                                                                            <option value="AU" data-flag-url="https://www.clientfunnels.io/img/flags/au.png">
+                                                                                +61 - Australia										</option>
+                                                                            <option value="AW" data-flag-url="https://www.clientfunnels.io/img/flags/aw.png">
+                                                                                +297 - Aruba										</option>
+                                                                            <option value="AZ" data-flag-url="https://www.clientfunnels.io/img/flags/az.png">
+                                                                                +994 - Azerbaijan										</option>
+                                                                            <option value="BA" data-flag-url="https://www.clientfunnels.io/img/flags/ba.png">
+                                                                                +387 - Bosnia and Herzegovina										</option>
+                                                                            <option value="BB" data-flag-url="https://www.clientfunnels.io/img/flags/bb.png">
+                                                                                +1 - Barbados										</option>
+                                                                            <option value="BD" data-flag-url="https://www.clientfunnels.io/img/flags/bd.png">
+                                                                                +880 - Bangladesh										</option>
+                                                                            <option value="BE" data-flag-url="https://www.clientfunnels.io/img/flags/be.png">
+                                                                                +32 - Belgium										</option>
+                                                                            <option value="BF" data-flag-url="https://www.clientfunnels.io/img/flags/bf.png">
+                                                                                +226 - Burkina Faso										</option>
+                                                                            <option value="BG" data-flag-url="https://www.clientfunnels.io/img/flags/bg.png">
+                                                                                +359 - Bulgaria										</option>
+                                                                            <option value="BH" data-flag-url="https://www.clientfunnels.io/img/flags/bh.png">
+                                                                                +973 - Bahrain										</option>
+                                                                            <option value="BI" data-flag-url="https://www.clientfunnels.io/img/flags/bi.png">
+                                                                                +257 - Burundi										</option>
+                                                                            <option value="BJ" data-flag-url="https://www.clientfunnels.io/img/flags/bj.png">
+                                                                                +229 - Benin										</option>
+                                                                            <option value="BL" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
+                                                                                +590 - Saint Barthélemy										</option>
+                                                                            <option value="BM" data-flag-url="https://www.clientfunnels.io/img/flags/bm.png">
+                                                                                +1441 - Bermuda										</option>
+                                                                            <option value="BN" data-flag-url="https://www.clientfunnels.io/img/flags/bn.png">
+                                                                                +673 - Brunei Darussalam										</option>
+                                                                            <option value="BO" data-flag-url="https://www.clientfunnels.io/img/flags/bo.png">
+                                                                                +591 - Bolivia (Plurinational State of)										</option>
+                                                                            <option value="BR" data-flag-url="https://www.clientfunnels.io/img/flags/br.png">
+                                                                                +55 - Brazil										</option>
+                                                                            <option value="BS" data-flag-url="https://www.clientfunnels.io/img/flags/bs.png">
+                                                                                +1242 - Bahamas										</option>
+                                                                            <option value="BT" data-flag-url="https://www.clientfunnels.io/img/flags/bt.png">
+                                                                                +975 - Bhutan										</option>
+                                                                            <option value="BW" data-flag-url="https://www.clientfunnels.io/img/flags/bw.png">
+                                                                                +267 - Botswana										</option>
+                                                                            <option value="BY" data-flag-url="https://www.clientfunnels.io/img/flags/by.png">
+                                                                                +375 - Belarus										</option>
+                                                                            <option value="BZ" data-flag-url="https://www.clientfunnels.io/img/flags/bz.png">
+                                                                                +501 - Belize										</option>
+                                                                            <option value="CA" data-flag-url="https://www.clientfunnels.io/img/flags/ca.png">
+                                                                                +1 - Canada										</option>
+                                                                            <option value="CC" data-flag-url="https://www.clientfunnels.io/img/flags/cc.png">
+                                                                                +61 - Cocos (Keeling) Islands										</option>
+                                                                            <option value="CD" data-flag-url="https://www.clientfunnels.io/img/flags/cd.png">
+                                                                                +243 - Congo, Democratic Republic of the										</option>
+                                                                            <option value="CF" data-flag-url="https://www.clientfunnels.io/img/flags/cf.png">
+                                                                                +236 - Central African Republic										</option>
+                                                                            <option value="CG" data-flag-url="https://www.clientfunnels.io/img/flags/cg.png">
+                                                                                +242 - Congo										</option>
+                                                                            <option value="CH" data-flag-url="https://www.clientfunnels.io/img/flags/ch.png">
+                                                                                +41 - Switzerland										</option>
+                                                                            <option value="CI" data-flag-url="https://www.clientfunnels.io/img/flags/ci.png">
+                                                                                +225 - Côte d'Ivoire										</option>
+                                                                            <option value="CK" data-flag-url="https://www.clientfunnels.io/img/flags/ck.png">
+                                                                                +682 - Cook Islands										</option>
+                                                                            <option value="CL" data-flag-url="https://www.clientfunnels.io/img/flags/cl.png">
+                                                                                +56 - Chile										</option>
+                                                                            <option value="CM" data-flag-url="https://www.clientfunnels.io/img/flags/cm.png">
+                                                                                +237 - Cameroon										</option>
+                                                                            <option value="CN" data-flag-url="https://www.clientfunnels.io/img/flags/cn.png">
+                                                                                +86 - China										</option>
+                                                                            <option value="CO" data-flag-url="https://www.clientfunnels.io/img/flags/co.png">
+                                                                                +57 - Colombia										</option>
+                                                                            <option value="CR" data-flag-url="https://www.clientfunnels.io/img/flags/cr.png">
+                                                                                +506 - Costa Rica										</option>
+                                                                            <option value="CU" data-flag-url="https://www.clientfunnels.io/img/flags/cu.png">
+                                                                                +53 - Cuba										</option>
+                                                                            <option value="CV" data-flag-url="https://www.clientfunnels.io/img/flags/cv.png">
+                                                                                +238 - Cabo Verde										</option>
+                                                                            <option value="CW" data-flag-url="https://www.clientfunnels.io/img/flags/cw.png">
+                                                                                +599 - Curaçao										</option>
+                                                                            <option value="CX" data-flag-url="https://www.clientfunnels.io/img/flags/cx.png">
+                                                                                +61 - Christmas Island										</option>
+                                                                            <option value="CY" data-flag-url="https://www.clientfunnels.io/img/flags/cy.png">
+                                                                                +357 - Cyprus										</option>
+                                                                            <option value="CZ" data-flag-url="https://www.clientfunnels.io/img/flags/cz.png">
+                                                                                +420 - Czechia										</option>
+                                                                            <option value="DE" data-flag-url="https://www.clientfunnels.io/img/flags/de.png">
+                                                                                +49 - Germany										</option>
+                                                                            <option value="DJ" data-flag-url="https://www.clientfunnels.io/img/flags/dj.png">
+                                                                                +253 - Djibouti										</option>
+                                                                            <option value="DK" data-flag-url="https://www.clientfunnels.io/img/flags/dk.png">
+                                                                                +45 - Denmark										</option>
+                                                                            <option value="DM" data-flag-url="https://www.clientfunnels.io/img/flags/dm.png">
+                                                                                +1767 - Dominica										</option>
+                                                                            <option value="DO" data-flag-url="https://www.clientfunnels.io/img/flags/do.png">
+                                                                                +1829 - Dominican Republic										</option>
+                                                                            <option value="DZ" data-flag-url="https://www.clientfunnels.io/img/flags/dz.png">
+                                                                                +213 - Algeria										</option>
+                                                                            <option value="EC" data-flag-url="https://www.clientfunnels.io/img/flags/ec.png">
+                                                                                +593 - Ecuador										</option>
+                                                                            <option value="EE" data-flag-url="https://www.clientfunnels.io/img/flags/ee.png">
+                                                                                +372 - Estonia										</option>
+                                                                            <option value="EG" data-flag-url="https://www.clientfunnels.io/img/flags/eg.png">
+                                                                                +20 - Egypt										</option>
+                                                                            <option value="EH" data-flag-url="https://www.clientfunnels.io/img/flags/eh.png">
+                                                                                +212 - Western Sahara										</option>
+                                                                            <option value="ER" data-flag-url="https://www.clientfunnels.io/img/flags/er.png">
+                                                                                +291 - Eritrea										</option>
+                                                                            <option value="ES" data-flag-url="https://www.clientfunnels.io/img/flags/es.png">
+                                                                                +34 - Spain										</option>
+                                                                            <option value="ET" data-flag-url="https://www.clientfunnels.io/img/flags/et.png">
+                                                                                +251 - Ethiopia										</option>
+                                                                            <option value="FI" data-flag-url="https://www.clientfunnels.io/img/flags/fi.png">
+                                                                                +358 - Finland										</option>
+                                                                            <option value="FJ" data-flag-url="https://www.clientfunnels.io/img/flags/fj.png">
+                                                                                +679 - Fiji										</option>
+                                                                            <option value="FK" data-flag-url="https://www.clientfunnels.io/img/flags/fk.png">
+                                                                                +500 - Falkland Islands (Malvinas)										</option>
+                                                                            <option value="FM" data-flag-url="https://www.clientfunnels.io/img/flags/fm.png">
+                                                                                +691 - Micronesia (Federated States of)										</option>
+                                                                            <option value="FO" data-flag-url="https://www.clientfunnels.io/img/flags/fo.png">
+                                                                                +298 - Faroe Islands										</option>
+                                                                            <option value="FR" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
+                                                                                +33 - France										</option>
+                                                                            <option value="GA" data-flag-url="https://www.clientfunnels.io/img/flags/ga.png">
+                                                                                +241 - Gabon										</option>
+                                                                            <option value="GB" data-flag-url="https://www.clientfunnels.io/img/flags/gb.png">
+                                                                                +44 - United Kingdom of Great Britain and Northern Ireland										</option>
+                                                                            <option value="GD" data-flag-url="https://www.clientfunnels.io/img/flags/gd.png">
+                                                                                +1473 - Grenada										</option>
+                                                                            <option value="GE" data-flag-url="https://www.clientfunnels.io/img/flags/ge.png">
+                                                                                +995 - Georgia										</option>
+                                                                            <option value="GG" data-flag-url="https://www.clientfunnels.io/img/flags/gg.png">
+                                                                                +441481 - Guernsey										</option>
+                                                                            <option value="GH" data-flag-url="https://www.clientfunnels.io/img/flags/gh.png">
+                                                                                +233 - Ghana										</option>
+                                                                            <option value="GI" data-flag-url="https://www.clientfunnels.io/img/flags/gi.png">
+                                                                                +350 - Gibraltar										</option>
+                                                                            <option value="GL" data-flag-url="https://www.clientfunnels.io/img/flags/gl.png">
+                                                                                +299 - Greenland										</option>
+                                                                            <option value="GM" data-flag-url="https://www.clientfunnels.io/img/flags/gm.png">
+                                                                                +220 - Gambia										</option>
+                                                                            <option value="GN" data-flag-url="https://www.clientfunnels.io/img/flags/gn.png">
+                                                                                +224 - Guinea										</option>
+                                                                            <option value="GQ" data-flag-url="https://www.clientfunnels.io/img/flags/gq.png">
+                                                                                +240 - Equatorial Guinea										</option>
+                                                                            <option value="GR" data-flag-url="https://www.clientfunnels.io/img/flags/gr.png">
+                                                                                +30 - Greece										</option>
+                                                                            <option value="GT" data-flag-url="https://www.clientfunnels.io/img/flags/gt.png">
+                                                                                +502 - Guatemala										</option>
+                                                                            <option value="GU" data-flag-url="https://www.clientfunnels.io/img/flags/gu.png">
+                                                                                +1671 - Guam										</option>
+                                                                            <option value="GW" data-flag-url="https://www.clientfunnels.io/img/flags/gw.png">
+                                                                                +245 - Guinea-Bissau										</option>
+                                                                            <option value="GY" data-flag-url="https://www.clientfunnels.io/img/flags/gy.png">
+                                                                                +592 - Guyana										</option>
+                                                                            <option value="HK" data-flag-url="https://www.clientfunnels.io/img/flags/hk.png">
+                                                                                +852 - Hong Kong										</option>
+                                                                            <option value="HN" data-flag-url="https://www.clientfunnels.io/img/flags/hn.png">
+                                                                                +504 - Honduras										</option>
+                                                                            <option value="HR" data-flag-url="https://www.clientfunnels.io/img/flags/hr.png">
+                                                                                +385 - Croatia										</option>
+                                                                            <option value="HT" data-flag-url="https://www.clientfunnels.io/img/flags/ht.png">
+                                                                                +509 - Haiti										</option>
+                                                                            <option value="HU" data-flag-url="https://www.clientfunnels.io/img/flags/hu.png">
+                                                                                +36 - Hungary										</option>
+                                                                            <option value="ID" data-flag-url="https://www.clientfunnels.io/img/flags/id.png">
+                                                                                +62 - Indonesia										</option>
+                                                                            <option value="IE" data-flag-url="https://www.clientfunnels.io/img/flags/ie.png">
+                                                                                +353 - Ireland										</option>
+                                                                            <option value="IL" data-flag-url="https://www.clientfunnels.io/img/flags/il.png">
+                                                                                +972 - Israel										</option>
+                                                                            <option value="IM" data-flag-url="https://www.clientfunnels.io/img/flags/im.png">
+                                                                                +441624 - Isle of Man										</option>
+                                                                            <option value="IN" data-flag-url="https://www.clientfunnels.io/img/flags/in.png">
+                                                                                +91 - India										</option>
+                                                                            <option value="IO" data-flag-url="https://www.clientfunnels.io/img/flags/io.png">
+                                                                                +246 - British Indian Ocean Territory										</option>
+                                                                            <option value="IQ" data-flag-url="https://www.clientfunnels.io/img/flags/iq.png">
+                                                                                +964 - Iraq										</option>
+                                                                            <option value="IR" data-flag-url="https://www.clientfunnels.io/img/flags/ir.png">
+                                                                                +98 - Iran (Islamic Republic of)										</option>
+                                                                            <option value="IS" data-flag-url="https://www.clientfunnels.io/img/flags/is.png">
+                                                                                +354 - Iceland										</option>
+                                                                            <option value="IT" data-flag-url="https://www.clientfunnels.io/img/flags/it.png">
+                                                                                +39 - Italy										</option>
+                                                                            <option value="JE" data-flag-url="https://www.clientfunnels.io/img/flags/je.png">
+                                                                                +441534 - Jersey										</option>
+                                                                            <option value="JM" data-flag-url="https://www.clientfunnels.io/img/flags/jm.png">
+                                                                                +1876 - Jamaica										</option>
+                                                                            <option value="JO" data-flag-url="https://www.clientfunnels.io/img/flags/jo.png">
+                                                                                +962 - Jordan										</option>
+                                                                            <option value="JP" data-flag-url="https://www.clientfunnels.io/img/flags/jp.png">
+                                                                                +81 - Japan										</option>
+                                                                            <option value="KE" data-flag-url="https://www.clientfunnels.io/img/flags/ke.png">
+                                                                                +254 - Kenya										</option>
+                                                                            <option value="KG" data-flag-url="https://www.clientfunnels.io/img/flags/kg.png">
+                                                                                +996 - Kyrgyzstan										</option>
+                                                                            <option value="KH" data-flag-url="https://www.clientfunnels.io/img/flags/kh.png">
+                                                                                +855 - Cambodia										</option>
+                                                                            <option value="KI" data-flag-url="https://www.clientfunnels.io/img/flags/ki.png">
+                                                                                +686 - Kiribati										</option>
+                                                                            <option value="KM" data-flag-url="https://www.clientfunnels.io/img/flags/km.png">
+                                                                                +269 - Comoros										</option>
+                                                                            <option value="KN" data-flag-url="https://www.clientfunnels.io/img/flags/kn.png">
+                                                                                +1869 - Saint Kitts and Nevis										</option>
+                                                                            <option value="KP" data-flag-url="https://www.clientfunnels.io/img/flags/kp.png">
+                                                                                +850 - Korea (Democratic People's Republic of)										</option>
+                                                                            <option value="KR" data-flag-url="https://www.clientfunnels.io/img/flags/kr.png">
+                                                                                +82 - Korea, Republic of										</option>
+                                                                            <option value="KW" data-flag-url="https://www.clientfunnels.io/img/flags/kw.png">
+                                                                                +965 - Kuwait										</option>
+                                                                            <option value="KY" data-flag-url="https://www.clientfunnels.io/img/flags/ky.png">
+                                                                                +1345 - Cayman Islands										</option>
+                                                                            <option value="KZ" data-flag-url="https://www.clientfunnels.io/img/flags/kz.png">
+                                                                                +7 - Kazakhstan										</option>
+                                                                            <option value="LA" data-flag-url="https://www.clientfunnels.io/img/flags/la.png">
+                                                                                +856 - Lao People's Democratic Republic										</option>
+                                                                            <option value="LB" data-flag-url="https://www.clientfunnels.io/img/flags/lb.png">
+                                                                                +961 - Lebanon										</option>
+                                                                            <option value="LC" data-flag-url="https://www.clientfunnels.io/img/flags/lc.png">
+                                                                                +1758 - Saint Lucia										</option>
+                                                                            <option value="LI" data-flag-url="https://www.clientfunnels.io/img/flags/li.png">
+                                                                                +423 - Liechtenstein										</option>
+                                                                            <option value="LK" data-flag-url="https://www.clientfunnels.io/img/flags/lk.png">
+                                                                                +94 - Sri Lanka										</option>
+                                                                            <option value="LR" data-flag-url="https://www.clientfunnels.io/img/flags/lr.png">
+                                                                                +231 - Liberia										</option>
+                                                                            <option value="LS" data-flag-url="https://www.clientfunnels.io/img/flags/ls.png">
+                                                                                +266 - Lesotho										</option>
+                                                                            <option value="LT" data-flag-url="https://www.clientfunnels.io/img/flags/lt.png">
+                                                                                +370 - Lithuania										</option>
+                                                                            <option value="LU" data-flag-url="https://www.clientfunnels.io/img/flags/lu.png">
+                                                                                +352 - Luxembourg										</option>
+                                                                            <option value="LV" data-flag-url="https://www.clientfunnels.io/img/flags/lv.png">
+                                                                                +371 - Latvia										</option>
+                                                                            <option value="LY" data-flag-url="https://www.clientfunnels.io/img/flags/ly.png">
+                                                                                +218 - Libya										</option>
+                                                                            <option value="MA" data-flag-url="https://www.clientfunnels.io/img/flags/ma.png">
+                                                                                +212 - Morocco										</option>
+                                                                            <option value="MC" data-flag-url="https://www.clientfunnels.io/img/flags/mc.png">
+                                                                                +377 - Monaco										</option>
+                                                                            <option value="MD" data-flag-url="https://www.clientfunnels.io/img/flags/md.png">
+                                                                                +373 - Moldova, Republic of										</option>
+                                                                            <option value="ME" data-flag-url="https://www.clientfunnels.io/img/flags/me.png">
+                                                                                +382 - Montenegro										</option>
+                                                                            <option value="MF" data-flag-url="https://www.clientfunnels.io/img/flags/mf.png">
+                                                                                +590 - Saint Martin (French part)										</option>
+                                                                            <option value="MG" data-flag-url="https://www.clientfunnels.io/img/flags/mg.png">
+                                                                                +261 - Madagascar										</option>
+                                                                            <option value="MH" data-flag-url="https://www.clientfunnels.io/img/flags/mh.png">
+                                                                                +692 - Marshall Islands										</option>
+                                                                            <option value="MK" data-flag-url="https://www.clientfunnels.io/img/flags/mk.png">
+                                                                                +389 - North Macedonia										</option>
+                                                                            <option value="ML" data-flag-url="https://www.clientfunnels.io/img/flags/ml.png">
+                                                                                +223 - Mali										</option>
+                                                                            <option value="MM" data-flag-url="https://www.clientfunnels.io/img/flags/mm.png">
+                                                                                +95 - Myanmar										</option>
+                                                                            <option value="MN" data-flag-url="https://www.clientfunnels.io/img/flags/mn.png">
+                                                                                +976 - Mongolia										</option>
+                                                                            <option value="MO" data-flag-url="https://www.clientfunnels.io/img/flags/mo.png">
+                                                                                +853 - Macao										</option>
+                                                                            <option value="MP" data-flag-url="https://www.clientfunnels.io/img/flags/mp.png">
+                                                                                +1670 - Northern Mariana Islands										</option>
+                                                                            <option value="MR" data-flag-url="https://www.clientfunnels.io/img/flags/mr.png">
+                                                                                +222 - Mauritania										</option>
+                                                                            <option value="MS" data-flag-url="https://www.clientfunnels.io/img/flags/ms.png">
+                                                                                +1664 - Montserrat										</option>
+                                                                            <option value="MT" data-flag-url="https://www.clientfunnels.io/img/flags/mt.png">
+                                                                                +356 - Malta										</option>
+                                                                            <option value="MU" data-flag-url="https://www.clientfunnels.io/img/flags/mu.png">
+                                                                                +230 - Mauritius										</option>
+                                                                            <option value="MV" data-flag-url="https://www.clientfunnels.io/img/flags/mv.png">
+                                                                                +960 - Maldives										</option>
+                                                                            <option value="MW" data-flag-url="https://www.clientfunnels.io/img/flags/mw.png">
+                                                                                +265 - Malawi										</option>
+                                                                            <option value="MX" data-flag-url="https://www.clientfunnels.io/img/flags/mx.png">
+                                                                                +52 - Mexico										</option>
+                                                                            <option value="MY" data-flag-url="https://www.clientfunnels.io/img/flags/my.png">
+                                                                                +60 - Malaysia										</option>
+                                                                            <option value="MZ" data-flag-url="https://www.clientfunnels.io/img/flags/mz.png">
+                                                                                +258 - Mozambique										</option>
+                                                                            <option value="NA" data-flag-url="https://www.clientfunnels.io/img/flags/na.png">
+                                                                                +264 - Namibia										</option>
+                                                                            <option value="NC" data-flag-url="https://www.clientfunnels.io/img/flags/nc.png">
+                                                                                +687 - New Caledonia										</option>
+                                                                            <option value="NE" data-flag-url="https://www.clientfunnels.io/img/flags/ne.png">
+                                                                                +227 - Niger										</option>
+                                                                            <option value="NG" data-flag-url="https://www.clientfunnels.io/img/flags/ng.png">
+                                                                                +234 - Nigeria										</option>
+                                                                            <option value="NI" data-flag-url="https://www.clientfunnels.io/img/flags/ni.png">
+                                                                                +505 - Nicaragua										</option>
+                                                                            <option value="NL" data-flag-url="https://www.clientfunnels.io/img/flags/nl.png">
+                                                                                +31 - Netherlands										</option>
+                                                                            <option value="NO" data-flag-url="https://www.clientfunnels.io/img/flags/no.png">
+                                                                                +47 - Norway										</option>
+                                                                            <option value="NP" data-flag-url="https://www.clientfunnels.io/img/flags/np.png">
+                                                                                +977 - Nepal										</option>
+                                                                            <option value="NR" data-flag-url="https://www.clientfunnels.io/img/flags/nr.png">
+                                                                                +674 - Nauru										</option>
+                                                                            <option value="NU" data-flag-url="https://www.clientfunnels.io/img/flags/nu.png">
+                                                                                +683 - Niue										</option>
+                                                                            <option value="NZ" data-flag-url="https://www.clientfunnels.io/img/flags/nz.png">
+                                                                                +64 - New Zealand										</option>
+                                                                            <option value="OM" data-flag-url="https://www.clientfunnels.io/img/flags/om.png">
+                                                                                +968 - Oman										</option>
+                                                                            <option value="PA" data-flag-url="https://www.clientfunnels.io/img/flags/pa.png">
+                                                                                +507 - Panama										</option>
+                                                                            <option value="PE" data-flag-url="https://www.clientfunnels.io/img/flags/pe.png">
+                                                                                +51 - Peru										</option>
+                                                                            <option value="PF" data-flag-url="https://www.clientfunnels.io/img/flags/pf.png">
+                                                                                +689 - French Polynesia										</option>
+                                                                            <option value="PG" data-flag-url="https://www.clientfunnels.io/img/flags/pg.png">
+                                                                                +675 - Papua New Guinea										</option>
+                                                                            <option value="PH" data-flag-url="https://www.clientfunnels.io/img/flags/ph.png">
+                                                                                +63 - Philippines										</option>
+                                                                            <option value="PK" data-flag-url="https://www.clientfunnels.io/img/flags/pk.png">
+                                                                                +92 - Pakistan										</option>
+                                                                            <option value="PL" data-flag-url="https://www.clientfunnels.io/img/flags/pl.png">
+                                                                                +48 - Poland										</option>
+                                                                            <option value="PM" data-flag-url="https://www.clientfunnels.io/img/flags/pm.png">
+                                                                                +508 - Saint Pierre and Miquelon										</option>
+                                                                            <option value="PN" data-flag-url="https://www.clientfunnels.io/img/flags/pn.png">
+                                                                                +64 - Pitcairn										</option>
+                                                                            <option value="PR" data-flag-url="https://www.clientfunnels.io/img/flags/pr.png">
+                                                                                +1 - Puerto Rico										</option>
+                                                                            <option value="PS" data-flag-url="https://www.clientfunnels.io/img/flags/ps.png">
+                                                                                +970 - Palestine, State of										</option>
+                                                                            <option value="PT" data-flag-url="https://www.clientfunnels.io/img/flags/pt.png">
+                                                                                +351 - Portugal										</option>
+                                                                            <option value="PW" data-flag-url="https://www.clientfunnels.io/img/flags/pw.png">
+                                                                                +680 - Palau										</option>
+                                                                            <option value="PY" data-flag-url="https://www.clientfunnels.io/img/flags/py.png">
+                                                                                +595 - Paraguay										</option>
+                                                                            <option value="QA" data-flag-url="https://www.clientfunnels.io/img/flags/qa.png">
+                                                                                +974 - Qatar										</option>
+                                                                            <option value="RE" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
+                                                                                +262 - Réunion										</option>
+                                                                            <option value="RO" data-flag-url="https://www.clientfunnels.io/img/flags/ro.png">
+                                                                                +40 - Romania										</option>
+                                                                            <option value="RS" data-flag-url="https://www.clientfunnels.io/img/flags/rs.png">
+                                                                                +381 - Serbia										</option>
+                                                                            <option value="RU" data-flag-url="https://www.clientfunnels.io/img/flags/ru.png">
+                                                                                +7 - Russian Federation										</option>
+                                                                            <option value="RW" data-flag-url="https://www.clientfunnels.io/img/flags/rw.png">
+                                                                                +250 - Rwanda										</option>
+                                                                            <option value="SA" data-flag-url="https://www.clientfunnels.io/img/flags/sa.png">
+                                                                                +966 - Saudi Arabia										</option>
+                                                                            <option value="SB" data-flag-url="https://www.clientfunnels.io/img/flags/sb.png">
+                                                                                +677 - Solomon Islands										</option>
+                                                                            <option value="SC" data-flag-url="https://www.clientfunnels.io/img/flags/sc.png">
+                                                                                +248 - Seychelles										</option>
+                                                                            <option value="SD" data-flag-url="https://www.clientfunnels.io/img/flags/sd.png">
+                                                                                +249 - Sudan										</option>
+                                                                            <option value="SE" data-flag-url="https://www.clientfunnels.io/img/flags/se.png">
+                                                                                +46 - Sweden										</option>
+                                                                            <option value="SG" data-flag-url="https://www.clientfunnels.io/img/flags/sg.png">
+                                                                                +65 - Singapore										</option>
+                                                                            <option value="SH" data-flag-url="https://www.clientfunnels.io/img/flags/sh.png">
+                                                                                +290 - Saint Helena, Ascension and Tristan da Cunha										</option>
+                                                                            <option value="SI" data-flag-url="https://www.clientfunnels.io/img/flags/si.png">
+                                                                                +386 - Slovenia										</option>
+                                                                            <option value="SJ" data-flag-url="https://www.clientfunnels.io/img/flags/no.png">
+                                                                                +47 - Svalbard and Jan Mayen										</option>
+                                                                            <option value="SK" data-flag-url="https://www.clientfunnels.io/img/flags/sk.png">
+                                                                                +421 - Slovakia										</option>
+                                                                            <option value="SL" data-flag-url="https://www.clientfunnels.io/img/flags/sl.png">
+                                                                                +232 - Sierra Leone										</option>
+                                                                            <option value="SM" data-flag-url="https://www.clientfunnels.io/img/flags/sm.png">
+                                                                                +378 - San Marino										</option>
+                                                                            <option value="SN" data-flag-url="https://www.clientfunnels.io/img/flags/sn.png">
+                                                                                +221 - Senegal										</option>
+                                                                            <option value="SO" data-flag-url="https://www.clientfunnels.io/img/flags/so.png">
+                                                                                +252 - Somalia										</option>
+                                                                            <option value="SR" data-flag-url="https://www.clientfunnels.io/img/flags/sr.png">
+                                                                                +597 - Suriname										</option>
+                                                                            <option value="SS" data-flag-url="https://www.clientfunnels.io/img/flags/ss.png">
+                                                                                +211 - South Sudan										</option>
+                                                                            <option value="ST" data-flag-url="https://www.clientfunnels.io/img/flags/st.png">
+                                                                                +239 - Sao Tome and Principe										</option>
+                                                                            <option value="SV" data-flag-url="https://www.clientfunnels.io/img/flags/sv.png">
+                                                                                +503 - El Salvador										</option>
+                                                                            <option value="SX" data-flag-url="https://www.clientfunnels.io/img/flags/sx.png">
+                                                                                +1721 - Sint Maarten (Dutch part)										</option>
+                                                                            <option value="SY" data-flag-url="https://www.clientfunnels.io/img/flags/sy.png">
+                                                                                +963 - Syrian Arab Republic										</option>
+                                                                            <option value="SZ" data-flag-url="https://www.clientfunnels.io/img/flags/sz.png">
+                                                                                +268 - Eswatini										</option>
+                                                                            <option value="TC" data-flag-url="https://www.clientfunnels.io/img/flags/tc.png">
+                                                                                +1649 - Turks and Caicos Islands										</option>
+                                                                            <option value="TD" data-flag-url="https://www.clientfunnels.io/img/flags/td.png">
+                                                                                +235 - Chad										</option>
+                                                                            <option value="TG" data-flag-url="https://www.clientfunnels.io/img/flags/tg.png">
+                                                                                +228 - Togo										</option>
+                                                                            <option value="TH" data-flag-url="https://www.clientfunnels.io/img/flags/th.png">
+                                                                                +66 - Thailand										</option>
+                                                                            <option value="TJ" data-flag-url="https://www.clientfunnels.io/img/flags/tj.png">
+                                                                                +992 - Tajikistan										</option>
+                                                                            <option value="TK" data-flag-url="https://www.clientfunnels.io/img/flags/tk.png">
+                                                                                +690 - Tokelau										</option>
+                                                                            <option value="TL" data-flag-url="https://www.clientfunnels.io/img/flags/tl.png">
+                                                                                +670 - Timor-Leste										</option>
+                                                                            <option value="TM" data-flag-url="https://www.clientfunnels.io/img/flags/tm.png">
+                                                                                +993 - Turkmenistan										</option>
+                                                                            <option value="TN" data-flag-url="https://www.clientfunnels.io/img/flags/tn.png">
+                                                                                +216 - Tunisia										</option>
+                                                                            <option value="TO" data-flag-url="https://www.clientfunnels.io/img/flags/to.png">
+                                                                                +676 - Tonga										</option>
+                                                                            <option value="TR" data-flag-url="https://www.clientfunnels.io/img/flags/tr.png">
+                                                                                +90 - Turkey										</option>
+                                                                            <option value="TT" data-flag-url="https://www.clientfunnels.io/img/flags/tt.png">
+                                                                                +1868 - Trinidad and Tobago										</option>
+                                                                            <option value="TV" data-flag-url="https://www.clientfunnels.io/img/flags/tv.png">
+                                                                                +688 - Tuvalu										</option>
+                                                                            <option value="TW" data-flag-url="https://www.clientfunnels.io/img/flags/tw.png">
+                                                                                +886 - Taiwan, Province of China										</option>
+                                                                            <option value="TZ" data-flag-url="https://www.clientfunnels.io/img/flags/tz.png">
+                                                                                +255 - Tanzania, United Republic of										</option>
+                                                                            <option value="UA" data-flag-url="https://www.clientfunnels.io/img/flags/ua.png">
+                                                                                +380 - Ukraine										</option>
+                                                                            <option value="UG" data-flag-url="https://www.clientfunnels.io/img/flags/ug.png">
+                                                                                +256 - Uganda										</option>
+                                                                            <option value="US" data-flag-url="https://www.clientfunnels.io/img/flags/us.png">
+                                                                                +1 - United States of America										</option>
+                                                                            <option value="UY" data-flag-url="https://www.clientfunnels.io/img/flags/uy.png">
+                                                                                +598 - Uruguay										</option>
+                                                                            <option value="UZ" data-flag-url="https://www.clientfunnels.io/img/flags/uz.png">
+                                                                                +998 - Uzbekistan										</option>
+                                                                            <option value="VA" data-flag-url="https://www.clientfunnels.io/img/flags/va.png">
+                                                                                +379 - Holy See										</option>
+                                                                            <option value="VC" data-flag-url="https://www.clientfunnels.io/img/flags/vc.png">
+                                                                                +1784 - Saint Vincent and the Grenadines										</option>
+                                                                            <option value="VE" data-flag-url="https://www.clientfunnels.io/img/flags/ve.png">
+                                                                                +58 - Venezuela (Bolivarian Republic of)										</option>
+                                                                            <option value="VG" data-flag-url="https://www.clientfunnels.io/img/flags/vg.png">
+                                                                                +1284 - Virgin Islands (British)										</option>
+                                                                            <option value="VI" data-flag-url="https://www.clientfunnels.io/img/flags/vi.png">
+                                                                                +1340 - Virgin Islands (U.S.)										</option>
+                                                                            <option value="VN" data-flag-url="https://www.clientfunnels.io/img/flags/vn.png">
+                                                                                +84 - Vietnam										</option>
+                                                                            <option value="VU" data-flag-url="https://www.clientfunnels.io/img/flags/vu.png">
+                                                                                +678 - Vanuatu										</option>
+                                                                            <option value="WF" data-flag-url="https://www.clientfunnels.io/img/flags/wf.png">
+                                                                                +681 - Wallis and Futuna										</option>
+                                                                            <option value="WS" data-flag-url="https://www.clientfunnels.io/img/flags/ws.png">
+                                                                                +685 - Samoa										</option>
+                                                                            <option value="YE" data-flag-url="https://www.clientfunnels.io/img/flags/ye.png">
+                                                                                +967 - Yemen										</option>
+                                                                            <option value="YT" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
+                                                                                +262 - Mayotte										</option>
+                                                                            <option value="ZA" data-flag-url="https://www.clientfunnels.io/img/flags/za.png">
+                                                                                +27 - South Africa										</option>
+                                                                            <option value="ZM" data-flag-url="https://www.clientfunnels.io/img/flags/zm.png">
+                                                                                +260 - Zambia										</option>
+                                                                            <option value="ZW" data-flag-url="https://www.clientfunnels.io/img/flags/zw.png">
+                                                                                +263 - Zimbabwe										</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label for="new-booking-mobile" class="bmd-label-floating"> Mobile <span class="required">*</span></label>
+                                                                            <input type="text" class="form-control" id="new-booking-mobile" required="true" name="mobile" value="+923102323700" maxlength="25">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <hr>
+                                                                <h4>Choose Call Slot</h4>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <label for="new-booking-call-day" class="bmd-label-floating"> Slot<span class="required">*</span></label>
+                                                                            <select class="form-control" required style="width: 100%" name="call_slot">
+                                                                                <option value="">--- Select ---</option>
+                                                                                <option value="2:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                                                                    2:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                                                                <option value="5:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                                                                    5:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                                                                <option value="7:00 PM - {{date('d F Y',strtotime("+1 day"))}}">
+                                                                                    7:00 PM - {{date('d F Y',strtotime("+1 day"))}}</option>
+                                                                                <option value="5:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                                                                    5:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                                                                <option value="7:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                                                                    7:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                                                                <option value="9:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                                                                    9:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                                                                <option value="11:00 PM - {{date('d F Y',strtotime("+2 day"))}}">
+                                                                                    11:00 PM - {{date('d F Y',strtotime("+2 day"))}}</option>
+                                                                                <option value="1:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                                                                    1:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                                                                <option value="5:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                                                                    5:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                                                                <option value="7:00 PM - {{date('d F Y',strtotime("+3 day"))}}">
+                                                                                    7:00 PM - {{date('d F Y',strtotime("+3 day"))}}</option>
+                                                                                <option value="1:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                                                                    1:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                                                                <option value="5:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                                                                    5:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                                                                <option value="7:00 PM - {{date('d F Y',strtotime("+4 day"))}}">
+                                                                                    7:00 PM - {{date('d F Y',strtotime("+4 day"))}}</option>
+                                                                                <option value="1:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                                                                    1:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                                                                <option value="5:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                                                                    5:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                                                                <option value="7:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                                                                    7:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                                                                <option value="3:00 PM - {{date('d F Y',strtotime("+5 day"))}}">
+                                                                                    3:00 PM - {{date('d F Y',strtotime("+5 day"))}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger pull-left cancel-new-booking" data-dismiss="modal">Cancel</button>
+
+                                                                <button type="submit" class="btn btn-success pull-right" id="submit">
+                                                                    Book!
+                                                                </button>
+                                                                <script>
+                                                                    $('#submit').click(function (e) {
+                                                                        $('#new-booking-form').hide();
+                                                                        $('#slot_loader').show();
+                                                                    });
+                                                                </script>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
 
                         </div>
@@ -1273,13 +1882,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
 
 </div>
 
@@ -1387,608 +1989,7 @@
         </div>
     </div>
 </div>
-<!-- Booking Modal -->
-<div id="booking-modal" class="modal hmodal-success" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="color-line"></div>
-            <div class="modal-header">
-                <h5 class="modal-title">Please Select A Suitable Call Slot Below</h5>
-            </div>
 
-            <div class="modal-messages"></div>
-            <div class="modal-loading">
-                <img src="https://www.clientfunnels.io/img/loading-blob.gif" class="img-responsive modal-img-center"> Booking Your Call
-            </div>
-
-            <form id="new-booking-form" class="form-horizontal live-form-validation">
-
-                <input type="hidden" name="rh" value="a5c185ab965f5550abafc3675b37a152">
-                <input type="hidden" name="campaign_id" value="785">
-                <input type="hidden" name="time_zone" value="">
-
-                <div class="modal-body">
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <p>Enter Your Details below to book a call with us.</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="new-booking-name" class="bmd-label-floating"> Name <span class="required">*</span></label>
-                                <input type="text" class="form-control" id="new-booking-name" required="true" name="name" value="owais uddin gilani" maxlength="50">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="new-booking-email" class="bmd-label-floating"> Email <span class="required">*</span></label>
-                                <input type="email" class="form-control" id="new-booking-email" required="true" name="email" value="owaisuddingilani@gmail.com" maxlength="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <label for="new-booking-mobile" class="bmd-label-floating"> Country Code <span class="required">*</span></label>
-                            <div class="select2-container m-b country-code-select2" id="s2id_autogen2" style="width: 100%"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3"><img class="flag" src="https://www.clientfunnels.io/img/flags/pk.png">
-											+92 - Pakistan										</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><select class="m-b country-code-select2" name="country_code" style="width: 100%; display: none;" tabindex="-1" title="">
-                                <option value="">--- Country Code ---</option>
-                                <option value="AD" data-flag-url="https://www.clientfunnels.io/img/flags/ad.png">
-                                    +376 - Andorra										</option>
-                                <option value="AE" data-flag-url="https://www.clientfunnels.io/img/flags/ae.png">
-                                    +971 - United Arab Emirates										</option>
-                                <option value="AF" data-flag-url="https://www.clientfunnels.io/img/flags/af.png">
-                                    +93 - Afghanistan										</option>
-                                <option value="AG" data-flag-url="https://www.clientfunnels.io/img/flags/ag.png">
-                                    +1268 - Antigua and Barbuda										</option>
-                                <option value="AI" data-flag-url="https://www.clientfunnels.io/img/flags/ai.png">
-                                    +1264 - Anguilla										</option>
-                                <option value="AL" data-flag-url="https://www.clientfunnels.io/img/flags/al.png">
-                                    +355 - Albania										</option>
-                                <option value="AM" data-flag-url="https://www.clientfunnels.io/img/flags/am.png">
-                                    +374 - Armenia										</option>
-                                <option value="AO" data-flag-url="https://www.clientfunnels.io/img/flags/ao.png">
-                                    +244 - Angola										</option>
-                                <option value="AQ" data-flag-url="https://www.clientfunnels.io/img/flags/aq.png">
-                                    +672 - Antarctica										</option>
-                                <option value="AR" data-flag-url="https://www.clientfunnels.io/img/flags/ar.png">
-                                    +54 - Argentina										</option>
-                                <option value="AS" data-flag-url="https://www.clientfunnels.io/img/flags/as.png">
-                                    +1684 - American Samoa										</option>
-                                <option value="AT" data-flag-url="https://www.clientfunnels.io/img/flags/at.png">
-                                    +43 - Austria										</option>
-                                <option value="AU" data-flag-url="https://www.clientfunnels.io/img/flags/au.png">
-                                    +61 - Australia										</option>
-                                <option value="AW" data-flag-url="https://www.clientfunnels.io/img/flags/aw.png">
-                                    +297 - Aruba										</option>
-                                <option value="AZ" data-flag-url="https://www.clientfunnels.io/img/flags/az.png">
-                                    +994 - Azerbaijan										</option>
-                                <option value="BA" data-flag-url="https://www.clientfunnels.io/img/flags/ba.png">
-                                    +387 - Bosnia and Herzegovina										</option>
-                                <option value="BB" data-flag-url="https://www.clientfunnels.io/img/flags/bb.png">
-                                    +1 - Barbados										</option>
-                                <option value="BD" data-flag-url="https://www.clientfunnels.io/img/flags/bd.png">
-                                    +880 - Bangladesh										</option>
-                                <option value="BE" data-flag-url="https://www.clientfunnels.io/img/flags/be.png">
-                                    +32 - Belgium										</option>
-                                <option value="BF" data-flag-url="https://www.clientfunnels.io/img/flags/bf.png">
-                                    +226 - Burkina Faso										</option>
-                                <option value="BG" data-flag-url="https://www.clientfunnels.io/img/flags/bg.png">
-                                    +359 - Bulgaria										</option>
-                                <option value="BH" data-flag-url="https://www.clientfunnels.io/img/flags/bh.png">
-                                    +973 - Bahrain										</option>
-                                <option value="BI" data-flag-url="https://www.clientfunnels.io/img/flags/bi.png">
-                                    +257 - Burundi										</option>
-                                <option value="BJ" data-flag-url="https://www.clientfunnels.io/img/flags/bj.png">
-                                    +229 - Benin										</option>
-                                <option value="BL" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
-                                    +590 - Saint Barthélemy										</option>
-                                <option value="BM" data-flag-url="https://www.clientfunnels.io/img/flags/bm.png">
-                                    +1441 - Bermuda										</option>
-                                <option value="BN" data-flag-url="https://www.clientfunnels.io/img/flags/bn.png">
-                                    +673 - Brunei Darussalam										</option>
-                                <option value="BO" data-flag-url="https://www.clientfunnels.io/img/flags/bo.png">
-                                    +591 - Bolivia (Plurinational State of)										</option>
-                                <option value="BR" data-flag-url="https://www.clientfunnels.io/img/flags/br.png">
-                                    +55 - Brazil										</option>
-                                <option value="BS" data-flag-url="https://www.clientfunnels.io/img/flags/bs.png">
-                                    +1242 - Bahamas										</option>
-                                <option value="BT" data-flag-url="https://www.clientfunnels.io/img/flags/bt.png">
-                                    +975 - Bhutan										</option>
-                                <option value="BW" data-flag-url="https://www.clientfunnels.io/img/flags/bw.png">
-                                    +267 - Botswana										</option>
-                                <option value="BY" data-flag-url="https://www.clientfunnels.io/img/flags/by.png">
-                                    +375 - Belarus										</option>
-                                <option value="BZ" data-flag-url="https://www.clientfunnels.io/img/flags/bz.png">
-                                    +501 - Belize										</option>
-                                <option value="CA" data-flag-url="https://www.clientfunnels.io/img/flags/ca.png">
-                                    +1 - Canada										</option>
-                                <option value="CC" data-flag-url="https://www.clientfunnels.io/img/flags/cc.png">
-                                    +61 - Cocos (Keeling) Islands										</option>
-                                <option value="CD" data-flag-url="https://www.clientfunnels.io/img/flags/cd.png">
-                                    +243 - Congo, Democratic Republic of the										</option>
-                                <option value="CF" data-flag-url="https://www.clientfunnels.io/img/flags/cf.png">
-                                    +236 - Central African Republic										</option>
-                                <option value="CG" data-flag-url="https://www.clientfunnels.io/img/flags/cg.png">
-                                    +242 - Congo										</option>
-                                <option value="CH" data-flag-url="https://www.clientfunnels.io/img/flags/ch.png">
-                                    +41 - Switzerland										</option>
-                                <option value="CI" data-flag-url="https://www.clientfunnels.io/img/flags/ci.png">
-                                    +225 - Côte d'Ivoire										</option>
-                                <option value="CK" data-flag-url="https://www.clientfunnels.io/img/flags/ck.png">
-                                    +682 - Cook Islands										</option>
-                                <option value="CL" data-flag-url="https://www.clientfunnels.io/img/flags/cl.png">
-                                    +56 - Chile										</option>
-                                <option value="CM" data-flag-url="https://www.clientfunnels.io/img/flags/cm.png">
-                                    +237 - Cameroon										</option>
-                                <option value="CN" data-flag-url="https://www.clientfunnels.io/img/flags/cn.png">
-                                    +86 - China										</option>
-                                <option value="CO" data-flag-url="https://www.clientfunnels.io/img/flags/co.png">
-                                    +57 - Colombia										</option>
-                                <option value="CR" data-flag-url="https://www.clientfunnels.io/img/flags/cr.png">
-                                    +506 - Costa Rica										</option>
-                                <option value="CU" data-flag-url="https://www.clientfunnels.io/img/flags/cu.png">
-                                    +53 - Cuba										</option>
-                                <option value="CV" data-flag-url="https://www.clientfunnels.io/img/flags/cv.png">
-                                    +238 - Cabo Verde										</option>
-                                <option value="CW" data-flag-url="https://www.clientfunnels.io/img/flags/cw.png">
-                                    +599 - Curaçao										</option>
-                                <option value="CX" data-flag-url="https://www.clientfunnels.io/img/flags/cx.png">
-                                    +61 - Christmas Island										</option>
-                                <option value="CY" data-flag-url="https://www.clientfunnels.io/img/flags/cy.png">
-                                    +357 - Cyprus										</option>
-                                <option value="CZ" data-flag-url="https://www.clientfunnels.io/img/flags/cz.png">
-                                    +420 - Czechia										</option>
-                                <option value="DE" data-flag-url="https://www.clientfunnels.io/img/flags/de.png">
-                                    +49 - Germany										</option>
-                                <option value="DJ" data-flag-url="https://www.clientfunnels.io/img/flags/dj.png">
-                                    +253 - Djibouti										</option>
-                                <option value="DK" data-flag-url="https://www.clientfunnels.io/img/flags/dk.png">
-                                    +45 - Denmark										</option>
-                                <option value="DM" data-flag-url="https://www.clientfunnels.io/img/flags/dm.png">
-                                    +1767 - Dominica										</option>
-                                <option value="DO" data-flag-url="https://www.clientfunnels.io/img/flags/do.png">
-                                    +1829 - Dominican Republic										</option>
-                                <option value="DZ" data-flag-url="https://www.clientfunnels.io/img/flags/dz.png">
-                                    +213 - Algeria										</option>
-                                <option value="EC" data-flag-url="https://www.clientfunnels.io/img/flags/ec.png">
-                                    +593 - Ecuador										</option>
-                                <option value="EE" data-flag-url="https://www.clientfunnels.io/img/flags/ee.png">
-                                    +372 - Estonia										</option>
-                                <option value="EG" data-flag-url="https://www.clientfunnels.io/img/flags/eg.png">
-                                    +20 - Egypt										</option>
-                                <option value="EH" data-flag-url="https://www.clientfunnels.io/img/flags/eh.png">
-                                    +212 - Western Sahara										</option>
-                                <option value="ER" data-flag-url="https://www.clientfunnels.io/img/flags/er.png">
-                                    +291 - Eritrea										</option>
-                                <option value="ES" data-flag-url="https://www.clientfunnels.io/img/flags/es.png">
-                                    +34 - Spain										</option>
-                                <option value="ET" data-flag-url="https://www.clientfunnels.io/img/flags/et.png">
-                                    +251 - Ethiopia										</option>
-                                <option value="FI" data-flag-url="https://www.clientfunnels.io/img/flags/fi.png">
-                                    +358 - Finland										</option>
-                                <option value="FJ" data-flag-url="https://www.clientfunnels.io/img/flags/fj.png">
-                                    +679 - Fiji										</option>
-                                <option value="FK" data-flag-url="https://www.clientfunnels.io/img/flags/fk.png">
-                                    +500 - Falkland Islands (Malvinas)										</option>
-                                <option value="FM" data-flag-url="https://www.clientfunnels.io/img/flags/fm.png">
-                                    +691 - Micronesia (Federated States of)										</option>
-                                <option value="FO" data-flag-url="https://www.clientfunnels.io/img/flags/fo.png">
-                                    +298 - Faroe Islands										</option>
-                                <option value="FR" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
-                                    +33 - France										</option>
-                                <option value="GA" data-flag-url="https://www.clientfunnels.io/img/flags/ga.png">
-                                    +241 - Gabon										</option>
-                                <option value="GB" data-flag-url="https://www.clientfunnels.io/img/flags/gb.png">
-                                    +44 - United Kingdom of Great Britain and Northern Ireland										</option>
-                                <option value="GD" data-flag-url="https://www.clientfunnels.io/img/flags/gd.png">
-                                    +1473 - Grenada										</option>
-                                <option value="GE" data-flag-url="https://www.clientfunnels.io/img/flags/ge.png">
-                                    +995 - Georgia										</option>
-                                <option value="GG" data-flag-url="https://www.clientfunnels.io/img/flags/gg.png">
-                                    +441481 - Guernsey										</option>
-                                <option value="GH" data-flag-url="https://www.clientfunnels.io/img/flags/gh.png">
-                                    +233 - Ghana										</option>
-                                <option value="GI" data-flag-url="https://www.clientfunnels.io/img/flags/gi.png">
-                                    +350 - Gibraltar										</option>
-                                <option value="GL" data-flag-url="https://www.clientfunnels.io/img/flags/gl.png">
-                                    +299 - Greenland										</option>
-                                <option value="GM" data-flag-url="https://www.clientfunnels.io/img/flags/gm.png">
-                                    +220 - Gambia										</option>
-                                <option value="GN" data-flag-url="https://www.clientfunnels.io/img/flags/gn.png">
-                                    +224 - Guinea										</option>
-                                <option value="GQ" data-flag-url="https://www.clientfunnels.io/img/flags/gq.png">
-                                    +240 - Equatorial Guinea										</option>
-                                <option value="GR" data-flag-url="https://www.clientfunnels.io/img/flags/gr.png">
-                                    +30 - Greece										</option>
-                                <option value="GT" data-flag-url="https://www.clientfunnels.io/img/flags/gt.png">
-                                    +502 - Guatemala										</option>
-                                <option value="GU" data-flag-url="https://www.clientfunnels.io/img/flags/gu.png">
-                                    +1671 - Guam										</option>
-                                <option value="GW" data-flag-url="https://www.clientfunnels.io/img/flags/gw.png">
-                                    +245 - Guinea-Bissau										</option>
-                                <option value="GY" data-flag-url="https://www.clientfunnels.io/img/flags/gy.png">
-                                    +592 - Guyana										</option>
-                                <option value="HK" data-flag-url="https://www.clientfunnels.io/img/flags/hk.png">
-                                    +852 - Hong Kong										</option>
-                                <option value="HN" data-flag-url="https://www.clientfunnels.io/img/flags/hn.png">
-                                    +504 - Honduras										</option>
-                                <option value="HR" data-flag-url="https://www.clientfunnels.io/img/flags/hr.png">
-                                    +385 - Croatia										</option>
-                                <option value="HT" data-flag-url="https://www.clientfunnels.io/img/flags/ht.png">
-                                    +509 - Haiti										</option>
-                                <option value="HU" data-flag-url="https://www.clientfunnels.io/img/flags/hu.png">
-                                    +36 - Hungary										</option>
-                                <option value="ID" data-flag-url="https://www.clientfunnels.io/img/flags/id.png">
-                                    +62 - Indonesia										</option>
-                                <option value="IE" data-flag-url="https://www.clientfunnels.io/img/flags/ie.png">
-                                    +353 - Ireland										</option>
-                                <option value="IL" data-flag-url="https://www.clientfunnels.io/img/flags/il.png">
-                                    +972 - Israel										</option>
-                                <option value="IM" data-flag-url="https://www.clientfunnels.io/img/flags/im.png">
-                                    +441624 - Isle of Man										</option>
-                                <option value="IN" data-flag-url="https://www.clientfunnels.io/img/flags/in.png">
-                                    +91 - India										</option>
-                                <option value="IO" data-flag-url="https://www.clientfunnels.io/img/flags/io.png">
-                                    +246 - British Indian Ocean Territory										</option>
-                                <option value="IQ" data-flag-url="https://www.clientfunnels.io/img/flags/iq.png">
-                                    +964 - Iraq										</option>
-                                <option value="IR" data-flag-url="https://www.clientfunnels.io/img/flags/ir.png">
-                                    +98 - Iran (Islamic Republic of)										</option>
-                                <option value="IS" data-flag-url="https://www.clientfunnels.io/img/flags/is.png">
-                                    +354 - Iceland										</option>
-                                <option value="IT" data-flag-url="https://www.clientfunnels.io/img/flags/it.png">
-                                    +39 - Italy										</option>
-                                <option value="JE" data-flag-url="https://www.clientfunnels.io/img/flags/je.png">
-                                    +441534 - Jersey										</option>
-                                <option value="JM" data-flag-url="https://www.clientfunnels.io/img/flags/jm.png">
-                                    +1876 - Jamaica										</option>
-                                <option value="JO" data-flag-url="https://www.clientfunnels.io/img/flags/jo.png">
-                                    +962 - Jordan										</option>
-                                <option value="JP" data-flag-url="https://www.clientfunnels.io/img/flags/jp.png">
-                                    +81 - Japan										</option>
-                                <option value="KE" data-flag-url="https://www.clientfunnels.io/img/flags/ke.png">
-                                    +254 - Kenya										</option>
-                                <option value="KG" data-flag-url="https://www.clientfunnels.io/img/flags/kg.png">
-                                    +996 - Kyrgyzstan										</option>
-                                <option value="KH" data-flag-url="https://www.clientfunnels.io/img/flags/kh.png">
-                                    +855 - Cambodia										</option>
-                                <option value="KI" data-flag-url="https://www.clientfunnels.io/img/flags/ki.png">
-                                    +686 - Kiribati										</option>
-                                <option value="KM" data-flag-url="https://www.clientfunnels.io/img/flags/km.png">
-                                    +269 - Comoros										</option>
-                                <option value="KN" data-flag-url="https://www.clientfunnels.io/img/flags/kn.png">
-                                    +1869 - Saint Kitts and Nevis										</option>
-                                <option value="KP" data-flag-url="https://www.clientfunnels.io/img/flags/kp.png">
-                                    +850 - Korea (Democratic People's Republic of)										</option>
-                                <option value="KR" data-flag-url="https://www.clientfunnels.io/img/flags/kr.png">
-                                    +82 - Korea, Republic of										</option>
-                                <option value="KW" data-flag-url="https://www.clientfunnels.io/img/flags/kw.png">
-                                    +965 - Kuwait										</option>
-                                <option value="KY" data-flag-url="https://www.clientfunnels.io/img/flags/ky.png">
-                                    +1345 - Cayman Islands										</option>
-                                <option value="KZ" data-flag-url="https://www.clientfunnels.io/img/flags/kz.png">
-                                    +7 - Kazakhstan										</option>
-                                <option value="LA" data-flag-url="https://www.clientfunnels.io/img/flags/la.png">
-                                    +856 - Lao People's Democratic Republic										</option>
-                                <option value="LB" data-flag-url="https://www.clientfunnels.io/img/flags/lb.png">
-                                    +961 - Lebanon										</option>
-                                <option value="LC" data-flag-url="https://www.clientfunnels.io/img/flags/lc.png">
-                                    +1758 - Saint Lucia										</option>
-                                <option value="LI" data-flag-url="https://www.clientfunnels.io/img/flags/li.png">
-                                    +423 - Liechtenstein										</option>
-                                <option value="LK" data-flag-url="https://www.clientfunnels.io/img/flags/lk.png">
-                                    +94 - Sri Lanka										</option>
-                                <option value="LR" data-flag-url="https://www.clientfunnels.io/img/flags/lr.png">
-                                    +231 - Liberia										</option>
-                                <option value="LS" data-flag-url="https://www.clientfunnels.io/img/flags/ls.png">
-                                    +266 - Lesotho										</option>
-                                <option value="LT" data-flag-url="https://www.clientfunnels.io/img/flags/lt.png">
-                                    +370 - Lithuania										</option>
-                                <option value="LU" data-flag-url="https://www.clientfunnels.io/img/flags/lu.png">
-                                    +352 - Luxembourg										</option>
-                                <option value="LV" data-flag-url="https://www.clientfunnels.io/img/flags/lv.png">
-                                    +371 - Latvia										</option>
-                                <option value="LY" data-flag-url="https://www.clientfunnels.io/img/flags/ly.png">
-                                    +218 - Libya										</option>
-                                <option value="MA" data-flag-url="https://www.clientfunnels.io/img/flags/ma.png">
-                                    +212 - Morocco										</option>
-                                <option value="MC" data-flag-url="https://www.clientfunnels.io/img/flags/mc.png">
-                                    +377 - Monaco										</option>
-                                <option value="MD" data-flag-url="https://www.clientfunnels.io/img/flags/md.png">
-                                    +373 - Moldova, Republic of										</option>
-                                <option value="ME" data-flag-url="https://www.clientfunnels.io/img/flags/me.png">
-                                    +382 - Montenegro										</option>
-                                <option value="MF" data-flag-url="https://www.clientfunnels.io/img/flags/mf.png">
-                                    +590 - Saint Martin (French part)										</option>
-                                <option value="MG" data-flag-url="https://www.clientfunnels.io/img/flags/mg.png">
-                                    +261 - Madagascar										</option>
-                                <option value="MH" data-flag-url="https://www.clientfunnels.io/img/flags/mh.png">
-                                    +692 - Marshall Islands										</option>
-                                <option value="MK" data-flag-url="https://www.clientfunnels.io/img/flags/mk.png">
-                                    +389 - North Macedonia										</option>
-                                <option value="ML" data-flag-url="https://www.clientfunnels.io/img/flags/ml.png">
-                                    +223 - Mali										</option>
-                                <option value="MM" data-flag-url="https://www.clientfunnels.io/img/flags/mm.png">
-                                    +95 - Myanmar										</option>
-                                <option value="MN" data-flag-url="https://www.clientfunnels.io/img/flags/mn.png">
-                                    +976 - Mongolia										</option>
-                                <option value="MO" data-flag-url="https://www.clientfunnels.io/img/flags/mo.png">
-                                    +853 - Macao										</option>
-                                <option value="MP" data-flag-url="https://www.clientfunnels.io/img/flags/mp.png">
-                                    +1670 - Northern Mariana Islands										</option>
-                                <option value="MR" data-flag-url="https://www.clientfunnels.io/img/flags/mr.png">
-                                    +222 - Mauritania										</option>
-                                <option value="MS" data-flag-url="https://www.clientfunnels.io/img/flags/ms.png">
-                                    +1664 - Montserrat										</option>
-                                <option value="MT" data-flag-url="https://www.clientfunnels.io/img/flags/mt.png">
-                                    +356 - Malta										</option>
-                                <option value="MU" data-flag-url="https://www.clientfunnels.io/img/flags/mu.png">
-                                    +230 - Mauritius										</option>
-                                <option value="MV" data-flag-url="https://www.clientfunnels.io/img/flags/mv.png">
-                                    +960 - Maldives										</option>
-                                <option value="MW" data-flag-url="https://www.clientfunnels.io/img/flags/mw.png">
-                                    +265 - Malawi										</option>
-                                <option value="MX" data-flag-url="https://www.clientfunnels.io/img/flags/mx.png">
-                                    +52 - Mexico										</option>
-                                <option value="MY" data-flag-url="https://www.clientfunnels.io/img/flags/my.png">
-                                    +60 - Malaysia										</option>
-                                <option value="MZ" data-flag-url="https://www.clientfunnels.io/img/flags/mz.png">
-                                    +258 - Mozambique										</option>
-                                <option value="NA" data-flag-url="https://www.clientfunnels.io/img/flags/na.png">
-                                    +264 - Namibia										</option>
-                                <option value="NC" data-flag-url="https://www.clientfunnels.io/img/flags/nc.png">
-                                    +687 - New Caledonia										</option>
-                                <option value="NE" data-flag-url="https://www.clientfunnels.io/img/flags/ne.png">
-                                    +227 - Niger										</option>
-                                <option value="NG" data-flag-url="https://www.clientfunnels.io/img/flags/ng.png">
-                                    +234 - Nigeria										</option>
-                                <option value="NI" data-flag-url="https://www.clientfunnels.io/img/flags/ni.png">
-                                    +505 - Nicaragua										</option>
-                                <option value="NL" data-flag-url="https://www.clientfunnels.io/img/flags/nl.png">
-                                    +31 - Netherlands										</option>
-                                <option value="NO" data-flag-url="https://www.clientfunnels.io/img/flags/no.png">
-                                    +47 - Norway										</option>
-                                <option value="NP" data-flag-url="https://www.clientfunnels.io/img/flags/np.png">
-                                    +977 - Nepal										</option>
-                                <option value="NR" data-flag-url="https://www.clientfunnels.io/img/flags/nr.png">
-                                    +674 - Nauru										</option>
-                                <option value="NU" data-flag-url="https://www.clientfunnels.io/img/flags/nu.png">
-                                    +683 - Niue										</option>
-                                <option value="NZ" data-flag-url="https://www.clientfunnels.io/img/flags/nz.png">
-                                    +64 - New Zealand										</option>
-                                <option value="OM" data-flag-url="https://www.clientfunnels.io/img/flags/om.png">
-                                    +968 - Oman										</option>
-                                <option value="PA" data-flag-url="https://www.clientfunnels.io/img/flags/pa.png">
-                                    +507 - Panama										</option>
-                                <option value="PE" data-flag-url="https://www.clientfunnels.io/img/flags/pe.png">
-                                    +51 - Peru										</option>
-                                <option value="PF" data-flag-url="https://www.clientfunnels.io/img/flags/pf.png">
-                                    +689 - French Polynesia										</option>
-                                <option value="PG" data-flag-url="https://www.clientfunnels.io/img/flags/pg.png">
-                                    +675 - Papua New Guinea										</option>
-                                <option value="PH" data-flag-url="https://www.clientfunnels.io/img/flags/ph.png">
-                                    +63 - Philippines										</option>
-                                <option value="PK" data-flag-url="https://www.clientfunnels.io/img/flags/pk.png">
-                                    +92 - Pakistan										</option>
-                                <option value="PL" data-flag-url="https://www.clientfunnels.io/img/flags/pl.png">
-                                    +48 - Poland										</option>
-                                <option value="PM" data-flag-url="https://www.clientfunnels.io/img/flags/pm.png">
-                                    +508 - Saint Pierre and Miquelon										</option>
-                                <option value="PN" data-flag-url="https://www.clientfunnels.io/img/flags/pn.png">
-                                    +64 - Pitcairn										</option>
-                                <option value="PR" data-flag-url="https://www.clientfunnels.io/img/flags/pr.png">
-                                    +1 - Puerto Rico										</option>
-                                <option value="PS" data-flag-url="https://www.clientfunnels.io/img/flags/ps.png">
-                                    +970 - Palestine, State of										</option>
-                                <option value="PT" data-flag-url="https://www.clientfunnels.io/img/flags/pt.png">
-                                    +351 - Portugal										</option>
-                                <option value="PW" data-flag-url="https://www.clientfunnels.io/img/flags/pw.png">
-                                    +680 - Palau										</option>
-                                <option value="PY" data-flag-url="https://www.clientfunnels.io/img/flags/py.png">
-                                    +595 - Paraguay										</option>
-                                <option value="QA" data-flag-url="https://www.clientfunnels.io/img/flags/qa.png">
-                                    +974 - Qatar										</option>
-                                <option value="RE" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
-                                    +262 - Réunion										</option>
-                                <option value="RO" data-flag-url="https://www.clientfunnels.io/img/flags/ro.png">
-                                    +40 - Romania										</option>
-                                <option value="RS" data-flag-url="https://www.clientfunnels.io/img/flags/rs.png">
-                                    +381 - Serbia										</option>
-                                <option value="RU" data-flag-url="https://www.clientfunnels.io/img/flags/ru.png">
-                                    +7 - Russian Federation										</option>
-                                <option value="RW" data-flag-url="https://www.clientfunnels.io/img/flags/rw.png">
-                                    +250 - Rwanda										</option>
-                                <option value="SA" data-flag-url="https://www.clientfunnels.io/img/flags/sa.png">
-                                    +966 - Saudi Arabia										</option>
-                                <option value="SB" data-flag-url="https://www.clientfunnels.io/img/flags/sb.png">
-                                    +677 - Solomon Islands										</option>
-                                <option value="SC" data-flag-url="https://www.clientfunnels.io/img/flags/sc.png">
-                                    +248 - Seychelles										</option>
-                                <option value="SD" data-flag-url="https://www.clientfunnels.io/img/flags/sd.png">
-                                    +249 - Sudan										</option>
-                                <option value="SE" data-flag-url="https://www.clientfunnels.io/img/flags/se.png">
-                                    +46 - Sweden										</option>
-                                <option value="SG" data-flag-url="https://www.clientfunnels.io/img/flags/sg.png">
-                                    +65 - Singapore										</option>
-                                <option value="SH" data-flag-url="https://www.clientfunnels.io/img/flags/sh.png">
-                                    +290 - Saint Helena, Ascension and Tristan da Cunha										</option>
-                                <option value="SI" data-flag-url="https://www.clientfunnels.io/img/flags/si.png">
-                                    +386 - Slovenia										</option>
-                                <option value="SJ" data-flag-url="https://www.clientfunnels.io/img/flags/no.png">
-                                    +47 - Svalbard and Jan Mayen										</option>
-                                <option value="SK" data-flag-url="https://www.clientfunnels.io/img/flags/sk.png">
-                                    +421 - Slovakia										</option>
-                                <option value="SL" data-flag-url="https://www.clientfunnels.io/img/flags/sl.png">
-                                    +232 - Sierra Leone										</option>
-                                <option value="SM" data-flag-url="https://www.clientfunnels.io/img/flags/sm.png">
-                                    +378 - San Marino										</option>
-                                <option value="SN" data-flag-url="https://www.clientfunnels.io/img/flags/sn.png">
-                                    +221 - Senegal										</option>
-                                <option value="SO" data-flag-url="https://www.clientfunnels.io/img/flags/so.png">
-                                    +252 - Somalia										</option>
-                                <option value="SR" data-flag-url="https://www.clientfunnels.io/img/flags/sr.png">
-                                    +597 - Suriname										</option>
-                                <option value="SS" data-flag-url="https://www.clientfunnels.io/img/flags/ss.png">
-                                    +211 - South Sudan										</option>
-                                <option value="ST" data-flag-url="https://www.clientfunnels.io/img/flags/st.png">
-                                    +239 - Sao Tome and Principe										</option>
-                                <option value="SV" data-flag-url="https://www.clientfunnels.io/img/flags/sv.png">
-                                    +503 - El Salvador										</option>
-                                <option value="SX" data-flag-url="https://www.clientfunnels.io/img/flags/sx.png">
-                                    +1721 - Sint Maarten (Dutch part)										</option>
-                                <option value="SY" data-flag-url="https://www.clientfunnels.io/img/flags/sy.png">
-                                    +963 - Syrian Arab Republic										</option>
-                                <option value="SZ" data-flag-url="https://www.clientfunnels.io/img/flags/sz.png">
-                                    +268 - Eswatini										</option>
-                                <option value="TC" data-flag-url="https://www.clientfunnels.io/img/flags/tc.png">
-                                    +1649 - Turks and Caicos Islands										</option>
-                                <option value="TD" data-flag-url="https://www.clientfunnels.io/img/flags/td.png">
-                                    +235 - Chad										</option>
-                                <option value="TG" data-flag-url="https://www.clientfunnels.io/img/flags/tg.png">
-                                    +228 - Togo										</option>
-                                <option value="TH" data-flag-url="https://www.clientfunnels.io/img/flags/th.png">
-                                    +66 - Thailand										</option>
-                                <option value="TJ" data-flag-url="https://www.clientfunnels.io/img/flags/tj.png">
-                                    +992 - Tajikistan										</option>
-                                <option value="TK" data-flag-url="https://www.clientfunnels.io/img/flags/tk.png">
-                                    +690 - Tokelau										</option>
-                                <option value="TL" data-flag-url="https://www.clientfunnels.io/img/flags/tl.png">
-                                    +670 - Timor-Leste										</option>
-                                <option value="TM" data-flag-url="https://www.clientfunnels.io/img/flags/tm.png">
-                                    +993 - Turkmenistan										</option>
-                                <option value="TN" data-flag-url="https://www.clientfunnels.io/img/flags/tn.png">
-                                    +216 - Tunisia										</option>
-                                <option value="TO" data-flag-url="https://www.clientfunnels.io/img/flags/to.png">
-                                    +676 - Tonga										</option>
-                                <option value="TR" data-flag-url="https://www.clientfunnels.io/img/flags/tr.png">
-                                    +90 - Turkey										</option>
-                                <option value="TT" data-flag-url="https://www.clientfunnels.io/img/flags/tt.png">
-                                    +1868 - Trinidad and Tobago										</option>
-                                <option value="TV" data-flag-url="https://www.clientfunnels.io/img/flags/tv.png">
-                                    +688 - Tuvalu										</option>
-                                <option value="TW" data-flag-url="https://www.clientfunnels.io/img/flags/tw.png">
-                                    +886 - Taiwan, Province of China										</option>
-                                <option value="TZ" data-flag-url="https://www.clientfunnels.io/img/flags/tz.png">
-                                    +255 - Tanzania, United Republic of										</option>
-                                <option value="UA" data-flag-url="https://www.clientfunnels.io/img/flags/ua.png">
-                                    +380 - Ukraine										</option>
-                                <option value="UG" data-flag-url="https://www.clientfunnels.io/img/flags/ug.png">
-                                    +256 - Uganda										</option>
-                                <option value="US" data-flag-url="https://www.clientfunnels.io/img/flags/us.png">
-                                    +1 - United States of America										</option>
-                                <option value="UY" data-flag-url="https://www.clientfunnels.io/img/flags/uy.png">
-                                    +598 - Uruguay										</option>
-                                <option value="UZ" data-flag-url="https://www.clientfunnels.io/img/flags/uz.png">
-                                    +998 - Uzbekistan										</option>
-                                <option value="VA" data-flag-url="https://www.clientfunnels.io/img/flags/va.png">
-                                    +379 - Holy See										</option>
-                                <option value="VC" data-flag-url="https://www.clientfunnels.io/img/flags/vc.png">
-                                    +1784 - Saint Vincent and the Grenadines										</option>
-                                <option value="VE" data-flag-url="https://www.clientfunnels.io/img/flags/ve.png">
-                                    +58 - Venezuela (Bolivarian Republic of)										</option>
-                                <option value="VG" data-flag-url="https://www.clientfunnels.io/img/flags/vg.png">
-                                    +1284 - Virgin Islands (British)										</option>
-                                <option value="VI" data-flag-url="https://www.clientfunnels.io/img/flags/vi.png">
-                                    +1340 - Virgin Islands (U.S.)										</option>
-                                <option value="VN" data-flag-url="https://www.clientfunnels.io/img/flags/vn.png">
-                                    +84 - Vietnam										</option>
-                                <option value="VU" data-flag-url="https://www.clientfunnels.io/img/flags/vu.png">
-                                    +678 - Vanuatu										</option>
-                                <option value="WF" data-flag-url="https://www.clientfunnels.io/img/flags/wf.png">
-                                    +681 - Wallis and Futuna										</option>
-                                <option value="WS" data-flag-url="https://www.clientfunnels.io/img/flags/ws.png">
-                                    +685 - Samoa										</option>
-                                <option value="YE" data-flag-url="https://www.clientfunnels.io/img/flags/ye.png">
-                                    +967 - Yemen										</option>
-                                <option value="YT" data-flag-url="https://www.clientfunnels.io/img/flags/fr.png">
-                                    +262 - Mayotte										</option>
-                                <option value="ZA" data-flag-url="https://www.clientfunnels.io/img/flags/za.png">
-                                    +27 - South Africa										</option>
-                                <option value="ZM" data-flag-url="https://www.clientfunnels.io/img/flags/zm.png">
-                                    +260 - Zambia										</option>
-                                <option value="ZW" data-flag-url="https://www.clientfunnels.io/img/flags/zw.png">
-                                    +263 - Zimbabwe										</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="new-booking-mobile" class="bmd-label-floating"> Mobile <span class="required">*</span></label>
-                                <input type="text" class="form-control" id="new-booking-mobile" required="true" name="mobile" value="+923102323700" maxlength="25">
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <h4>Choose Call Slot</h4>
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="new-booking-call-day" class="bmd-label-floating"> Slot<span class="required">*</span></label>
-                                <div class="select2-container js-source-states-2 m-b" id="s2id_new-booking-call-day" title=" Slot*" style="width: 100%;"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4">--- Select ---</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen"> Slot*</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen"> Slot*</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><select class="js-source-states-2 m-b" id="new-booking-call-day" name="call_slot" style="width: 100%; display: none;" title=" Slot*" tabindex="-1">			<option value="">--- Select ---</option>
-                                    <option value="1597050000">
-                                        2:00 PM - 10th August 2020					</option>
-                                    <option value="1597060800">
-                                        5:00 PM - 10th August 2020					</option>
-                                    <option value="1597068000">
-                                        7:00 PM - 10th August 2020					</option>
-                                    <option value="1597147200">
-                                        5:00 PM - 11th August 2020					</option>
-                                    <option value="1597154400">
-                                        7:00 PM - 11th August 2020					</option>
-                                    <option value="1597161600">
-                                        9:00 PM - 11th August 2020					</option>
-                                    <option value="1597168800">
-                                        11:00 PM - 11th August 2020					</option>
-                                    <option value="1597219200">
-                                        1:00 PM - 12th August 2020					</option>
-                                    <option value="1597233600">
-                                        5:00 PM - 12th August 2020					</option>
-                                    <option value="1597240800">
-                                        7:00 PM - 12th August 2020					</option>
-                                    <option value="1597305600">
-                                        1:00 PM - 13th August 2020					</option>
-                                    <option value="1597320000">
-                                        5:00 PM - 13th August 2020					</option>
-                                    <option value="1597327200">
-                                        7:00 PM - 13th August 2020					</option>
-                                    <option value="1597392000">
-                                        1:00 PM - 14th August 2020					</option>
-                                    <option value="1597406400">
-                                        5:00 PM - 14th August 2020					</option>
-                                    <option value="1597413600">
-                                        7:00 PM - 14th August 2020					</option>
-                                    <option value="1597485600">
-                                        3:00 PM - 15th August 2020					</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger pull-left cancel-new-booking">Cancel</button>
-
-                    <button type="submit" class="btn btn-success pull-right">
-                        Book!
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-</div>
-<!-- /Booking Modal -->
 
 
 <!-- Bootstrap core JavaScript -->
@@ -2002,14 +2003,3 @@
 </script>
 <script src="https://www.clientfunnels.io/vendor/cs-webinar/jquery/jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/vendor/cs-webinar/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://www.clientfunnels.io/js/plugins/sweetalert2.js"></script>
-<script src="https://vjs.zencdn.net/7.0.0/video.min.js"></script>
-<script src="https://www.clientfunnels.io/vendor/cs-webinar/js/videojs-contrib-hls.js"></script>
-<script src="https://www.clientfunnels.io/vendor/select2/select2.js"></script>
-<script src="https://www.clientfunnels.io/js/plugins/jstz.min.js"></script>
-<script src="https://www.clientfunnels.io/js/plugins/mobile-detect.min.js"></script>
-<script src="https://www.clientfunnels.io/vendor/cs-webinar/js/webinar.js?v=1.2.4"></script>
-
-
-
-<span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>

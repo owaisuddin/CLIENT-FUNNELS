@@ -1561,7 +1561,8 @@
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
         }
-    }</style>
+    }
+</style>
 <link href="https://www.clientfunnels.io/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet">
 <link href="https://www.clientfunnels.io/vendor/select2/select2.css" rel="stylesheet">
 <link href="https://www.clientfunnels.io/vendor/select2/select2-bootstrap.css" rel="stylesheet">
@@ -1668,16 +1669,18 @@
                                                 <i class="fa fa-arrow-left"></i> Campaigns List
                                             </a>
 
-                                            <a href="edit-campaign/{{$campaign['id']}}"
+                                            <a href="{{env('APP_URL').'/edit-campaign/'.$campaign->id}}"
                                                class="btn btn-warning">
                                                 <i class="fa fa-wrench"></i> Edit
                                             </a>
 
+                                            <a href="{{env('APP_URL').'/delete-campaign/'.$campaign->id}}">
                                             <button type="button"
                                                     class="btn btn-danger btn-sm pull-right delete-content"
                                                     data-type="campaign" data-id="735" data-message="Delete Campaign?">
                                                 <i class="fa fa-trash"></i> Delete
                                             </button>
+                                            </a>
                                         </div>
                                         <hr>
                                         <div class="row">
@@ -2352,66 +2355,27 @@
                                                                                 from 29/07/2020 till 29/07/2020</strong>
                                                                             <hr>
 
-                                                                            <form action="https://www.clientfunnels.io/campaigns/view/735?page=statistics"
-                                                                                  method="post">
+                                                                            <form action="https://www.clientfunnels.io/campaigns/view/735?page=statistics" method="post">
                                                                                 <div class="row">
                                                                                     <div class="col-sm-12">
                                                                                         <div class="form-group">
-                                                                                            <label for="vc-fs-scale"
-                                                                                                   class="bmd-label-floating">Timeframe
+                                                                                            <label for="vc-fs-scale" class="bmd-label-floating">Timeframe
                                                                                                 <span class="required">*</span></label>
-                                                                                            <div class="select2-container js-source-states-2 m-b"
-                                                                                                 id="s2id_vc-fs-scale"
-                                                                                                 style="width: 100%"><a
-                                                                                                        href="javascript:void(0)"
-                                                                                                        class="select2-choice"
-                                                                                                        tabindex="-1">
-                                                                                                    <span class="select2-chosen"
-                                                                                                          id="select2-chosen-1">Day</span><abbr
-                                                                                                            class="select2-search-choice-close"></abbr>
-                                                                                                    <span class="select2-arrow"
-                                                                                                          role="presentation"><b
-                                                                                                                role="presentation"></b></span></a><label
-                                                                                                        for="s2id_autogen1"
-                                                                                                        class="select2-offscreen">Timeframe
-                                                                                                    *</label><input
-                                                                                                        class="select2-focusser select2-offscreen"
-                                                                                                        type="text"
-                                                                                                        aria-haspopup="true"
-                                                                                                        role="button"
-                                                                                                        aria-labelledby="select2-chosen-1"
-                                                                                                        id="s2id_autogen1">
+                                                                                            <div class="select2-container js-source-states-2 m-b" id="s2id_vc-fs-scale" style="width: 100%"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+                                                                                                    <span class="select2-chosen" id="select2-chosen-1">Day</span><abbr class="select2-search-choice-close"></abbr>
+                                                                                                    <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen">Timeframe
+                                                                                                    *</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1">
                                                                                                 <div class="select2-drop select2-display-none select2-with-searchbox">
                                                                                                     <div class="select2-search">
-                                                                                                        <label for="s2id_autogen1_search"
-                                                                                                               class="select2-offscreen">Timeframe
+                                                                                                        <label for="s2id_autogen1_search" class="select2-offscreen">Timeframe
                                                                                                             *</label>
-                                                                                                        <input type="text"
-                                                                                                               autocomplete="off"
-                                                                                                               autocorrect="off"
-                                                                                                               autocapitalize="off"
-                                                                                                               spellcheck="false"
-                                                                                                               class="select2-input"
-                                                                                                               role="combobox"
-                                                                                                               aria-expanded="true"
-                                                                                                               aria-autocomplete="list"
-                                                                                                               aria-owns="select2-results-1"
-                                                                                                               id="s2id_autogen1_search"
-                                                                                                               placeholder="">
+                                                                                                        <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">
                                                                                                     </div>
-                                                                                                    <ul class="select2-results"
-                                                                                                        role="listbox"
-                                                                                                        id="select2-results-1"></ul>
+                                                                                                    <ul class="select2-results" role="listbox" id="select2-results-1"></ul>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <select class="js-source-states-2 m-b"
-                                                                                                    name="scale"
-                                                                                                    id="vc-fs-scale"
-                                                                                                    style="width: 100%; display: none;"
-                                                                                                    tabindex="-1"
-                                                                                                    title="Timeframe *">
-                                                                                                <option value="day"
-                                                                                                        selected="">Day
+                                                                                            <select class="js-source-states-2 m-b" name="scale" id="vc-fs-scale" style="width: 100%; display: none;" tabindex="-1" title="Timeframe *">
+                                                                                                <option value="day" selected="">Day
                                                                                                 </option>
                                                                                                 <option value="week">
                                                                                                     Week
@@ -2430,85 +2394,38 @@
                                                                                     </div>
                                                                                 </div>
 
-                                                                                <div class="row vc-fs-date-row"
-                                                                                     data-type="day">
+                                                                                <div class="row vc-fs-date-row" data-type="day">
                                                                                     <div class="col-sm-12">
                                                                                         <div class="form-group bmd-form-group is-filled">
-                                                                                            <label for="vc-fs-date"
-                                                                                                   class="bmd-label-floating">
-                                                                                                Date <span
-                                                                                                        class="required">*</span></label>
-                                                                                            <input type="text"
-                                                                                                   class="form-control st-datetimepicker"
-                                                                                                   id="vc-fs-date"
-                                                                                                   name="date"
-                                                                                                   value="29/07/2020">
+                                                                                            <label for="vc-fs-date" class="bmd-label-floating">
+                                                                                                Date <span class="required">*</span></label>
+                                                                                            <input type="text" class="form-control st-datetimepicker" id="vc-fs-date" name="date" value="29/07/2020">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
 
-                                                                                <div class="row vc-fs-date-row"
-                                                                                     data-type="month"
-                                                                                     style="display: none">
+                                                                                <div class="row vc-fs-date-row" data-type="month" style="display: none">
                                                                                     <div class="col-sm-12">
                                                                                         <div class="form-group">
-                                                                                            <label for="vc-fs-month"
-                                                                                                   class="bmd-label-floating">
-                                                                                                Month <span
-                                                                                                        class="required">*</span></label>
+                                                                                            <label for="vc-fs-month" class="bmd-label-floating">
+                                                                                                Month <span class="required">*</span></label>
 
-                                                                                            <div class="select2-container js-source-states-2 m-b"
-                                                                                                 id="s2id_vc-fs-month"
-                                                                                                 style="width: 100%"><a
-                                                                                                        href="javascript:void(0)"
-                                                                                                        class="select2-choice"
-                                                                                                        tabindex="-1">
-                                                                                                    <span class="select2-chosen"
-                                                                                                          id="select2-chosen-2">July</span><abbr
-                                                                                                            class="select2-search-choice-close"></abbr>
-                                                                                                    <span class="select2-arrow"
-                                                                                                          role="presentation"><b
-                                                                                                                role="presentation"></b></span></a><label
-                                                                                                        for="s2id_autogen2"
-                                                                                                        class="select2-offscreen">
+                                                                                            <div class="select2-container js-source-states-2 m-b" id="s2id_vc-fs-month" style="width: 100%"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+                                                                                                    <span class="select2-chosen" id="select2-chosen-2">July</span><abbr class="select2-search-choice-close"></abbr>
+                                                                                                    <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen">
                                                                                                     Month
-                                                                                                    *</label><input
-                                                                                                        class="select2-focusser select2-offscreen"
-                                                                                                        type="text"
-                                                                                                        aria-haspopup="true"
-                                                                                                        role="button"
-                                                                                                        aria-labelledby="select2-chosen-2"
-                                                                                                        id="s2id_autogen2">
+                                                                                                    *</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2">
                                                                                                 <div class="select2-drop select2-display-none select2-with-searchbox">
                                                                                                     <div class="select2-search">
-                                                                                                        <label for="s2id_autogen2_search"
-                                                                                                               class="select2-offscreen">
+                                                                                                        <label for="s2id_autogen2_search" class="select2-offscreen">
                                                                                                             Month
                                                                                                             *</label>
-                                                                                                        <input type="text"
-                                                                                                               autocomplete="off"
-                                                                                                               autocorrect="off"
-                                                                                                               autocapitalize="off"
-                                                                                                               spellcheck="false"
-                                                                                                               class="select2-input"
-                                                                                                               role="combobox"
-                                                                                                               aria-expanded="true"
-                                                                                                               aria-autocomplete="list"
-                                                                                                               aria-owns="select2-results-2"
-                                                                                                               id="s2id_autogen2_search"
-                                                                                                               placeholder="">
+                                                                                                        <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">
                                                                                                     </div>
-                                                                                                    <ul class="select2-results"
-                                                                                                        role="listbox"
-                                                                                                        id="select2-results-2"></ul>
+                                                                                                    <ul class="select2-results" role="listbox" id="select2-results-2"></ul>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <select class="js-source-states-2 m-b"
-                                                                                                    name="month"
-                                                                                                    id="vc-fs-month"
-                                                                                                    style="width: 100%; display: none;"
-                                                                                                    tabindex="-1"
-                                                                                                    title=" Month *">
+                                                                                            <select class="js-source-states-2 m-b" name="month" id="vc-fs-month" style="width: 100%; display: none;" tabindex="-1" title=" Month *">
                                                                                                 <option value="1">
                                                                                                     January
                                                                                                 </option>
@@ -2525,8 +2442,7 @@
                                                                                                 </option>
                                                                                                 <option value="6">June
                                                                                                 </option>
-                                                                                                <option value="7"
-                                                                                                        selected="">July
+                                                                                                <option value="7" selected="">July
                                                                                                 </option>
                                                                                                 <option value="8">
                                                                                                     August
@@ -2548,72 +2464,31 @@
                                                                                     </div>
                                                                                 </div>
 
-                                                                                <div class="row vc-fs-date-row"
-                                                                                     data-type="year"
-                                                                                     style="display: none">
+                                                                                <div class="row vc-fs-date-row" data-type="year" style="display: none">
                                                                                     <div class="col-sm-12">
                                                                                         <div class="form-group">
-                                                                                            <label for="vc-fs-year"
-                                                                                                   class="bmd-label-floating">
-                                                                                                Year <span
-                                                                                                        class="required">*</span></label>
+                                                                                            <label for="vc-fs-year" class="bmd-label-floating">
+                                                                                                Year <span class="required">*</span></label>
 
-                                                                                            <div class="select2-container js-source-states-2 m-b"
-                                                                                                 id="s2id_vc-fs-year"
-                                                                                                 style="width: 100%"><a
-                                                                                                        href="javascript:void(0)"
-                                                                                                        class="select2-choice"
-                                                                                                        tabindex="-1">
-                                                                                                    <span class="select2-chosen"
-                                                                                                          id="select2-chosen-3">2020</span><abbr
-                                                                                                            class="select2-search-choice-close"></abbr>
-                                                                                                    <span class="select2-arrow"
-                                                                                                          role="presentation"><b
-                                                                                                                role="presentation"></b></span></a><label
-                                                                                                        for="s2id_autogen3"
-                                                                                                        class="select2-offscreen">
-                                                                                                    Year *</label><input
-                                                                                                        class="select2-focusser select2-offscreen"
-                                                                                                        type="text"
-                                                                                                        aria-haspopup="true"
-                                                                                                        role="button"
-                                                                                                        aria-labelledby="select2-chosen-3"
-                                                                                                        id="s2id_autogen3">
+                                                                                            <div class="select2-container js-source-states-2 m-b" id="s2id_vc-fs-year" style="width: 100%"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+                                                                                                    <span class="select2-chosen" id="select2-chosen-3">2020</span><abbr class="select2-search-choice-close"></abbr>
+                                                                                                    <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen">
+                                                                                                    Year *</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3">
                                                                                                 <div class="select2-drop select2-display-none select2-with-searchbox">
                                                                                                     <div class="select2-search">
-                                                                                                        <label for="s2id_autogen3_search"
-                                                                                                               class="select2-offscreen">
+                                                                                                        <label for="s2id_autogen3_search" class="select2-offscreen">
                                                                                                             Year
                                                                                                             *</label>
-                                                                                                        <input type="text"
-                                                                                                               autocomplete="off"
-                                                                                                               autocorrect="off"
-                                                                                                               autocapitalize="off"
-                                                                                                               spellcheck="false"
-                                                                                                               class="select2-input"
-                                                                                                               role="combobox"
-                                                                                                               aria-expanded="true"
-                                                                                                               aria-autocomplete="list"
-                                                                                                               aria-owns="select2-results-3"
-                                                                                                               id="s2id_autogen3_search"
-                                                                                                               placeholder="">
+                                                                                                        <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">
                                                                                                     </div>
-                                                                                                    <ul class="select2-results"
-                                                                                                        role="listbox"
-                                                                                                        id="select2-results-3"></ul>
+                                                                                                    <ul class="select2-results" role="listbox" id="select2-results-3"></ul>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <select class="js-source-states-2 m-b"
-                                                                                                    name="year"
-                                                                                                    id="vc-fs-year"
-                                                                                                    style="width: 100%; display: none;"
-                                                                                                    tabindex="-1"
-                                                                                                    title=" Year *">
+                                                                                            <select class="js-source-states-2 m-b" name="year" id="vc-fs-year" style="width: 100%; display: none;" tabindex="-1" title=" Year *">
                                                                                                 <option value="2019">
                                                                                                     2019
                                                                                                 </option>
-                                                                                                <option value="2020"
-                                                                                                        selected="">2020
+                                                                                                <option value="2020" selected="">2020
                                                                                                 </option>
                                                                                                 <option value="2021">
                                                                                                     2021
@@ -2647,34 +2522,20 @@
                                                                                     </div>
                                                                                 </div>
 
-                                                                                <div class="row vc-fs-date-row"
-                                                                                     data-type="custom"
-                                                                                     style="display: none">
+                                                                                <div class="row vc-fs-date-row" data-type="custom" style="display: none">
                                                                                     <div class="col-sm-6">
                                                                                         <div class="form-group bmd-form-group">
-                                                                                            <label for="vc-fs-cdate-from"
-                                                                                                   class="bmd-label-static">
-                                                                                                From <span
-                                                                                                        class="required">*</span></label>
-                                                                                            <input type="text"
-                                                                                                   class="form-control st-datetimepicker"
-                                                                                                   id="vc-fs-cdate-from"
-                                                                                                   name="date_from"
-                                                                                                   value="">
+                                                                                            <label for="vc-fs-cdate-from" class="bmd-label-static">
+                                                                                                From <span class="required">*</span></label>
+                                                                                            <input type="text" class="form-control st-datetimepicker" id="vc-fs-cdate-from" name="date_from" value="">
                                                                                         </div>
                                                                                     </div>
 
                                                                                     <div class="col-sm-6">
                                                                                         <div class="form-group bmd-form-group">
-                                                                                            <label for="vc-fs-cdate-to"
-                                                                                                   class="bmd-label-static">
-                                                                                                To <span
-                                                                                                        class="required">*</span></label>
-                                                                                            <input type="text"
-                                                                                                   class="form-control st-datetimepicker"
-                                                                                                   id="vc-fs-cdate-to"
-                                                                                                   name="date_to"
-                                                                                                   value="">
+                                                                                            <label for="vc-fs-cdate-to" class="bmd-label-static">
+                                                                                                To <span class="required">*</span></label>
+                                                                                            <input type="text" class="form-control st-datetimepicker" id="vc-fs-cdate-to" name="date_to" value="">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2683,9 +2544,8 @@
                                                                                 <hr>
                                                                                 <div class="row">
                                                                                     <div class="col-sm-12">
-                                                                                        <button type="submit"
-                                                                                                class="btn btn-success max-width">
-                                                                                            <i class="fa fa-refresh-alt"></i>
+                                                                                        <button type="submit" class="btn btn-success max-width">
+                                                                                            <i class="fa fa-refresh-alt" aria-hidden="true"></i>
                                                                                             Refresh
                                                                                         </button>
                                                                                     </div>
@@ -2707,9 +2567,7 @@
                                                                         }
                                                                     </script>
 
-                                                                    <canvas id="webinar-blocks" width="952" height="534"
-                                                                            style="display: block; height: 534px; width: 951px;"
-                                                                            class="chartjs-render-monitor"></canvas>
+                                                                    <canvas id="webinar-blocks" width="952" height="534" style="display: block; height: 534px; width: 951px;" class="chartjs-render-monitor"></canvas>
 
                                                                 </div>
                                                             </div>
@@ -3111,7 +2969,9 @@
     <script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
     <script src="https://www.clientfunnels.io/js/plugins/jquery.dataTables.min.js"></script>
     <script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>
-
+    <script src="https://www.clientfunnels.io/js/core/jquery.min.js"></script>
+    <script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
+    <script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
     <script src="https://www.clientfunnels.io/js/custom.js?v=1.1.4"></script>
     <script src="https://www.clientfunnels.io/js/material-dashboard.js?v=2.1.0"></script>
 

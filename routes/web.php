@@ -39,8 +39,18 @@ Route::get('/booking/{id}', 'WebinarController@bookingWebinar')->name('bookingWe
 Route::post('/booking_webinar/{id}', 'WebinarController@saveBookingWebinar')->name('bookingWebinar');
 Route::post('/webinar_registration/{id}', 'WebinarController@registrationWebinar')->name('registrationWebinar');
 Route::post('/getCampaignDetail', 'WebinarController@getCampaignDetail')->name('getCampaignDetail');
-Route::post('/webinar_video', 'WebinarController@getCampaignVideo')->name('webinarVideo');
+Route::get('/webinar_video/{id}', 'WebinarController@getCampaignVideo')->name('webinarVideo');
 Route::post('/new_webinar_video', 'CampaignController@newWebinarVideo')->name('newWebinarVideo');
+Route::post('/new_campaign_video', 'CampaignController@newCampaignVideo')->name('newCampaignVideo');
+Route::post('/webinar_video_preview', 'WebinarController@webinarVideoPreview')->name('webinarVideoPreview');
+Route::post('/call_slot', 'WebinarController@callSlot')->name('callSlot');
+Route::post('/submit_questions', 'WebinarController@submitQuestion')->name('callSlot');
+Route::get('/delete-campaign/{id}', 'CampaignController@destroy')->name('deleteCampaign');
+
+
+
+
+
 
 
 

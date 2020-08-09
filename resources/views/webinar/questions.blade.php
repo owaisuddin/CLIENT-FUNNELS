@@ -1,12 +1,11 @@
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title></title>
+    <title> Webinar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://www.clientfunnels.io/vendor/cs-webinar/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,9 +17,11 @@
     <link href="https://www.clientfunnels.io/vendor/cs-webinar/css/animate.css" rel="stylesheet">
     <link href="https://www.clientfunnels.io/vendor/cs-webinar/css/hover.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.clientfunnels.io/vendor/fontawesome/css/all.min.css">
+    <link href="https://www.clientfunnels.io/vendor/select2/select2.css" rel="stylesheet">
+    <link href="https://www.clientfunnels.io/vendor/cs-webinar/css/datetime.css" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
-    <script src="https://connect.facebook.net/signals/config/239781813894908?v=2.9.22&amp;r=stable" async=""></script>
+    <script src="https://connect.facebook.net/signals/config/239781813894908?v=2.9.23&amp;r=stable" async=""></script>
     <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -1608,25 +1609,20 @@
                 -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
             }
-        }
-    </style>
+        }</style>
 </head>
 
 <body class="greybg">
 
-<div style="display: none">
-    <div id="input_date">1596112200</div>
-    <div id="input_repeat">900</div>
-</div>
+<div id="page_messages"></div>
 
 <!-- Website Header -->
 <header class="dark-header text-center">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 col-sm-12 col-12 logo-dark">
-					<span class="clr-wh pl-5 pt-3">
-						<h1 id="preview-webinar-title">{!! $campaign['name'] !!}</h1>
-					</span>
+					<span class="clr-wh pl-5 pt-3" id="webinar-preview-title">
+						{{$campaign['title']}}					</span>
             </div>
         </div>
     </div>
@@ -1634,189 +1630,83 @@
 
 <div class="container">
 
-
     <!-- Website Inner Sections -->
     <section class="top-header pt-5 pb-5">
         <div class="section-heading text-center">
 
-            <h4 class="mt-0 mb-0" id="preview-webinar-subheading">
-                @if(!empty($campaign['campaignLead']['subheading']))
-                    {!! urldecode($campaign['campaignLead']['subheading']) !!}
-                @endif
-            </h4>
+            <h4 class="mt-0 mb-0" id="preview-webinar-subheading">{{$campaign['description']}}</h4>
         </div>
-        <div class="call-button mt-3 pt-3 pb-2">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-3">
-                    <a href="javascript:void(0)" class="hvr-sweep-to-top wow flipInX btn-lead animated"
-                       data-wow-delay="0.2s"
-                       style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">YES!
-                        Reserve My Seat Now</a>
-                </div>
 
 
-            </div>
-
-        </div>
-        <?php
-        $query = @unserialize (file_get_contents('http://ip-api.com/php/'));
-        ?>
     </section>
 
     <!-- Event Section -->
     <section class="form-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 bgprimary atheight">
+                <div class="col-md-12 atheight">
 
+                    <div id="questionnaire-loading" style="display: none">
+                        <img src="https://www.clientfunnels.io/img/loading-blob.gif"
+                             class="img-responsive modal-img-center"> Saving
+                    </div>
 
-                    <div class="event-date">
-                        <div class="row">
+                    <form id="questionnaire-form" method="post" action="/submit_questions">
+                        @csrf
+                        <input type="hidden" name="campaign_id" value="{{$campaign['campaign_id']}}">
 
-                            <div class="col-md-3 col-sm-3 col-4">
-                                <div class="date-box"><span >{{date("F")}}</span><br>
-                                    <span class="month font-bold" >{{date("jS")}}</span></div>
-                            </div>
+                        <div class="row m-b" id="slot-hide">
+                            <div class="col-sm-12">
 
-                            <div class="col-md-9 col-sm-9 col-8">
-                                <div class="event-datefull">
-                                    <span class="day" id="">{{date("l")}}</span> <br>
-                                    <span class="fulldt font-bold" >{{date('F , jS Y')}}</span> <br>
-                                    <span class="fulltm"> At <span>{{date("g:i A") .' '.$query['timezone']}}  +05:00</span>
-										</span>
+                                <div class="form-group required_fields" data-min="1">
+                                    @foreach(unserialize($campaign['questions']) as $k => $questions)
+                                        <?php
+                                        if ($k < 1) continue;
+                                        ?>
+                                    <label for="qqk-0" class="bmd-label-floating">
+                                        <?php
+                                        $quest =  json_decode(urldecode($questions));
+                                        echo $quest->question;
+                                        ?>
+                                        <span class="required">*</span>
+                                        <input type="hidden" name="questions[{{$k}}]" value="{{$quest->question}}">
+                                        <input type="hidden" name="webinar_info" value="{{$webinar_info}}">
+                                    </label>
+                                    <br>
+
+                                    <textarea name="answers[{{$k}}]" class="form-control" required=""
+                                              maxlength="100"></textarea><hr/>
+
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="presenter-box text-center">
-                        <div class="pr-img">
-                            @if(!empty($campaign['campaignLead']['presenter_image']))
-                                <img id="preview-webinar-right-img" src="{{$campaign['campaignLead']['presenter_image']}}" alt="presenter">
-                            @endif
-                        </div>
-                        <div class="pr-name">
-                            <h3>
-                                <span id="preview-webinar-presenter-title">
-                                    @if(!empty($campaign['campaignLead']['presenter_title']))
-                                        {!! urldecode($campaign['campaignLead']['presenter_title']) !!}
-                                    @endif
-                                </span>
-                                <span id="preview-webinar-presenter-name">
-                                    @if(!empty($campaign['campaignLead']['presenter_name']))
-                                        {!! urldecode($campaign['campaignLead']['presenter_name']) !!}
-                                    @endif
-                                </span>
-                            </h3>
-                        </div>
-                        <div class="pr-content">
-                            <p id="preview-webinar-presenter-text">
-                                @if(!empty($campaign['campaignLead']['presenter_text']))
-                                    {!! urldecode($campaign['campaignLead']['learn_title']) !!}
-                                @endif
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-1 bgwhite"></div>
-                <div class="col-md-6 bgwhite atheight">
-                    <div class="webinar-dtl">
-                        <div class="section-heading text-left">
-                            <h4 class="mt-0 mb-0 lead-training-starts" id="preview-webinar-lead-training-starts"></h4>
+                        <div class="row m-b">
+                            <div class="col-sm-12">
+                                <button class="btn btn-warning" type="submit" id="submit">
+                                    Submit Answers
+                                </button>
+                            </div>
                         </div>
                         <script>
-                            function startTimer(duration, display) {
-
-                                var timer = duration, minutes, seconds;
-                                setInterval(function () {
-                                    minutes = parseInt(timer / 60, 10);
-                                    seconds = parseInt(timer % 60, 10);
-
-                                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                                    localStorage.setItem('minutes',minutes);
-                                    if(seconds == 0 && minutes == 0){
-                                        localStorage.setItem('minutes',15);
-                                        timer = 900;
-                                    }
-                                    seconds = seconds < 10 ? "0" + seconds : seconds;
-                                    $('#min').html(minutes);
-                                    $('#sec').html(seconds);
-                                    // display.textContent = $('#min').html(minutes) + ":" + $('#sec').html(seconds);
-
-                                    if (--timer < 0) {
-                                        timer = duration;
-                                    }
-                                }, 1000);
-                            }
-
-                            window.onload = function () {
-                                if(localStorage.getItem('minutes')){
-                                    var fiveMinutes = 60 * parseInt(localStorage.getItem('minutes')),
-                                    display = document.querySelector('#min');
-                                    startTimer(fiveMinutes, display);
-                                }else{
-                                    localStorage.setItem('minutes',15);
-                                    var fiveMinutes = 60 * 15,
-                                    display = document.querySelector('#min');
-                                    startTimer(fiveMinutes, display);
-                                }
-                            };
+                            $('#submit').click(function (e) {
+                                $('#slot-hide').hide();
+                                $('#questionnaire-loading').show();
+                            });
                         </script>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
 
-                        <div id="timer">
-                            <div><b>0</b><br><span>Days</span></div>
-                            <div><b>0</b><br><span>Hours</span></div>
-                            <div><b id="min">0</b><br><span>Minutes</span></div>
-                            <div><b id="sec">00</b><br><span>Seconds</span></div>
-                        </div>
-
-                        <div class="section-heading">
-                            <h3 class="mt-" id="preview-webinar-learn-title">
-                                @if(!empty($campaign['campaignLead']['learn_title']))
-                                    {!! urldecode($campaign['campaignLead']['learn_title']) !!}
-                                @endif
-                            </h3>
-                        </div>
-
-                        <div class="feature-list mt-4">
-                            <ul class="cl-learn" id="preview-webinar-learn-list-wrap">
-                                @if(!empty($campaign['campaignLead']['learn_list']))
-                                    @foreach(unserialize($campaign['campaignLead']['learn_list']) as $list)
-                                        <li class="cl-learn-item">{!! urldecode($list) !!}</li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <br>
-    <section class="cal-to-btn">
-        <div class="container">
-
-            <div class="call-button pt- pb-5">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-3">
-                        <a href="javascript:void(0)" class="hvr-sweep-to-top wow flipInX btn-lead animated"
-                           data-wow-delay="0.2s"
-                           style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">YES!
-                            Reserve My Seat Now</a>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 
 </div>
 
@@ -2234,110 +2124,12 @@
         </div>
     </div>
 </div>
-<!-- Reg Modal -->
-<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body reg-modal-body">
-
-                <div class="row m-b">
-                    <div class="col-sm-12 text-center">
-                        <small>50% Complete</small>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row m-b">
-                    <div class="col-sm-12 text-center">
-                        <small>ALMOST THERE! PLEASE COMPLETE THIS FORM TO SAVE YOUR SEAT</small>
-                        <h2>Enter your email address below and reserve your seat... <strong>It's 100% free!</strong>
-                        </h2>
-                    </div>
-                </div>
-
-                <div class="row m-b">
-
-                    <div class="col-sm-6" id="modal-image-wrap"></div>
-                    <div class="col-sm-6">
-
-                        <form method="post" action="{{url('webinar_registration/'.$campaign['id'])}}">
-                            @csrf
-                            <input type="hidden" name="campaign_id" value="{{$campaign['id']}}">
-                            <input type="hidden" name="time_zone" value="">
-
-                            <div id="reg-errors"></div>
-
-                            <div class="row mb-10">
-                                <div class="col-sm-12">
-                                    <label class="form-label" for="reg-first-name">First Name</label>
-                                    <input class="form-control" id="reg-first-name" type="text" name="first_name"
-                                           maxlength="25" placeholder="First Name" required="">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label class="form-label" for="reg-email">Email</label>
-                                    <input class="form-control" id="reg-email" type="text" name="email" maxlength="100"
-                                           placeholder="email" required="">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="privacy_policy" type="checkbox" value="1"
-                                               id="reg-pp" required="">
-                                        <label class="form-label" for="reg-pp">Yes I accept the <a
-                                                    href="https://www.clientfunnels.io/privacy-policy/192"
-                                                    target="_blank" title="View Privacy Policy">Privacy
-                                                Policy</a></label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-reg">
-                                        CLAIM MY SPOT &gt;&gt;
-                                    </button>
-                                </div>
-                            </div>
-
-                        </form>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        Privacy Policy: We hate SPAM and promise to keep your email address safe
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript">
-    var BASE_URL = "https://www.clientfunnels.io/",
-        API_URL = "https://www.clientfunnels.io/api/",
-        DEFAULT_MESSAGE = "We could not process your request right now, please try again or contact us";
-</script>
 <script src="https://www.clientfunnels.io/vendor/cs-webinar/jquery/jquery.min.js"></script>
+<script src="https://www.clientfunnels.io/js/plugins/moment.min.js"></script>
 <script src="https://www.clientfunnels.io/vendor/cs-webinar/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://www.clientfunnels.io/vendor/cs-webinar/jquery/wow.min.js"></script>
-<script src="https://www.clientfunnels.io/vendor/cs-webinar/jquery/app.js?v1.0.5"></script>
-<script src="https://www.clientfunnels.io/js/plugins/sweetalert2.js"></script>
-<script src="https://www.clientfunnels.io/js/plugins/jstz.min.js"></script>
+
+
 <script>
     new WOW().init();
 </script>

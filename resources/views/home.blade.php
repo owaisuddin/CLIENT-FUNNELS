@@ -117,7 +117,7 @@
                                     </div>
                                     <h2 class="card-title text-center">
                                         All Campaign Statistics This
-                                        Week 14th-21st Jul	{{date('M')}}	{{date("d", strtotime("-1 week"))}}	{{date('d')}}	</h2>
+                                        Week {{date("dS", strtotime("-1 week"))}}-{{date('dS')}} {{date('M')}}	</h2>
                                 </div>
                                 <div class="card-body">
 
@@ -150,7 +150,7 @@
                                                             backgroundColor: 'rgba(0,204,0,0.5)',
                                                             borderColor: 'rgba(0,204,0)',
                                                             borderWidth: 1,
-                                                            data: [0,0,19,0]
+                                                            data: [0,0,{{$booking_count}},0]
                                                         }
                                                         ,
                                                         {
@@ -198,7 +198,7 @@
                                                         <div class="row">
                                                             <div class="col-sm-4 text-success">Current: 19%</div>
                                                             <div class="col-sm-4 text-info">Target: 13%</div>
-                                                            <div class="col-sm-4">Total: 3</div>
+                                                            <div class="col-sm-4">Total: {{$booking_count}}</div>
                                                         </div>
                                                     </small>
                                                 </div>

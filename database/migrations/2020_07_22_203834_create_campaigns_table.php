@@ -27,6 +27,7 @@ class CreateCampaignsTable extends Migration
             $table->integer('call_bookings')->default(0);
             $table->integer('call_closed')->default(0);
             $table->integer('user_id');
+            $table->integer('is_deleted')->default(0);
             $table->timestamps();
         });
     }

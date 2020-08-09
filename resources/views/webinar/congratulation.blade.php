@@ -110,17 +110,9 @@
                                     if(seconds == 0 && minutes == 0){
                                         // localStorage.setItem('minutes',5);
                                         // timer = 300;
-                                        $.ajax({
-                                            type: 'POST',
-                                            url: '/webinar_video',
-                                            data: {
-                                                '_token': '<?php echo csrf_token() ?>',
-                                                'form_data': "{{$webinar_info['campaign_id']}}",
-                                            },
-                                            success: function (result) {
-                                                window.location.href = result;
-                                            }
-                                        });
+                                        result = '{{'/webinar_video/'.$webinar_info['campaign_id']}}';
+                                        window.location.href = result;
+
                                     }
                                     if (--timer < 0) {
                                         timer = duration;
