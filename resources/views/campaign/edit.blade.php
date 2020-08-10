@@ -5017,7 +5017,6 @@
                             },
                             success: function (result) {
                                 setFormSubmitting();
-                                alert(result);
                                 swal_alert("success", "Campaign Updated", "Click OK to go back to campaigns list", function() {
                                     window.location.href = result;
                                 });

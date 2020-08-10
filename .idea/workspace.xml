@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/after_call_slot.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/webinar/questions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WebinarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WebinarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_22_203834_create_campaigns_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_22_203834_create_campaigns_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/campaign/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/webinar/booking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/booking.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/webinar/congratulation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/congratulation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/webinar/lead.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/lead.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/webinar/webinar_video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webinar/webinar_video.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +210,7 @@
       <workItem from="1596669154152" duration="1448000" />
       <workItem from="1596750901680" duration="6364000" />
       <workItem from="1596816161115" duration="14000" />
-      <workItem from="1596883395902" duration="40445000" />
+      <workItem from="1596883395902" duration="41425000" />
     </task>
     <servers />
   </component>

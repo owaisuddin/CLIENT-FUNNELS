@@ -81,7 +81,9 @@ class WebinarController extends Controller
     {
         $request['questions'] = serialize($request['questions']);
         $request['answers'] = serialize($request['answers']);
-        $campaign = Questionnaire::where('campaign_id',$request->get('campaign_id'))->first();
+        WebinarQuestions::create($request->all());
+        $campaign = Campaigns::where('id',$request->get('campaign_id'))->first();
+
         return view('webinar.after_call_slot')->with(compact('campaign'));
     }
 
