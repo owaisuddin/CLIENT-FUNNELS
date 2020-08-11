@@ -142,7 +142,7 @@
                                                             backgroundColor: 'rgba(255,0,0,0.5)',
                                                             borderColor: 'rgba(255,0,0)',
                                                             borderWidth: 1,
-                                                            data: [0,31,0,0]
+                                                            data: [0,{{$views}},0,0]
                                                         }
                                                         ,
                                                         {
@@ -185,7 +185,7 @@
                                                         <div class="row">
                                                             <div class="col-sm-4 text-danger">Current: 31%</div>
                                                             <div class="col-sm-4 text-info">Target: 65%</div>
-                                                            <div class="col-sm-4">Total: 5</div>
+                                                            <div class="col-sm-4">Total: {{$views}}</div>
                                                         </div>
                                                     </small>
                                                 </div>

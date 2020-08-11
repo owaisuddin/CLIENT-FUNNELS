@@ -544,30 +544,11 @@
 
                                                                                     <select class="js-source-states-2 m-b" id="edit-campaign-whp-select" style="width: 100%">
                                                                                         <option value="">--- Select ---</option>
-                                                                                        <option value="1450">
-                                                                                            2Clientfunne (ID: 1450)
-                                                                                        </option>
-                                                                                        <option value="1439">
-                                                                                            Webinar clientfunnels (ID: 1439)
-                                                                                        </option>
-                                                                                        <option value="1437">
-                                                                                            Webinar (ID: 1437)
-                                                                                        </option>
-                                                                                        <option value="1436">
-                                                                                            Webinar copy (ID: 1436)
-                                                                                        </option>
-                                                                                        <option value="1236">
-                                                                                            Untitled_ May 17, 2020 8_05 PM (ID: 1236)
-                                                                                        </option>
-                                                                                        <option value="1235">
-                                                                                            v2 Holding room (ID: 1235)
-                                                                                        </option>
-                                                                                        <option value="1213">
-                                                                                            Webinar v1 (ID: 1213)
-                                                                                        </option>
-                                                                                        <option value="1212">
-                                                                                            Holding room 2 (ID: 1212)
-                                                                                        </option>
+                                                                                        @foreach($webinar_videos as $webinar_video)
+                                                                                            <option value="{{$webinar_video->videos}}">
+                                                                                                {{$webinar_video->videos}}
+                                                                                            </option>
+                                                                                        @endforeach
                                                                                     </select>
 
                                                                                     <button type="button" class="btn btn-success edit-campaign-use-selected-whp-video">
@@ -1163,32 +1144,13 @@
                                                                                 <div class="col-sm-6 ind-saved-videos-wrap">
                                                                                     <h3>Select Video</h3>
 
-                                                                                    <select class="js-source-states-2 m-b" id="edit-campaign-ind-select" style="width: 100%">
+                                                                                    <select class="js-source-states-2 m-b" id="" style="width: 100%">
                                                                                         <option value="">--- Select ---</option>
-                                                                                        <option value="1450">
-                                                                                            2Clientfunne (ID: 1450)
+                                                                                        @foreach($webinar_videos as $webinar_video)
+                                                                                        <option value="{{$webinar_video->videos}}">
+                                                                                            {{$webinar_video->videos}}
                                                                                         </option>
-                                                                                        <option value="1439">
-                                                                                            Webinar clientfunnels (ID: 1439)
-                                                                                        </option>
-                                                                                        <option value="1437">
-                                                                                            Webinar (ID: 1437)
-                                                                                        </option>
-                                                                                        <option value="1436">
-                                                                                            Webinar copy (ID: 1436)
-                                                                                        </option>
-                                                                                        <option value="1236">
-                                                                                            Untitled_ May 17, 2020 8_05 PM (ID: 1236)
-                                                                                        </option>
-                                                                                        <option value="1235">
-                                                                                            v2 Holding room (ID: 1235)
-                                                                                        </option>
-                                                                                        <option value="1213">
-                                                                                            Webinar v1 (ID: 1213)
-                                                                                        </option>
-                                                                                        <option value="1212">
-                                                                                            Holding room 2 (ID: 1212)
-                                                                                        </option>
+                                                                                        @endforeach
                                                                                     </select>
 
                                                                                     <button type="button" class="btn btn-success edit-campaign-use-selected-ind-video">
@@ -1300,30 +1262,11 @@
 
                                                                         <select class="js-source-states-2 m-b" id="edit-campaign-webinar-select" style="width: 100%">
                                                                             <option value="">--- Select ---</option>
-                                                                            <option value="1450">
-                                                                                2Clientfunne (ID: 1450)
+                                                                            @foreach($webinar_videos as $webinar_video)
+                                                                            <option value="{{$webinar_video->videos}}">
+                                                                                {{$webinar_video->videos}}
                                                                             </option>
-                                                                            <option value="1439">
-                                                                                Webinar clientfunnels (ID: 1439)
-                                                                            </option>
-                                                                            <option value="1437">
-                                                                                Webinar (ID: 1437)
-                                                                            </option>
-                                                                            <option value="1436">
-                                                                                Webinar copy (ID: 1436)
-                                                                            </option>
-                                                                            <option value="1236">
-                                                                                Untitled_ May 17, 2020 8_05 PM (ID: 1236)
-                                                                            </option>
-                                                                            <option value="1235">
-                                                                                v2 Holding room (ID: 1235)
-                                                                            </option>
-                                                                            <option value="1213">
-                                                                                Webinar v1 (ID: 1213)
-                                                                            </option>
-                                                                            <option value="1212">
-                                                                                Holding room 2 (ID: 1212)
-                                                                            </option>
+                                                                            @endforeach
                                                                         </select>
 
                                                                         <button type="button" class="btn btn-success edit-campaign-use-selected-webinar">

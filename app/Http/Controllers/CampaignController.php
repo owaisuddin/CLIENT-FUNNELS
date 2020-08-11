@@ -13,6 +13,7 @@ use App\Rapport;
 use App\User;
 use App\WebinarHolding;
 use App\WebinarRoom;
+use App\WebinarVideos;
 use Illuminate\Http\Request;
 use Validator, Hash, Auth, Session, Redirect,DB;
 
@@ -89,7 +90,8 @@ class CampaignController extends Controller
      */
     public function edit($id)
     {
-        return view('campaign.edit')->with('id',$id);
+        $webinar_videos = WebinarVideos::all();
+        return view('campaign.edit')->with(compact('id','webinar_videos'));
     }
 
     /**
@@ -203,7 +205,7 @@ class CampaignController extends Controller
         $file = $file_info;
         $file->move($path, $filename);
         Campaigns::where('id',$request->get('campaign_id'))->update(['preview_video'=>$filename]);
-
+        WebinarVideos::create(['videos' => $filename]);
         return array(
           'result' => 'success',
           'message' => 'upload video successfully',
@@ -218,6 +220,7 @@ class CampaignController extends Controller
         $file = $file_info;
         $file->move($path, $filename);
         Campaigns::where('id',$request->get('campaign_id'))->update(['webinar_video'=>$filename]);
+        WebinarVideos::create(['videos' => $filename]);
 
         return array(
             'result' => 'success',

@@ -20,7 +20,10 @@ class WebinarController extends Controller
      */
     public function index($id)
     {
-        $campaign = Campaigns::with(['campaignLead'])->where('id',$id)->first();
+        $campaign = Campaigns::with(['campaignLead'])->where('id',$id)->get();
+        $campaign_views = $campaign->first()->page_views + 1;
+        Campaigns::where('id',$id)->update(['page_views' => $campaign_views]);
+        $campaign = $campaign->first();
         return view('webinar.lead')->with(compact('campaign',$campaign));
     }
 

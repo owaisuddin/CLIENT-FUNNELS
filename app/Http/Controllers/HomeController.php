@@ -29,6 +29,7 @@ class HomeController extends Controller
         $campaign_count = Campaigns::all()->count();
         $registration_count = WebinarRegistration::all()->count();
         $booking_count = WebinarBooking::all()->count();
-        return view('home')->with(compact('registration_count','campaign_count','booking_count'));
+        $views = Campaigns::all()->sum('page_views');
+        return view('home')->with(compact('registration_count','campaign_count','booking_count','views'));
     }
 }
