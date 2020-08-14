@@ -36,12 +36,12 @@
             </li>
 
 
-            {{--<li class="nav-item ">--}}
-                {{--<a class="nav-link" href="https://www.clientfunnels.io/calendar">--}}
-                    {{--<i class="material-icons">calendar_today</i>--}}
-                    {{--<p> Calendar </p>--}}
-                {{--</a>--}}
-            {{--</li>--}}
+            <li class="nav-item ">
+                <a class="nav-link" href="/calendar">
+                    <i class="material-icons">calendar_today</i>
+                    <p> Calendar </p>
+                </a>
+            </li>
 
 
             {{--<li class="nav-item ">--}}

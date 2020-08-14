@@ -11,4 +11,8 @@ class WebinarBooking extends Model
     protected $fillable = [
         'campaign_id', 'name', 'email','country_code','mobile','call_slot'
     ];
+
+    public function WebinarBooking(){
+        return $this->belongsTo('App\Campaigns','campaign_id','id');
+    }
 }

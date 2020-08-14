@@ -46,6 +46,9 @@ Route::post('/webinar_video_preview', 'WebinarController@webinarVideoPreview')->
 Route::post('/call_slot', 'WebinarController@callSlot')->name('callSlot');
 Route::post('/submit_questions', 'WebinarController@submitQuestion')->name('callSlot');
 Route::get('/delete-campaign/{id}', 'CampaignController@destroy')->name('deleteCampaign');
+Route::get('/calendar', 'CalendarController@index')->name('calendar');
+Route::get('/get_my_calendar_events', 'CalendarController@getEvents')->name('get_my_calendar_events');
+
 
 
 
