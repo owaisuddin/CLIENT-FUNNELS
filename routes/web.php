@@ -48,6 +48,7 @@ Route::post('/submit_questions', 'WebinarController@submitQuestion')->name('call
 Route::get('/delete-campaign/{id}', 'CampaignController@destroy')->name('deleteCampaign');
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/get_my_calendar_events', 'CalendarController@getEvents')->name('get_my_calendar_events');
+Route::post('/getBookingData', 'CalendarController@getBookingData')->name('getBookingData');
 
 
 

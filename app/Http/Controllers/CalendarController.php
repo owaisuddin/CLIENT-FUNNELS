@@ -20,4 +20,9 @@ class CalendarController extends Controller
 
         ]);
     }
+
+    public function getBookingData(Request $request){
+        $webinarData = WebinarBooking::where('id',$request->get('booking_id'))->first();
+        return $webinarData;
+    }
 }

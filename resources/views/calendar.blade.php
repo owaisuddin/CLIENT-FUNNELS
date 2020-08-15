@@ -187,19 +187,7 @@
                     allDaySlot: false,
                     selectHelper: true,
                     select: function(start, end, allDay) {
-                        var title = prompt('Event Title:');
-                        if (title) {
-                            calendar.fullCalendar('renderEvent',
-                                {
-                                    title: title,
-                                    start: start,
-                                    end: end,
-                                    allDay: allDay
-                                },
-                                true // make the event "stick"
-                            );
-                        }
-                        calendar.fullCalendar('unselect');
+
                     },
                     droppable: true, // this allows things to be dropped onto the calendar !!!
                     drop: function(date, allDay) { // this function is called when something is dropped
@@ -225,12 +213,20 @@
                         }
 
                     },
+                    eventClick: function(info) {
+                        alert('Event: ' + info.event.title);
+                        alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+                        alert('View: ' + info.view.type);
 
+                        // change the border color just for fun
+                        info.el.style.borderColor = 'red';
+                    },
                     events: [
                         <?php  foreach($data as $d) {?>
                         {
                             title: 'Booked call with {{$d['name']}}<br/>Campaign: {{$d['WebinarBooking']['name']}}',
                             start: "{{explode("-",$d['call_slot'])[1]}}",
+                            data: '{{$d['id']}}',
                             className: 'important'
                         },
                         <?php }?>
@@ -1020,6 +1016,7 @@
                                             };
                                         }
                                         if (buttonClick) {
+
                                             var icon = options.theme ? smartProperty(options.buttonIcons, buttonName) : null; // why are we using smartProperty here?
                                             var text = smartProperty(options.buttonText, buttonName); // why are we using smartProperty here?
                                             var button = $(
@@ -5856,9 +5853,28 @@ function enableTextSelection(element) {
 
 
                     function bindDaySeg(event, eventElement, segment) {
-
                         if (isEventDraggable(event)) {
-                            t.draggableDayEvent(event, eventElement, segment); // use `t` so subclasses can override
+                            console.log(event.data);
+                            $.ajax({
+                                type: 'POST',
+                                url: '/getBookingData',
+                                data: {
+                                    '_token': '<?php echo csrf_token() ?>',
+                                    'booking_id': event.data
+                                },
+                                success: function (result) {
+                                    console.log(result);
+                                    $('.cbd-contact-name').html(result.name);
+                                    $('.cbd-contact-id').html(result.campaign_id);
+                                    $('.cbd-booking-booked_call_id').html(result.id);
+                                    $('.cbd-booking-booked_with').html('owais uddin gilani');
+                                    $('.cbd-booking-call_duration').html('2 hours');
+                                    $('.cbd-booking-status').html('pending');
+                                    $('.cbd-booking-booked').html(new Date(result.created_at));
+                                    $('.cbd-booking-call_start').html(result.call_slot);
+                                    $('#cal-booking-modal').show();
+                                }
+                            });
                         }
 
                         if (
@@ -6333,10 +6349,10 @@ function enableTextSelection(element) {
                     };
 
                 }
-
                 ;;
 
             })(jQuery);
+
         </script>
 
         <footer class="footer">
@@ -6423,12 +6439,12 @@ function enableTextSelection(element) {
                 </div>
                 <hr class="cbd-booking-call_start-hr">
 
-                <div class="row">
-                    <div class="col-sm-4">
-                        <strong>Call End:</strong>
-                    </div>
-                    <div class="col-sm-8 cbd-booking-call_end"></div>
-                </div>
+{{--                <div class="row">--}}
+{{--                    <div class="col-sm-4">--}}
+{{--                        <strong>Call End:</strong>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-8 cbd-booking-call_end"></div>--}}
+{{--                </div>--}}
                 <hr class="cbd-booking-call_end-hr">
 
                 <div class="row">
@@ -6455,30 +6471,34 @@ function enableTextSelection(element) {
                 </div>
                 <hr class="cbd-booking-status-hr">
 
-                <div class="row">
-                    <div class="col-sm-4">
-                        <strong>Previous Bookings:</strong>
-                    </div>
-                    <div class="col-sm-8 cbd-booking-changed_by"></div>
-                </div>
-                <hr class="cbd-booking-changed_by-hr">
+{{--                <div class="row">--}}
+{{--                    <div class="col-sm-4">--}}
+{{--                        <strong>Previous Bookings:</strong>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-8 cbd-booking-changed_by"></div>--}}
+{{--                </div>--}}
+{{--                <hr class="cbd-booking-changed_by-hr">--}}
 
 
-                <hr>
-                <a href="" class="btn btn-success m-b cbd-link">
-                    <i class="fa fa-arrow-right"></i> View / Modify Contact Bookings
-                </a>
+{{--                <a href="" class="btn btn-success m-b cbd-link">--}}
+{{--                    <i class="fa fa-arrow-right"></i> View / Modify Contact Bookings--}}
+{{--                </a>--}}
 
 
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning" id="close_modal" data-dismiss="modal">Close</button>
             </div>
 
         </div>
     </div>
 </div>
+<script>
+    $('#close_modal').click(function (e) {
+        $('#cal-booking-modal').hide();
+    });
+</script>
 <style>
 
 
