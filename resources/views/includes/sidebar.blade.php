@@ -79,43 +79,43 @@
             {{--</li>--}}
 
 
-            {{--<li class="nav-item ">--}}
-                {{--<a class="nav-link" data-toggle="collapse" href="#navlinkMfinance">--}}
-                    {{--<i class="material-icons">credit_card</i>--}}
-                    {{--<p> Finance										<b class="caret"></b>--}}
-                    {{--</p>--}}
-                {{--</a>--}}
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#navlinkMfinance">
+                    <i class="material-icons">credit_card</i>
+                    <p>Finance<b class="caret"></b>
+                    </p>
+                </a>
 
-                {{--<div class="collapse" id="navlinkMfinance">--}}
-                    {{--<ul class="nav">--}}
-                        {{--<li class="nav-item ">--}}
-                            {{--<a class="nav-link" href="https://www.clientfunnels.io/finance/payments">--}}
-                                {{--<span class="sidebar-mini"> £ </span>--}}
-                                {{--<span class="sidebar-normal"> Payments </span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-item ">--}}
-                            {{--<a class="nav-link" href="https://www.clientfunnels.io/finance/programs">--}}
-                                {{--<span class="sidebar-mini"> P </span>--}}
-                                {{--<span class="sidebar-normal"> Programs </span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-item ">--}}
-                            {{--<a class="nav-link" href="https://www.clientfunnels.io/finance/contracts">--}}
-                                {{--<span class="sidebar-mini"> C </span>--}}
-                                {{--<span class="sidebar-normal"> Contracts </span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-item ">--}}
-                            {{--<a class="nav-link" href="https://www.clientfunnels.io/finance/stripe-settings">--}}
-                                {{--<span class="sidebar-mini"> SS </span>--}}
-                                {{--<span class="sidebar-normal"> Stripe Settings </span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
+                <div class="collapse" id="navlinkMfinance">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/payments">
+                                <span class="sidebar-mini"> £ </span>
+                                <span class="sidebar-normal"> Payments </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/finance/programs">
+                                <span class="sidebar-mini"> P </span>
+                                <span class="sidebar-normal"> Programs </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.clientfunnels.io/finance/contracts">
+                                <span class="sidebar-mini"> C </span>
+                                <span class="sidebar-normal"> Contracts </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="https://www.clientfunnels.io/finance/stripe-settings">
+                                <span class="sidebar-mini"> SS </span>
+                                <span class="sidebar-normal"> Stripe Settings </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            {{--</li>--}}
+            </li>
 
 
             {{--<li class="nav-item ">--}}

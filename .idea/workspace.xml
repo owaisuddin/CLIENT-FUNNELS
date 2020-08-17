@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_failed.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_pending.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_successful.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/payments.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/program.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/finance/viewProgram.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/calendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +229,10 @@
       <workItem from="1597251465305" duration="4447000" />
       <workItem from="1597388498132" duration="9477000" />
       <workItem from="1597472150020" duration="3308000" />
+      <workItem from="1597479949293" duration="15000" />
+      <workItem from="1597613885861" duration="7009000" />
+      <workItem from="1597679747763" duration="10000" />
+      <workItem from="1597679802617" duration="9849000" />
     </task>
     <servers />
   </component>
@@ -235,18 +249,18 @@
       <screen x="0" y="28" width="1366" height="712" />
     </state>
     <state x="416" y="142" width="526" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1366.712@0.28.1366.712" timestamp="1596970006476" />
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl" timestamp="1597302347678">
+    <state x="466" y="142" width="435" height="483" key="FileChooserDialogImpl" timestamp="1597652859799">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="466" y="142" width="426" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1597302347678" />
-    <state x="339" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1597216147855">
+    <state x="466" y="142" width="435" height="483" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1597652859799" />
+    <state x="339" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1597679805169">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="339" y="212" key="com.intellij.ide.util.TipDialog/0.28.1366.712@0.28.1366.712" timestamp="1597216147855" />
-    <state x="712" y="116" width="1540" height="536" key="find.popup" timestamp="1597004387298">
-      <screen x="0" y="28" width="2966" height="712" />
+    <state x="339" y="212" key="com.intellij.ide.util.TipDialog/0.28.1366.712@0.28.1366.712" timestamp="1597679805169" />
+    <state x="328" y="116" width="774" height="536" key="find.popup" timestamp="1597696681002">
+      <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="328" y="116" width="709" height="536" key="find.popup/0.28.1366.712@0.28.1366.712" timestamp="1596971825346" />
+    <state x="328" y="116" width="774" height="536" key="find.popup/0.28.1366.712@0.28.1366.712" timestamp="1597696681002" />
     <state x="712" y="116" width="1540" height="536" key="find.popup/0.28.2966.712@0.28.2966.712" timestamp="1597004387298" />
     <state x="346" y="169" key="run.anything.popup" timestamp="1596970344470">
       <screen x="0" y="28" width="1366" height="712" />
@@ -257,5 +271,16 @@
     </state>
     <state x="346" y="31" width="672" height="676" key="search.everywhere.popup/0.28.1366.712@0.28.1366.712" timestamp="1597011211914" />
     <state x="751" y="31" width="1460" height="676" key="search.everywhere.popup/0.28.2966.712@0.28.2966.712" timestamp="1597005246477" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/finance/program.blade.php</url>
+          <line>194</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

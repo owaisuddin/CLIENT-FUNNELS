@@ -30,7 +30,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/vendor/slim-image-cropper/js/slim.jquery.min.js"></script>
 <script src="https://www.clientfunnels.io/js/custom.js?v=1.1.4"></script>
-
+<script src="https://www.clientfunnels.io/js/core/bootstrap-material-design.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.slim-result').on('click', function () {

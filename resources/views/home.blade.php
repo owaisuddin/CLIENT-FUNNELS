@@ -442,5 +442,6 @@
             </div>
         </div>
     </div>
+    <script src="https://www.clientfunnels.io/js/core/bootstrap-material-design.min.js"></script>
     <!-- /Start New Campaign -->
 @endsection

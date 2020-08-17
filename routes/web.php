@@ -49,6 +49,18 @@ Route::get('/delete-campaign/{id}', 'CampaignController@destroy')->name('deleteC
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/get_my_calendar_events', 'CalendarController@getEvents')->name('get_my_calendar_events');
 Route::post('/getBookingData', 'CalendarController@getBookingData')->name('getBookingData');
+Route::get('/payments', 'FinanceController@paymentsView')->name('paymentsView');
+Route::get('/payments/successful', 'FinanceController@paymentSuccessfulView')->name('paymentSuccessfulView');
+Route::get('/payments/pending', 'FinanceController@paymentPendingView')->name('paymentPendingView');
+Route::get('/payments/failed', 'FinanceController@paymentFailedView')->name('paymentFailedView');
+Route::get('/finance/programs', 'FinanceController@programs')->name('financePrograms');
+Route::post('/finance/programs', 'FinanceController@financeProgram')->name('financeProgram');
+Route::get('/finance/programs/view/{id}', 'FinanceController@viewFinanceProgram')->name('viewFinanceProgram');
+Route::get('/finance/programs/delete/{id}', 'FinanceController@deleteFinanceProgram')->name('deleteFinanceProgram');
+Route::get('/finance/programs/show/', 'FinanceController@showFinanceProgram')->name('showFinanceProgram');
+
+
+
 
 
 
