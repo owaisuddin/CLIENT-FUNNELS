@@ -9,6 +9,10 @@ class WebinarVideos extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'videos'
+        'videos','duration','created_by'
     ];
+
+    public function webinarVideo(){
+        return $this->hasMany('App\Campaigns','webinar_video','videos');
+    }
 }

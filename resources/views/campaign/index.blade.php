@@ -101,7 +101,7 @@
                                                 <i class="fa fa-plus"></i> Start New Campaign
                                             </button>
 
-                                            <a href="https://www.clientfunnels.io/campaigns/media" class="btn btn-info"
+                                            <a href="/campaigns/media" class="btn btn-info"
                                                title="View Your Media Files">
                                                 <i class="fa fa-video"></i> Media
                                             </a>

@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8b4a6a-048a-4437-82e3-57aee7899d48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_failed.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_pending.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/payment_successful.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/payments.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/program.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/finance/viewProgram.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/campaign/addMedia.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/campaign/media.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/campaign/mediaDetail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/client-funnel-github.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/client-funnel-github.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/WebinarVideos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/WebinarVideos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_070701_create_webinar_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_11_070701_create_webinar_videos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/campaign/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +124,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/james-heinrich/getid3" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fNSmGoH6DtdGtVIw6Dl8penCiw" />
@@ -232,7 +234,7 @@
       <workItem from="1597479949293" duration="15000" />
       <workItem from="1597613885861" duration="7009000" />
       <workItem from="1597679747763" duration="10000" />
-      <workItem from="1597679802617" duration="9849000" />
+      <workItem from="1597679802617" duration="18329000" />
     </task>
     <servers />
   </component>

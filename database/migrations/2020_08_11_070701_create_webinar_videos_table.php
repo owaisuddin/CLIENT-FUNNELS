@@ -16,6 +16,8 @@ class CreateWebinarVideosTable extends Migration
         Schema::create('webinar_videos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('videos');
+            $table->string('duration')->nullable(true);
+            $table->string('created_by')->nullable(true);
             $table->timestamps();
         });
     }

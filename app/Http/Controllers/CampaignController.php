@@ -205,7 +205,11 @@ class CampaignController extends Controller
         $file = $file_info;
         $file->move($path, $filename);
         Campaigns::where('id',$request->get('campaign_id'))->update(['preview_video'=>$filename]);
-        WebinarVideos::create(['videos' => $filename]);
+        WebinarVideos::create([
+            'videos' => $filename,
+            'creation' => '',
+            'created_by' => Auth::user()->name
+            ]);
         return array(
           'result' => 'success',
           'message' => 'upload video successfully',
@@ -227,5 +231,24 @@ class CampaignController extends Controller
             'message' => 'upload video successfully',
             'return_data' => $file_info
         );
+    }
+
+    public function mediaIndex(Request $request){
+        $webinar_videos = WebinarVideos::with('webinarVideo')->get();
+        return view('campaign.media')->with(compact('webinar_videos'));
+    }
+
+    public function addMedia(Request $request){
+        return view('campaign.addMedia');
+    }
+
+    public function deleteMedia($id){
+        WebinarVideos::destroy($id);
+        return redirect('/campaigns/media');
+    }
+
+    public function showMedia($id){
+        $webinar_video = WebinarVideos::with('webinarVideo')->where('id',$id)->first();
+        return view('campaign.mediaDetail')->with(compact('webinar_video'));
     }
 }
