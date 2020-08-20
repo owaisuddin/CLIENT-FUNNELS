@@ -2293,7 +2293,7 @@
                                         <input class="form-check-input" name="privacy_policy" type="checkbox" value="1"
                                                id="reg-pp" required="">
                                         <label class="form-label" for="reg-pp">Yes I accept the <a
-                                                    href="https://www.clientfunnels.io/privacy-policy/192"
+                                                    href="#"
                                                     target="_blank" title="View Privacy Policy">Privacy
                                                 Policy</a></label>
                                     </div>

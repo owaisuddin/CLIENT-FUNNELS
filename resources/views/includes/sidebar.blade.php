@@ -100,18 +100,18 @@
                                 <span class="sidebar-normal"> Programs </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://www.clientfunnels.io/finance/contracts">
-                                <span class="sidebar-mini"> C </span>
-                                <span class="sidebar-normal"> Contracts </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://www.clientfunnels.io/finance/stripe-settings">
-                                <span class="sidebar-mini"> SS </span>
-                                <span class="sidebar-normal"> Stripe Settings </span>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item ">--}}
+{{--                            <a class="nav-link" href="https://www.clientfunnels.io/finance/contracts">--}}
+{{--                                <span class="sidebar-mini"> C </span>--}}
+{{--                                <span class="sidebar-normal"> Contracts </span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item ">--}}
+{{--                            <a class="nav-link" href="https://www.clientfunnels.io/finance/stripe-settings">--}}
+{{--                                <span class="sidebar-mini"> SS </span>--}}
+{{--                                <span class="sidebar-normal"> Stripe Settings </span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                     </ul>
                 </div>
 

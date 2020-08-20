@@ -55,7 +55,7 @@
                                                             <button class="btn btn-info view-contact-payment" data-payment-id="">
                                                                 <i class="fas fa-receipt"></i> View Payment
                                                             </button>
-                                                            <a href="https://www.clientfunnels.io/contacts/view/" class="btn btn-warning">
+                                                            <a href="javscript:void(0)" class="btn btn-warning">
                                                                 <i class="fas fa-user"></i> View Contact
                                                             </a>
                                                         </div>

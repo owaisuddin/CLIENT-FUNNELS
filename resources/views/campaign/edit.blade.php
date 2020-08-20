@@ -7,71 +7,6 @@
 
     <div class="main-panel">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-            <div class="container-fluid">
-                <div class="navbar-wrapper">
-                    <div class="navbar-minimize">
-                        <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
-                            <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
-                            <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
-                        </button>
-                    </div>
-                    <a class="navbar-brand" href="https://www.clientfunnels.io/">Dashboard</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end">
-
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="New Contact Messages">
-                                <i class="material-icons" style="font-size: 3em;">chat</i>
-                                <span class="notification header-total-new-messages" style="display: none"></span>
-                                <p class="d-lg-none d-md-block">
-                                    New Contact Message
-                                </p>
-                                <div class="ripple-container"></div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="https://www.clientfunnels.io/contacts?new-messages">View Contacts With&nbsp;<span class="header-total-new-messages"></span>&nbsp;New Messages</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-
-                            <a class="nav-link" href="https://www.clientfunnels.io/admin/credits" title="SMS Credits">
-                                <i class="fas fa-2x fa-comments-dollar"></i>
-                                <span class=" header-total-credits"></span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons" style="font-size: 3em;">person</i>
-                                <p class="d-lg-none d-md-block">
-                                    Account
-                                </p>
-                                <div class="ripple-container"></div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="https://www.clientfunnels.io/my-account">My Account</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://www.clientfunnels.io/logout">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </nav>
         <!-- End Navbar -->
 
         <div class="content">
@@ -95,7 +30,7 @@
                                 <hr />
                                 <div class="embed-responsive embed-responsive-1by1">
 
-                                    <iframe id="campaign-lp-preview-iframe" class="embed-responsive-item" src="https://www.clientfunnels.io/campaigns/preview_campaign_page/lead"></iframe>
+                                    <iframe id="campaign-lp-preview-iframe" class="embed-responsive-item" src="javascript:void(0)"></iframe>
                                 </div>
                             </div>
 
@@ -106,7 +41,7 @@
                                 <hr />
                                 <div class="embed-responsive embed-responsive-1by1">
 
-                                    <iframe id="campaign-whp-preview-iframe" class="embed-responsive-item" src="https://www.clientfunnels.io/campaigns/preview_campaign_page/waiting"></iframe>
+                                    <iframe id="campaign-whp-preview-iframe" class="embed-responsive-item" src="javascript:void(0)"></iframe>
                                 </div>
                             </div>
 
@@ -117,7 +52,7 @@
                                 <hr />
                                 <div class="embed-responsive embed-responsive-1by1">
 
-                                    <iframe id="campaign-in-preview-iframe" class="embed-responsive-item" src="https://www.clientfunnels.io/campaigns/preview_campaign_page/indoctrination"></iframe>
+                                    <iframe id="campaign-in-preview-iframe" class="embed-responsive-item" src="javascript:void(0)"></iframe>
                                 </div>
                             </div>
 

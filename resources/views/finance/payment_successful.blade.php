@@ -43,7 +43,7 @@
 
                             <li class="nav-item dropdown">
 
-                                <a class="nav-link" href="https://www.clientfunnels.io/admin/credits" title="SMS Credits">
+                                <a class="nav-link" href="javascript:void(0)" title="SMS Credits">
                                     <i class="fas fa-2x fa-comments-dollar"></i>
                                     <span class=" header-total-credits">564</span>
                                 </a>
@@ -58,9 +58,9 @@
                                     <div class="ripple-container"></div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="https://www.clientfunnels.io/my-account">My Account</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">My Account</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.clientfunnels.io/logout">Log out</a>
+                                    <a class="dropdown-item" href="/logout">Log out</a>
                                 </div>
                             </li>
                         </ul>
@@ -121,7 +121,7 @@
                                                             <button class="btn btn-info view-contact-payment" data-payment-id="">
                                                                 <i class="fas fa-receipt"></i> View Payment
                                                             </button>
-                                                            <a href="https://www.clientfunnels.io/contacts/view/" class="btn btn-warning">
+                                                            <a href="javascript:void(0)" class="btn btn-warning">
                                                                 <i class="fas fa-user"></i> View Contact
                                                             </a>
                                                         </div>

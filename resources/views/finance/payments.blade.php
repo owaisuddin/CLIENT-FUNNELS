@@ -14,7 +14,7 @@
                                 <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="https://www.clientfunnels.io/">Dashboard</a>
+                        <a class="navbar-brand" href="/home">Dashboard</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
@@ -37,13 +37,13 @@
                                     <div class="ripple-container"></div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="https://www.clientfunnels.io/contacts?new-messages">View Contacts With&nbsp;<span class="header-total-new-messages" style="display: none;"></span>&nbsp;New Messages</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">View Contacts With&nbsp;<span class="header-total-new-messages" style="display: none;"></span>&nbsp;New Messages</a>
                                 </div>
                             </li>
 
                             <li class="nav-item dropdown">
 
-                                <a class="nav-link" href="https://www.clientfunnels.io/admin/credits" title="SMS Credits">
+                                <a class="nav-link" href="javascript:void(0)" title="SMS Credits">
                                     <i class="fas fa-2x fa-comments-dollar"></i>
                                     <span class=" header-total-credits">564</span>
                                 </a>
@@ -58,9 +58,9 @@
                                     <div class="ripple-container"></div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="https://www.clientfunnels.io/my-account">My Account</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">My Account</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.clientfunnels.io/logout">Log out</a>
+                                    <a class="dropdown-item" href="/logout">Log out</a>
                                 </div>
                             </li>
                         </ul>

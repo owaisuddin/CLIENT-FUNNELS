@@ -287,7 +287,7 @@
                                             </div>
                                             <hr>
                                         </div>
-                                        <a href="https://www.clientfunnels.io/campaigns/contacts/view/34836"
+                                        <a href="javascript:void(0)"
                                            class="btn btn-success vcc-view-url" id="contact_url">
                                             <i class="fa fa-arrow-right"></i> View Contact
                                         </a>
