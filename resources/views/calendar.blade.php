@@ -6571,6 +6571,11 @@ function enableTextSelection(element) {
         margin-bottom: 10px;
         font-family: 'Roboto', sans-serif;
     }
+
+    td {
+        border-style : hidden!important;
+    }
+
     span.fc-button {
         font-family: 'Roboto', sans-serif;
         border-color: #9675ce;
