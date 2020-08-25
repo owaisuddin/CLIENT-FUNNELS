@@ -49,7 +49,8 @@
 
 
 </head>
-
+<script src="https://www.clientfunnels.io/js/core/popper.min.js"></script>
+<script src="https://www.clientfunnels.io/js/core/bootstrap-material-design.min.js"></script>
 <script src="https://client.crisp.chat/l.js" async=""></script>
 <link href="https://client.relay.crisp.chat" rel="dns-prefetch" crossorigin="">
 <link href="https://settings.crisp.chat" rel="preconnect" crossorigin="">
@@ -77,38 +78,116 @@
                 </div>
             @endif
         @endforeach
+        <div class="wrapper ">
+            <div class="main-panel">
+                <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-minimize">
+                                <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                                    <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                                    <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+                                </button>
+                            </div>
+                            <a class="navbar-brand" href="/home">Dashboard</a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                aria-controls="navigation-index"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="navbar-toggler-icon icon-bar"></span>
+                            <span class="navbar-toggler-icon icon-bar"></span>
+                            <span class="navbar-toggler-icon icon-bar"></span>
+                        </button>
 
-        @yield('content')
+                        <div class="collapse navbar-collapse justify-content-end">
+
+                            <ul class="navbar-nav">
+
+                                {{--                            <li class="nav-item dropdown">--}}
+                                {{--                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"--}}
+                                {{--                                   aria-haspopup="true" aria-expanded="false" title="New Contact Messages">--}}
+                                {{--                                    <i class="material-icons" style="font-size: 3em;">chat</i>--}}
+                                {{--                                    <span class="notification header-total-new-messages" style="display: none"></span>--}}
+                                {{--                                    <p class="d-lg-none d-md-block">--}}
+                                {{--                                        New Contact Message--}}
+                                {{--                                    </p>--}}
+                                {{--                                    <div class="ripple-container"></div>--}}
+                                {{--                                </a>--}}
+                                {{--                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">--}}
+                                {{--                                    <a class="dropdown-item" href="javscript:void(0)">View--}}
+                                {{--                                        Contacts With&nbsp;<span class="header-total-new-messages"--}}
+                                {{--                                                                 style="display: none;"></span>&nbsp;New Messages</a>--}}
+                                {{--                                </div>--}}
+                                {{--                            </li>--}}
+
+                                {{--                            <li class="nav-item dropdown">--}}
+
+                                {{--                                <a class="nav-link" href="javscript:void(0)" title="SMS Credits">--}}
+                                {{--                                    <i class="fas fa-2x fa-comments-dollar"></i>--}}
+                                {{--                                    <span class=" header-total-credits">577</span>--}}
+                                {{--                                </a>--}}
+                                {{--                            </li>--}}
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons" style="font-size: 3em;">person</i>
+                                        <p class="d-lg-none d-md-block">
+                                            Account
+                                        </p>
+                                        <div class="ripple-container"></div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right"
+                                         aria-labelledby="navbarDropdownProfile">
+                                        <a class="dropdown-item" href="/my-account">My Account</a>
+                                        <div class="dropdown-divider"></div>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <a class="dropdown-item" onclick="document.getElementById('logout-form').submit();">Log out</a>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </nav>
+                @yield('content')
+            </div>
+        </div>
 
     </div>
 </div>
 </body>
 @section('scripts')
-<script src="{{ asset('js/core/jquery.min.js') }}"></script>
-<script src="{{ asset('js/core/popper.min.js') }}"></script>
-<script src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
-<script src="{{ asset('js/plugins/chartist.min.js') }}"></script>
-<script src="{{ asset('js/plugins/jquery-jvectormap.js') }}"></script>
-<script src="{{ asset('jquery.bootstrap-wizard.js') }}"></script>
-<script src="{{ asset('js/plugins/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-<script src="{{ asset('/js/plugins/moment.min.js') }}"></script>
-<script src="{{ asset('js/plugins/sweetalert2.js') }}"></script>
-<script src="{{ asset('js/material.js') }}"></script>
-<script src="{{ asset('js/home-login.js') }}"></script>
-<script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
-<script src="https://www.clientfunnels.io/js/app-dashboard.js?v=1.1.0"></script>
+    <script src="{{ asset('js/core/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/chartist.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/jquery-jvectormap.js') }}"></script>
+    <script src="{{ asset('jquery.bootstrap-wizard.js') }}"></script>
+    <script src="{{ asset('js/plugins/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+    <script src="{{ asset('/js/plugins/moment.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/sweetalert2.js') }}"></script>
+    <script src="{{ asset('js/material.js') }}"></script>
+    <script src="{{ asset('js/home-login.js') }}"></script>
+    <script src="https://www.clientfunnels.io/js/plugins/Chart.min.js"></script>
+    <script src="https://www.clientfunnels.io/js/app-dashboard.js?v=1.1.0"></script>
 
 
-<script>
-    $(document).ready(function () {
-        md.checkFullPageBackgroundImage();
-        setTimeout(function () {
-            // after 1000 ms we add the class animated to the login/register card
-            $('.card').removeClass('card-hidden');
-        }, 700);
-    });
-</script>
+    <script>
+        $(document).ready(function () {
+            md.checkFullPageBackgroundImage();
+            setTimeout(function () {
+                // after 1000 ms we add the class animated to the login/register card
+                $('.card').removeClass('card-hidden');
+            }, 700);
+        });
+    </script>
 
 @stop
 </html>

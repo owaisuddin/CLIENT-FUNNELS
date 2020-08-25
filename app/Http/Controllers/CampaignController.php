@@ -11,7 +11,9 @@ use App\LeadPage;
 use App\Questionnaire;
 use App\Rapport;
 use App\User;
+use App\WebinarBooking;
 use App\WebinarHolding;
+use App\WebinarRegistration;
 use App\WebinarRoom;
 use App\WebinarVideos;
 use Illuminate\Http\Request;
@@ -27,8 +29,11 @@ class CampaignController extends Controller
     public function index(Request $request,$id)
     {
         $campaign = Campaigns::with('webinarRegistration','webinarBooking')->where('id',$id)->first();
-
-        return view('campaign.view')->with(compact('campaign',$campaign));
+        $campaign_count = Campaigns::all()->where('id',$id)->count();
+        $registration_count = WebinarRegistration::all()->where('id',$id)->count();
+        $booking_count = WebinarBooking::all()->where('id',$id)->count();
+        $views = Campaigns::all()->where('id',$id)->sum('page_views');
+        return view('campaign.view')->with(compact('campaign','registration_count','campaign_count','booking_count','views'));
     }
 
     /**

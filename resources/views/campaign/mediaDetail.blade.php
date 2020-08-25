@@ -1,310 +1,231 @@
 @extends('layouts.app')
 @section('content')
-    <body>
-    <div class="wrapper ">
-        <div class="main-panel">
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+
+        <div class="content">
                 <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-minimize">
-                            <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
-                                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
-                                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
-                            </button>
-                        </div>
-                        <a class="navbar-brand" href="/home">Dashboard</a>
+
+                    <div class="row">
+                        <div class="col-sm-12" id="page_messages"></div>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-end">
-
-                        <ul class="navbar-nav">
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false" title="New Contact Messages">
-                                    <i class="material-icons" style="font-size: 3em;">chat</i>
-                                    <span class="notification header-total-new-messages" style="display: none"></span>
-                                    <p class="d-lg-none d-md-block">
-                                        New Contact Message
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javascript:void(0)">View
-                                        Contacts With&nbsp;<span class="header-total-new-messages"
-                                                                 style="display: none;"></span>&nbsp;New Messages</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link" href="javascript:void(0)"
-                                   title="SMS Credits">
-                                    <i class="fas fa-2x fa-comments-dollar"></i>
-                                    <span class=" header-total-credits">558</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons" style="font-size: 3em;">person</i>
-                                    <p class="d-lg-none d-md-block">
-                                        Account
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javascript:void(0)">My
-                                        Account</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/logout">Log out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-            </nav>
-            <!-- End Navbar -->
-
-            <div class="content">
-                <div class="content">
-                    <div class="container-fluid">
-
-                        <div class="row">
-                            <div class="col-sm-12" id="page_messages"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-header card-header-primary card-header-icon">
-                                        <div class="card-icon">
-                                            <i class="material-icons">airplay</i>
-                                        </div>
-                                        <h4 class="card-title">View Campaign Media</h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-primary card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">airplay</i>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="toolbar">
-                                            <a href="/campaigns/media"
-                                               title="Back to media list" class="btn btn-success m-b">
-                                                <i class="fa fa-arrow-left"></i> Media List
-                                            </a>
+                                    <h4 class="card-title">View Campaign Media</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="toolbar">
+                                        <a href="/campaigns/media"
+                                           title="Back to media list" class="btn btn-success m-b">
+                                            <i class="fa fa-arrow-left"></i> Media List
+                                        </a>
 
-                                            <button type="button" class="btn btn-rose watch-media-video m-b"
-                                                    data-toggle="modal"
-                                                    data-target="#myModal">
-                                                <i class="fa fa-play"></i> Watch
-                                            </button>
+                                        <button type="button" class="btn btn-rose watch-media-video m-b"
+                                                data-toggle="modal"
+                                                data-target="#myModal">
+                                            <i class="fa fa-play"></i> Watch
+                                        </button>
 
-                                            <a type="button"
-                                               class="btn btn-danger m-b pull-right btn-sm delete-content"
-                                               href="/delete/media/{{$webinar_video['id']}}">
-                                                <i class="fa fa-trash"></i> Delete
-                                            </a>
+                                        <a type="button"
+                                           class="btn btn-danger m-b pull-right btn-sm delete-content"
+                                           href="/delete/media/{{$webinar_video['id']}}">
+                                            <i class="fa fa-trash"></i> Delete
+                                        </a>
 
-                                        </div>
-                                        <hr>
+                                    </div>
+                                    <hr>
 
-                                        <div class="row">
-                                            <div class="col-md-12 ml-auto mr-auto">
-                                                <div class="page-categories">
+                                    <div class="row">
+                                        <div class="col-md-12 ml-auto mr-auto">
+                                            <div class="page-categories">
 
-                                                    <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
-                                                        role="tablist">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link active" data-toggle="tab"
-                                                               href="#view-campaign-media-details" role="tablist">
-                                                                <i class="material-icons">info</i> Description
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" data-toggle="tab"
-                                                               href="#view-campaign-media-campaigns" role="tablist">
-                                                                <i class="material-icons">build</i> Campaigns
-                                                            </a>
-                                                        </li>
-                                                    </ul>
+                                                <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
+                                                    role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="tab"
+                                                           href="#view-campaign-media-details" role="tablist">
+                                                            <i class="material-icons">info</i> Description
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab"
+                                                           href="#view-campaign-media-campaigns" role="tablist">
+                                                            <i class="material-icons">build</i> Campaigns
+                                                        </a>
+                                                    </li>
+                                                </ul>
 
-                                                    <hr>
-                                                    <div class="tab-content tab-space tab-subcategories">
+                                                <hr>
+                                                <div class="tab-content tab-space tab-subcategories">
 
-                                                        <div class="tab-pane active" id="view-campaign-media-details">
-                                                            <div class="card">
-                                                                <div class="card-body">
+                                                    <div class="tab-pane active" id="view-campaign-media-details">
+                                                        <div class="card">
+                                                            <div class="card-body">
 
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Video ID:</strong> {{$webinar_video['id']}}
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Name:</strong>
-                                                                            {{$webinar_video['videos']}}
-                                                                        </div>
-
+                                                                <div class="row m-b word-break">
+                                                                    <div class="col-sm-6">
+                                                                        <strong>Video ID:</strong> {{$webinar_video['id']}}
                                                                     </div>
-                                                                    <hr>
-                                                                    <div class="row m-b word-break">
+
+
+                                                                    <div class="col-sm-6">
+                                                                        <strong>Name:</strong>
+                                                                        {{$webinar_video['videos']}}
+                                                                    </div>
+
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row m-b word-break">
 {{--                                                                        <div class="col-sm-6">--}}
 {{--                                                                            <strong>Duration:</strong>  seconds--}}
 {{--                                                                        </div>--}}
 
 
-                                                                        <div class="col-sm-12">
-                                                                            <strong>Created:</strong>
-                                                                            {{$webinar_video['created_at']}}
-                                                                        </div>
-
+                                                                    <div class="col-sm-12">
+                                                                        <strong>Created:</strong>
+                                                                        {{$webinar_video['created_at']}}
                                                                     </div>
-                                                                    <hr>
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Created By:</strong> <span
-                                                                                    class="label label-success">{{$webinar_video['created_by']}}</span>
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Status:</strong> <span
-                                                                                    class="text-success"><i
-                                                                                        class="fa fa-check"></i> Video Ready</span>
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <hr>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="tab-pane" id="view-campaign-media-campaigns">
-                                                            <div class="card">
-                                                                <div class="card-body">
-                                                                    @if(empty($webinar_video['webinarVideo']))
-                                                                    <div class="alert alert-info">
-                                                                        Video not used in any campaigns.
-                                                                    </div>
-                                                                    @else
-                                                                        <div class="row">
-                                                                                <div class="col-sm-3">
-                                                                                    <b>id</b>
-                                                                                </div>
-                                                                                <div class="col-sm-3">
-                                                                                    <b>name</b>
-                                                                                </div>
-                                                                                <div class="col-sm-3">
-                                                                                    <b>webinar_url</b>
-                                                                                </div>
-                                                                                <div class="col-sm-3">
-                                                                                    <b>status</b>
-                                                                                </div>
-                                                                            <br/>
-                                                                            <br/>
-                                                                            @foreach($webinar_video['webinarVideo'] as $webinar)
-                                                                            <div class="col-sm-3">
-                                                                                {{$webinar['id']}}
-                                                                            </div>
-                                                                            <div class="col-sm-3">
-                                                                                {{$webinar['name']}}
-                                                                            </div>
-                                                                            <div class="col-sm-3">
-                                                                                <a href="{{$webinar['webinar_url']}}" target="_blank">
-                                                                                    {{$webinar['webinar_url']}}
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="col-sm-3">
-                                                                                {{$webinar['status']}}
-                                                                            </div>
-                                                                            @endforeach
-                                                                        </div>
-                                                                    @endif
 
                                                                 </div>
+                                                                <hr>
+                                                                <div class="row m-b word-break">
+                                                                    <div class="col-sm-6">
+                                                                        <strong>Created By:</strong> <span
+                                                                                class="label label-success">{{$webinar_video['created_by']}}</span>
+                                                                    </div>
+
+
+                                                                    <div class="col-sm-6">
+                                                                        <strong>Status:</strong> <span
+                                                                                class="text-success"><i
+                                                                                    class="fa fa-check"></i> Video Ready</span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <hr>
                                                             </div>
                                                         </div>
-
-
                                                     </div>
 
+                                                    <div class="tab-pane" id="view-campaign-media-campaigns">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                @if(empty($webinar_video['webinarVideo']))
+                                                                <div class="alert alert-info">
+                                                                    Video not used in any campaigns.
+                                                                </div>
+                                                                @else
+                                                                    <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                <b>id</b>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <b>name</b>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <b>webinar_url</b>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <b>status</b>
+                                                                            </div>
+                                                                        <br/>
+                                                                        <br/>
+                                                                        @foreach($webinar_video['webinarVideo'] as $webinar)
+                                                                        <div class="col-sm-3">
+                                                                            {{$webinar['id']}}
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            {{$webinar['name']}}
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            <a href="{{$webinar['webinar_url']}}" target="_blank">
+                                                                                {{$webinar['webinar_url']}}
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            {{$webinar['status']}}
+                                                                        </div>
+                                                                        @endforeach
+                                                                    </div>
+                                                                @endif
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
                                                 </div>
+
                                             </div>
                                         </div>
-
-
                                     </div>
-                                    <!-- end content-->
+
+
                                 </div>
-                                <!--  end card  -->
+                                <!-- end content-->
                             </div>
-                            <!-- end col-md-12 -->
+                            <!--  end card  -->
                         </div>
-                        <!-- end row -->            </div>
-                </div>
+                        <!-- end col-md-12 -->
+                    </div>
+                    <!-- end row -->            </div>
             </div>
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Watch Video</h5>
-                        </div>
-                        <div class="row watch-media-video"
-                             data-type="ready">
-                            <div class="col-sm-12">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <video width="550" controls
-                                           autoplay>
-                                        <source src="{{asset('/uploads/'.$webinar_video->videos)}}"
-                                                type="video/mp4">
-                                        <source src="{{asset('/uploads/'.$webinar_video->videos)}}"
-                                                type="video/ogg">
-                                        Your browser does not
-                                        support HTML video.
-                                    </video>
-                                </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Watch Video</h5>
+                    </div>
+                    <div class="row watch-media-video"
+                         data-type="ready">
+                        <div class="col-sm-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <video width="550" controls
+                                       autoplay>
+                                    <source src="{{asset('/uploads/'.$webinar_video->videos)}}"
+                                            type="video/mp4">
+                                    <source src="{{asset('/uploads/'.$webinar_video->videos)}}"
+                                            type="video/ogg">
+                                    Your browser does not
+                                    support HTML video.
+                                </video>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button"
-                                    class="btn btn-danger"
-                                    data-dismiss="modal">Close
-                            </button>
-                        </div>
                     </div>
-
+                    <div class="modal-footer">
+                        <button type="button"
+                                class="btn btn-danger"
+                                data-dismiss="modal">Close
+                        </button>
+                    </div>
                 </div>
+
             </div>
-            <footer class="footer">
-                <div class="container-fluid">
-
-                    <div class="copyright float-left">
-                        <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
-                            Cookie Policy
-                        </a>
-                        |
-                        <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
-                            Privacy Policy
-                        </a>
-                    </div>
-                    <div class="copyright float-right">
-                        © 2020 Client Funnels
-                    </div>
-                </div>
-            </footer>
         </div>
-    </div>
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <div class="copyright float-left">
+                    <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
+                        Cookie Policy
+                    </a>
+                    |
+                    <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="copyright float-right">
+                    © 2020 Client Funnels
+                </div>
+            </div>
+        </footer>
 
     <!--Modals -->
     <!-- Loading -->

@@ -1,265 +1,186 @@
 @extends('layouts.app')
 <script src="https://www.clientfunnels.io/js/core/bootstrap-material-design.min.js"></script>
 @section('content')
-    <div class="wrapper ">
 
-        <div class="main-panel">
+    <div class="content">
+            <div class="container-fluid">
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " style="">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-minimize">
-                            <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
-                                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
-                                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
-                            </button>
-                        </div>
-                        <a class="navbar-brand" href="/home">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                            aria-expanded="false" aria-label="Toggle navigation" style="">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-end">
-
-                        <ul class="navbar-nav">
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false" title="New Contact Messages">
-                                    <i class="material-icons" style="font-size: 3em;">chat</i>
-                                    <span class="notification header-total-new-messages" style="display: none"></span>
-                                    <p class="d-lg-none d-md-block">
-                                        New Contact Message
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javascript:void(0)">View
-                                        Contacts With&nbsp;<span class="header-total-new-messages"
-                                                                 style="display: none;"></span>&nbsp;New Messages</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link" href="javascript:void(0)"
-                                   title="SMS Credits">
-                                    <i class="fas fa-2x fa-comments-dollar"></i>
-                                    <span class=" header-total-credits">564</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons" style="font-size: 3em;">person</i>
-                                    <p class="d-lg-none d-md-block">
-                                        Account
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javascript:void(0)">My
-                                        Account</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/logout">Log out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
+                <div class="row">
+                    <div class="col-sm-12" id="page_messages"></div>
                 </div>
-            </nav>
-            <!-- End Navbar -->
-
-            <div class="content">
-                <div class="content">
-                    <div class="container-fluid">
-
-                        <div class="row">
-                            <div class="col-sm-12" id="page_messages"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-header card-header-primary card-header-icon">
-                                        <div class="card-icon">
-                                            <i class="fa fa-book-open"></i>
-                                        </div>
-                                        <h4 class="card-title">Programs</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="toolbar">
-                                            <button type="button" class="btn btn-success add-new-program">
-                                                <i class="fa fa-plus"></i> Add New Program
-                                                <div class="ripple-container"></div>
-                                            </button>
-                                        </div>
-                                        <div class="material-datatables">
-                                            <div id="DataTables_Table_0_wrapper"
-                                                 class="dataTables_wrapper dt-bootstrap4">
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="dataTables_length" id="DataTables_Table_0_length">
-                                                            <label>Show <select name="DataTables_Table_0_length"
-                                                                                aria-controls="DataTables_Table_0"
-                                                                                class="custom-select custom-select-sm form-control form-control-sm">
-                                                                    <option value="10">10</option>
-                                                                    <option value="25">25</option>
-                                                                    <option value="50">50</option>
-                                                                    <option value="-1">All</option>
-                                                                </select> entries</label></div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div id="DataTables_Table_0_filter" class="dataTables_filter">
-                                                            <label><input type="search"
-                                                                          class="form-control form-control-sm"
-                                                                          placeholder="Search records"
-                                                                          aria-controls="DataTables_Table_0"></label>
-                                                        </div>
-                                                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-primary card-header-icon">
+                                <div class="card-icon">
+                                    <i class="fa fa-book-open"></i>
+                                </div>
+                                <h4 class="card-title">Programs</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="toolbar">
+                                    <button type="button" class="btn btn-success add-new-program" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fa fa-plus"></i> Add New Program
+                                        <div class="ripple-container"></div>
+                                    </button>
+                                </div>
+                                <div class="material-datatables">
+                                    <div id="DataTables_Table_0_wrapper"
+                                         class="dataTables_wrapper dt-bootstrap4">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="dataTables_length" id="DataTables_Table_0_length">
+                                                    <label>Show <select name="DataTables_Table_0_length"
+                                                                        aria-controls="DataTables_Table_0"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="-1">All</option>
+                                                        </select> entries</label></div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                                    <label><input type="search"
+                                                                  class="form-control form-control-sm"
+                                                                  placeholder="Search records"
+                                                                  aria-controls="DataTables_Table_0"></label>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table class="table table-striped table-no-bordered table-hover default-datatables dataTable dtr-inline"
-                                                               cellspacing="0" width="100%" style="width: 100%;"
-                                                               id="DataTables_Table_0" role="grid"
-                                                               aria-describedby="DataTables_Table_0_info">
-                                                            <thead>
-                                                            <tr role="row">
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 65px;"
-                                                                    aria-label="Program ID: activate to sort column ascending">
-                                                                    Program ID
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 222px;"
-                                                                    aria-label="Name: activate to sort column ascending">
-                                                                    Name
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 73px;"
-                                                                    aria-label="Contracts: activate to sort column ascending">
-                                                                    Contracts
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 92px;"
-                                                                    aria-label="Assigned Contacts: activate to sort column ascending">
-                                                                    Assigned Contacts
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 109px;"
-                                                                    aria-label="Created: activate to sort column ascending">
-                                                                    Created
-                                                                </th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="DataTables_Table_0" rowspan="1"
-                                                                    colspan="1" style="width: 212px;"
-                                                                    aria-label="Notes: activate to sort column ascending">
-                                                                    Notes
-                                                                </th>
-                                                                <th class="disabled-sorting text-right sorting"
-                                                                    tabindex="0" aria-controls="DataTables_Table_0"
-                                                                    rowspan="1" colspan="1" style="width: 148px;"
-                                                                    aria-label="Actions: activate to sort column ascending">
-                                                                    Actions
-                                                                </th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            @foreach($programs as $program)
-                                                                <tr role="row" class="odd">
-                                                                    <td tabindex="0">{{$program->id}}</td>
-                                                                    <td>
-                                                                        <div class="d-inline">{{$program->name}}</div>
-                                                                    </td>
-                                                                    <td>0</td>
-                                                                    <td>0</td>
-                                                                    <td>{{date('d-m-Y',strtotime($program->created_at))}}
-                                                                        <br>By: <span
-                                                                                class="label label-success">You</span>
-                                                                    </td>
-                                                                    <td>{{$program->notes}}</td>
-                                                                    <td>
-                                                                        <button type="button"
-                                                                                class="btn btn-warning pull-right m-b edit-company-contract"
-                                                                                data-program-id="{{$program->id}}">
-                                                                            <i class="fa fa-pencil-alt"></i> Edit
-                                                                        </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table table-striped table-no-bordered table-hover default-datatables dataTable dtr-inline"
+                                                       cellspacing="0" width="100%" style="width: 100%;"
+                                                       id="DataTables_Table_0" role="grid"
+                                                       aria-describedby="DataTables_Table_0_info">
+                                                    <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 65px;"
+                                                            aria-label="Program ID: activate to sort column ascending">
+                                                            Program ID
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 222px;"
+                                                            aria-label="Name: activate to sort column ascending">
+                                                            Name
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 73px;"
+                                                            aria-label="Contracts: activate to sort column ascending">
+                                                            Contracts
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 92px;"
+                                                            aria-label="Assigned Contacts: activate to sort column ascending">
+                                                            Assigned Contacts
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 109px;"
+                                                            aria-label="Created: activate to sort column ascending">
+                                                            Created
+                                                        </th>
+                                                        <th class="sorting" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1"
+                                                            colspan="1" style="width: 212px;"
+                                                            aria-label="Notes: activate to sort column ascending">
+                                                            Notes
+                                                        </th>
+                                                        <th class="disabled-sorting text-right sorting"
+                                                            tabindex="0" aria-controls="DataTables_Table_0"
+                                                            rowspan="1" colspan="1" style="width: 148px;"
+                                                            aria-label="Actions: activate to sort column ascending">
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @foreach($programs as $program)
+                                                        <tr role="row" class="odd">
+                                                            <td tabindex="0">{{$program->id}}</td>
+                                                            <td>
+                                                                <div class="d-inline">{{$program->name}}</div>
+                                                            </td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>{{date('d-m-Y',strtotime($program->created_at))}}
+                                                                <br>By: <span
+                                                                        class="label label-success">You</span>
+                                                            </td>
+                                                            <td>{{$program->notes}}</td>
+                                                            <td>
+                                                                <button type="button"
+                                                                        class="btn btn-warning pull-right m-b edit-company-contract"
+                                                                        data-program-id="{{$program->id}}">
+                                                                    <i class="fa fa-pencil-alt"></i> Edit
+                                                                </button>
 
-                                                                        <a href="/finance/programs/view/{{$program->id}}"
-                                                                           class="btn btn-success pull-right m-b">
-                                                                            <i class="fa fa-eye"></i> View
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            @endforeach
-                                                            </tbody>
-                                                            <tfoot>
-                                                            <tr>
-                                                                <th rowspan="1" colspan="1">Program ID</th>
-                                                                <th rowspan="1" colspan="1">Name</th>
-                                                                <th rowspan="1" colspan="1">Contracts</th>
-                                                                <th rowspan="1" colspan="1">Assigned</th>
-                                                                <th rowspan="1" colspan="1">Created</th>
-                                                                <th rowspan="1" colspan="1">Notes</th>
-                                                                <th class="disabled-sorting text-right" rowspan="1"
-                                                                    colspan="1">Actions
-                                                                </th>
-                                                            </tr>
-                                                            </tfoot>
-                                                            <tbody>
+                                                                <a href="/finance/programs/view/{{$program->id}}"
+                                                                   class="btn btn-success pull-right m-b">
+                                                                    <i class="fa fa-eye"></i> View
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <th rowspan="1" colspan="1">Program ID</th>
+                                                        <th rowspan="1" colspan="1">Name</th>
+                                                        <th rowspan="1" colspan="1">Contracts</th>
+                                                        <th rowspan="1" colspan="1">Assigned</th>
+                                                        <th rowspan="1" colspan="1">Created</th>
+                                                        <th rowspan="1" colspan="1">Notes</th>
+                                                        <th class="disabled-sorting text-right" rowspan="1"
+                                                            colspan="1">Actions
+                                                        </th>
+                                                    </tr>
+                                                    </tfoot>
+                                                    <tbody>
 
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <!-- end content-->
                                 </div>
-                                <!--  end card  -->
-                            </div>
-                            <!-- end col-md-12 -->
-                        </div>
-                        <!-- end row -->            </div>
-                </div>
-            </div>
-            <footer class="footer">
-                <div class="container-fluid">
 
-                    <div class="copyright float-left">
-                        <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
-                            Cookie Policy
-                        </a>
-                        |
-                        <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
-                            Privacy Policy
-                        </a>
+                            </div>
+                            <!-- end content-->
+                        </div>
+                        <!--  end card  -->
                     </div>
-                    <div class="copyright float-right">
-                        © 2020 Client Funnels
-                    </div>
+                    <!-- end col-md-12 -->
                 </div>
-            </footer>
+                <!-- end row -->            </div>
         </div>
-    </div>
-    <div id="add-new-program-modal" class="modal hmodal-success" tabindex="-1" role="dialog" data-backdrop="static"
+
+    <footer class="footer">
+        <div class="container-fluid">
+
+            <div class="copyright float-left">
+                <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
+                    Cookie Policy
+                </a>
+                |
+                <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="copyright float-right">
+                © 2020 Client Funnels
+            </div>
+        </div>
+    </footer>
+
+    <div id="add-new-program-modal" class="modal modal-success" tabindex="-1" role="dialog" data-backdrop="static"
          data-keyboard="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -267,9 +188,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title"></h5>
                 </div>
-
                 <div class="modal-messages"></div>
-
                 <form id="new-program-form" class="form-horizontal live-form-validation" novalidate="novalidate">
                     @csrf
                     <input type="hidden" name="edit_program_id" value="0">
@@ -392,7 +311,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger pull-left close-modal" data-dismiss="modal">Cancel</button>
 
                         <button type="submit" class="btn btn-success pull-right">
                             <i class="fa fa-arrow-up"></i> Save
@@ -405,11 +324,15 @@
             </div>
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.clientfunnels.io/js/plugins/jquery.dataTables.min.js"></script>
     <script>
         $('.add-new-program').on('click', function () {
             $('#add-new-program-modal').show();
+        });
+        $('.modal').on('click',function () {
+            $('#add-new-program-modal').hide();
         });
         $('form').submit(function (e) {
             e.preventDefault();
@@ -423,7 +346,6 @@
                 },
                 success: function (result) {
                     $('#add-new-program-modal').hide();
-                    alert('asd');
                     window.location.reload();
                 }
             });

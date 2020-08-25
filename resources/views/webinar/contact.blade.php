@@ -5,7 +5,7 @@
             <div class="color-line"></div>
             <div class="modal-header">
                 <h5 class="modal-title">Contact Registration &amp; Booking</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-messages" style="display: none;"></div>
@@ -141,7 +141,7 @@
                                             <div class="col-sm-4">
                                                 <strong>Booked With:</strong>
                                             </div>
-                                            <div class="col-sm-8 vcb-data-booked_with">Helena Hill</div>
+                                            <div class="col-sm-8 vcb-data-booked_with">{{Auth::user()->name}}</div>
                                         </div>
                                         <hr>
                                         <div class="row">
@@ -287,10 +287,10 @@
                                             </div>
                                             <hr>
                                         </div>
-                                        <a href="javascript:void(0)"
-                                           class="btn btn-success vcc-view-url" id="contact_url">
-                                            <i class="fa fa-arrow-right"></i> View Contact
-                                        </a>
+{{--                                        <a href="javascript:void(0)"--}}
+{{--                                           class="btn btn-success vcc-view-url" id="contact_url">--}}
+{{--                                            <i class="fa fa-arrow-right"></i> View Contact--}}
+{{--                                        </a>--}}
                                     </div>
 
                                     <div class="vcc-no-data" style="display: none;">
@@ -311,15 +311,15 @@
 
         </div>
 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close
-                <div class="ripple-container">
-                    <div class="ripple-decorator ripple-on ripple-out"
-                         style="left: 5.71924px; top: 17.3869px; background-color: rgb(255, 255, 255); transform: scale(8.12185);"></div>
-                </div>
-            </button>
+{{--        <div class="modal-footer">--}}
+{{--            <button type="button" class="btn btn-danger pull-left close-modal" data-dismiss="modal">Close--}}
+{{--                <div class="ripple-container">--}}
+{{--                    <div class="ripple-decorator ripple-on ripple-out"--}}
+{{--                         style="left: 5.71924px; top: 17.3869px; background-color: rgb(255, 255, 255); transform: scale(8.12185);"></div>--}}
+{{--                </div>--}}
+{{--            </button>--}}
 
-        </div>
+{{--        </div>--}}
 
     </div>
 </div>

@@ -1686,7 +1686,7 @@
                                         <div class="row">
                                             <div class="col-md-12 ml-auto mr-auto">
                                                 <div class="page-categories">
-
+                                                    <div class="modal-content"></div>
 
                                                     <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
                                                         role="tablist">
@@ -1809,7 +1809,6 @@
                                                                             No Registrations to show at this time.
                                                                         </div>
                                                                     @else
-                                                                        <div class="modal-content"></div>
                                                                         <div class="material-datatables">
                                                                             <div id="DataTables_Table_0_wrapper"
                                                                                  class="dataTables_wrapper dt-bootstrap4">
@@ -2229,7 +2228,7 @@
                                                                                             </td>
                                                                                         </tr>
                                                                                         @endforeach
-                                                                                        <div class="modal-content"></div>
+{{--                                                                                        <div class="modal-content"></div>--}}
                                                                                         <script src="https://www.clientfunnels.io/js/core/jquery.min.js"></script>
                                                                                         <script>
                                                                                             $('.view-campaign-booking , .view-campaign-reg').on('click',function () {
@@ -2242,8 +2241,13 @@
                                                                                                     },
                                                                                                     success: function (result) {
                                                                                                         $('.modal-content').html(result);
+                                                                                                        $('.modal-content').show();
                                                                                                     }
                                                                                                 });
+                                                                                            });
+
+                                                                                            $('.modal-content').on('click','.modal-close',function () {
+                                                                                                $('.modal-content').hide();
                                                                                             });
                                                                                         </script>
                                                                                         </tbody>
@@ -2352,29 +2356,15 @@
                                                                     <div class="row m-b">
                                                                         <div class="col-md-12">
                                                                             <strong>Filter Statistics - Showing date
-                                                                                from 29/07/2020 till 29/07/2020</strong>
+                                                                                from {{date('y-m-d')}} till {{date('y-m-d')}} </strong>
                                                                             <hr>
-
                                                                             <form action="https://www.clientfunnels.io/campaigns/view/735?page=statistics" method="post">
                                                                                 <div class="row">
                                                                                     <div class="col-sm-12">
                                                                                         <div class="form-group">
                                                                                             <label for="vc-fs-scale" class="bmd-label-floating">Timeframe
                                                                                                 <span class="required">*</span></label>
-                                                                                            <div class="select2-container js-source-states-2 m-b" id="s2id_vc-fs-scale" style="width: 100%"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">
-                                                                                                    <span class="select2-chosen" id="select2-chosen-1">Day</span><abbr class="select2-search-choice-close"></abbr>
-                                                                                                    <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen">Timeframe
-                                                                                                    *</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1">
-                                                                                                <div class="select2-drop select2-display-none select2-with-searchbox">
-                                                                                                    <div class="select2-search">
-                                                                                                        <label for="s2id_autogen1_search" class="select2-offscreen">Timeframe
-                                                                                                            *</label>
-                                                                                                        <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">
-                                                                                                    </div>
-                                                                                                    <ul class="select2-results" role="listbox" id="select2-results-1"></ul>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <select class="js-source-states-2 m-b" name="scale" id="vc-fs-scale" style="width: 100%; display: none;" tabindex="-1" title="Timeframe *">
+                                                                                            <select class="js-source-states-2 m-b" name="scale" id="vc-fs-scale" style="width: 100%;" tabindex="-1" title="Timeframe *">
                                                                                                 <option value="day" selected="">Day
                                                                                                 </option>
                                                                                                 <option value="week">
@@ -2542,14 +2532,14 @@
 
 
                                                                                 <hr>
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12">
-                                                                                        <button type="submit" class="btn btn-success max-width">
-                                                                                            <i class="fa fa-refresh-alt" aria-hidden="true"></i>
-                                                                                            Refresh
-                                                                                        </button>
-                                                                                    </div>
-                                                                                </div>
+{{--                                                                                <div class="row">--}}
+{{--                                                                                    <div class="col-sm-12">--}}
+{{--                                                                                        <button type="submit" class="btn btn-success max-width">--}}
+{{--                                                                                            <i class="fa fa-refresh-alt" aria-hidden="true"></i>--}}
+{{--                                                                                            Refresh--}}
+{{--                                                                                        </button>--}}
+{{--                                                                                    </div>--}}
+{{--                                                                                </div>--}}
                                                                             </form>
 
                                                                         </div>
@@ -2559,20 +2549,143 @@
                                                                     </div>
                                                                     <h3>Webinar Watched 10 Minutes Blocks</h3>
                                                                     <small>Total Webinar Duration: </small>
+                                                                    <div class="card-body">
 
-                                                                    <script type="text/javascript">
-                                                                        var blockData = {
-                                                                            labels: [],
-                                                                            datasets: [],
-                                                                        }
-                                                                    </script>
+                                                                        <div class="row">
+                                                                            <div class="col-md-8"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                                                                <canvas id="campaign-stats" width="651" height="366" style="display: block; width: 651px; height: 366px;" class="chartjs-render-monitor"></canvas>
 
-                                                                    <canvas id="webinar-blocks" width="952" height="534" style="display: block; height: 534px; width: 951px;" class="chartjs-render-monitor"></canvas>
+                                                                                <script type="text/javascript">
+                                                                                    var statsData = {
+                                                                                        labels: ['Optin Rate', 'View Rate', 'Calls Booked', 'Calls Closed'],
+                                                                                        datasets: [
+                                                                                            {
+                                                                                                label: 'Optin Rate (33%)',
+                                                                                                backgroundColor: 'rgba(255,0,0,0.5)',
+                                                                                                borderColor: 'rgba(255,0,0)',
+                                                                                                borderWidth: 1,
+                                                                                                data: [{{$campaign_count}},0,0,0]
+                                                                                            }
+                                                                                            ,
+                                                                                            {
+                                                                                                label: 'View Rate (31%)',
+                                                                                                backgroundColor: 'rgba(255,0,0,0.5)',
+                                                                                                borderColor: 'rgba(255,0,0)',
+                                                                                                borderWidth: 1,
+                                                                                                data: [0,{{$views}},0,0]
+                                                                                            }
+                                                                                            ,
+                                                                                            {
+                                                                                                label: 'Calls Booked (19%)',
+                                                                                                backgroundColor: 'rgba(0,204,0,0.5)',
+                                                                                                borderColor: 'rgba(0,204,0)',
+                                                                                                borderWidth: 1,
+                                                                                                data: [0,0,{{$booking_count}},0]
+                                                                                            }
+                                                                                            ,
+                                                                                            {
+                                                                                                label: 'Calls Closed (0%)',
+                                                                                                backgroundColor: 'rgba(255,0,0,0.5)',
+                                                                                                borderColor: 'rgba(255,0,0)',
+                                                                                                borderWidth: 1,
+                                                                                                data: [0,0,0,0]
+                                                                                            }
+                                                                                        ],
+                                                                                    }
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <strong class="text-danger">Optin Rate</strong><br>
+                                                                                        <small>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-4 text-danger">Current: 19%</div>
+                                                                                                <div class="col-sm-4 text-info">Target: 20%</div>
+                                                                                                <div class="col-sm-4">Total: {{$campaign_count}}</div>
+                                                                                            </div>
+                                                                                        </small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <strong class="text-danger">View Rate</strong><br>
+                                                                                        <small>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-4 text-danger">Current: 31%</div>
+                                                                                                <div class="col-sm-4 text-info">Target: 65%</div>
+                                                                                                <div class="col-sm-4">Total: {{$views}}</div>
+                                                                                            </div>
+                                                                                        </small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <strong class="text-success">Calls Booked</strong><br>
+                                                                                        <small>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-4 text-success">Current: 19%</div>
+                                                                                                <div class="col-sm-4 text-info">Target: 13%</div>
+                                                                                                <div class="col-sm-4">Total: {{$booking_count}}</div>
+                                                                                            </div>
+                                                                                        </small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12">
+                                                                                        <strong class="text-danger">Calls Closed</strong><br>
+                                                                                        <small>
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-4 text-danger">Current: 0%</div>
+                                                                                                <div class="col-sm-4 text-info">Target: 20%</div>
+                                                                                                <div class="col-sm-4">Total: 0</div>
+                                                                                            </div>
+                                                                                        </small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <hr>
+                                                                            </div>
 
+                                                                        </div>
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <script>
+                                                            $(document).ready(function() {
 
+                                                                //Line Chart INIT
+                                                                new Chart(document.getElementById('campaign-stats').getContext('2d'), {
+                                                                    type: 'horizontalBar',
+                                                                    data: statsData,
+                                                                    options: {
+                                                                        elements: {
+                                                                            rectangle: {
+                                                                                borderWidth: 2,
+                                                                            }
+                                                                        },
+                                                                        responsive: true,
+                                                                        legend: {
+                                                                            display: false,
+                                                                        },
+                                                                        scales : {
+                                                                            yAxes : [{
+                                                                                ticks : {
+                                                                                    beginAtZero : true
+                                                                                }
+                                                                            }]
+                                                                        },
+                                                                        scaleBeginAtZero: true,
+                                                                        tooltips: {enabled: false},
+                                                                        hover: {mode: null},
+                                                                    }
+                                                                });
+                                                            });
+                                                        </script>
 
                                                         <div class="tab-pane" id="view-campaign-call-closed"
                                                              id="view-campaign-call-closed">

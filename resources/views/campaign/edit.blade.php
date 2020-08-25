@@ -3,14 +3,7 @@
     <link href="https://www.clientfunnels.io/vendor/select2/select2-bootstrap.css" rel="stylesheet" />
     <link href="https://www.clientfunnels.io/vendor/select2/select2.css" rel="stylesheet" />
     <link href="https://www.clientfunnels.io/vendor/slim-image-cropper/css/slim.min.css" rel="stylesheet" />
-<div class="wrapper ">
-
-    <div class="main-panel">
-
-        <!-- End Navbar -->
-
-        <div class="content">
-            <div class="content">
+    <div class="content">
                 <div class="container-fluid">
 
                     <div class="row">
@@ -1720,11 +1713,7 @@
                 </div>
 
             </div>
-        </div>
-    </div>
 
-</div>
-</div>
 
 <!--Modals -->
 <!-- Loading -->

@@ -1,413 +1,332 @@
 @extends('layouts.app')
 @section('content')
-    <div class="wrapper ">
 
-        <div class="main-panel">
+    <div class="content">
+            <div class="container-fluid">
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-minimize">
-                            <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
-                                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
-                                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
-                            </button>
-                        </div>
-                        <a class="navbar-brand" href="/home">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-end">
-
-                        <ul class="navbar-nav">
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false" title="New Contact Messages">
-                                    <i class="material-icons" style="font-size: 3em;">chat</i>
-                                    <span class="notification header-total-new-messages" style="display: none"></span>
-                                    <p class="d-lg-none d-md-block">
-                                        New Contact Message
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javscript:void(0)">View
-                                        Contacts With&nbsp;<span class="header-total-new-messages"
-                                                                 style="display: none;"></span>&nbsp;New Messages</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link" href="javscript:void(0)"
-                                   title="SMS Credits">
-                                    <i class="fas fa-2x fa-comments-dollar"></i>
-                                    <span class=" header-total-credits">558</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons" style="font-size: 3em;">person</i>
-                                    <p class="d-lg-none d-md-block">
-                                        Account
-                                    </p>
-                                    <div class="ripple-container"></div>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="javscript:void(0)">My
-                                        Account</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/logout">Log out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
+                <div class="row">
+                    <div class="col-sm-12" id="page_messages"></div>
                 </div>
-            </nav>
-            <!-- End Navbar -->
-
-            <div class="content">
-                <div class="content">
-                    <div class="container-fluid">
-
-                        <div class="row">
-                            <div class="col-sm-12" id="page_messages"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-header card-header-primary card-header-icon">
-                                        <div class="card-icon">
-                                            <i class="fa fa-book-open"></i>
-                                        </div>
-                                        <h4 class="card-title">View Program</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="toolbar">
-                                            <a href="/finance/programs"
-                                               title="Back to programs list" class="btn btn-success">
-                                                <i class="fa fa-arrow-left"></i> Programs List
-                                            </a>
-
-                                            <a type="button"
-                                                    class="btn btn-danger btn-sm m-b pull-right"
-                                                    data-type="program" href="/finance/programs/delete/{{$program['id']}}"
-                                                    data-message="Delete Company Program">
-                                                <i class="fa fa-trash"></i> Delete
-                                            </a>
-
-
-                                        </div>
-                                        <hr>
-
-                                        <div class="row">
-                                            <div class="col-md-12 ml-auto mr-auto">
-                                                <div class="page-categories">
-
-                                                    <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
-                                                        role="tablist">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link active show" data-toggle="tab"
-                                                               href="#view-program-details" role="tablist">
-                                                                <i class="material-icons">info</i> Details
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" data-toggle="tab"
-                                                               href="#view-program-contacts" role="tablist">
-                                                                <i class="material-icons">assignment_ind</i> Assigned
-                                                                Contacts (0)
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-
-                                                    <hr>
-                                                    <div class="tab-content tab-space tab-subcategories">
-
-                                                        <div class="tab-pane active show" id="view-program-details">
-                                                            <div class="card">
-                                                                <div class="card-body">
-
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Program ID:</strong> {{$program['id']}}
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Name:</strong> {{$program['name']}}
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <hr>
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Price:</strong> {{$program['price'].' '.$program['currency']}}
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Recurring Payment:</strong> Every {{$program['recurring_every'].' '.$program['recurring_tenure']}}
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <hr>
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Contracts:</strong>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    {{$program['contracts']}}
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Notes:</strong> {{$program['notes']}}
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <hr>
-                                                                    <div class="row m-b word-break">
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Created:</strong> {{$program['created_at']}}
-                                                                        </div>
-
-
-                                                                        <div class="col-sm-6">
-                                                                            <strong>Created By:</strong> <span
-                                                                                    class="label label-success">You</span>
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <hr>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="tab-pane" id="view-program-contacts">
-                                                            <div class="card">
-                                                                <div class="card-body">
-
-
-                                                                    <h2 class="text-center">Assigned Contacts</h2>
-                                                                    <hr>
-                                                                    <div class="material-datatables">
-                                                                        <div id="DataTables_Table_0_wrapper"
-                                                                             class="dataTables_wrapper dt-bootstrap4">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12 col-md-6">
-                                                                                    <div class="dataTables_length"
-                                                                                         id="DataTables_Table_0_length">
-                                                                                        <label>Show <select
-                                                                                                    name="DataTables_Table_0_length"
-                                                                                                    aria-controls="DataTables_Table_0"
-                                                                                                    class="custom-select custom-select-sm form-control form-control-sm">
-                                                                                                <option value="10">10
-                                                                                                </option>
-                                                                                                <option value="25">25
-                                                                                                </option>
-                                                                                                <option value="50">50
-                                                                                                </option>
-                                                                                                <option value="-1">All
-                                                                                                </option>
-                                                                                            </select> entries</label>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-sm-12 col-md-6">
-                                                                                    <div id="DataTables_Table_0_filter"
-                                                                                         class="dataTables_filter">
-                                                                                        <label><input type="search"
-                                                                                                      class="form-control form-control-sm"
-                                                                                                      placeholder="Search records"
-                                                                                                      aria-controls="DataTables_Table_0"></label>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12">
-                                                                                    <table class="table table-striped table-no-bordered table-hover default-datatables dataTable dtr-inline"
-                                                                                           cellspacing="0" width="100%"
-                                                                                           style="width: 100%;"
-                                                                                           id="DataTables_Table_0"
-                                                                                           role="grid"
-                                                                                           aria-describedby="DataTables_Table_0_info">
-                                                                                        <thead>
-                                                                                        <tr role="row">
-                                                                                            <th class="sorting"
-                                                                                                tabindex="0"
-                                                                                                aria-controls="DataTables_Table_0"
-                                                                                                rowspan="1" colspan="1"
-                                                                                                style="width: 0px;"
-                                                                                                aria-label="Assigned ID: activate to sort column ascending">
-                                                                                                Assigned ID
-                                                                                            </th>
-                                                                                            <th class="sorting"
-                                                                                                tabindex="0"
-                                                                                                aria-controls="DataTables_Table_0"
-                                                                                                rowspan="1" colspan="1"
-                                                                                                style="width: 0px;"
-                                                                                                aria-label="Contact: activate to sort column ascending">
-                                                                                                Contact
-                                                                                            </th>
-                                                                                            <th class="sorting"
-                                                                                                tabindex="0"
-                                                                                                aria-controls="DataTables_Table_0"
-                                                                                                rowspan="1" colspan="1"
-                                                                                                style="width: 0px;"
-                                                                                                aria-label="Assigned: activate to sort column ascending">
-                                                                                                Assigned
-                                                                                            </th>
-                                                                                            <th class="text-right sorting"
-                                                                                                tabindex="0"
-                                                                                                aria-controls="DataTables_Table_0"
-                                                                                                rowspan="1" colspan="1"
-                                                                                                style="width: 0px;"
-                                                                                                aria-label="Actions: activate to sort column ascending">
-                                                                                                Actions
-                                                                                            </th>
-                                                                                        </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        <tr class="odd">
-                                                                                            <td valign="top" colspan="4"
-                                                                                                class="dataTables_empty">
-                                                                                                No data available in
-                                                                                                table
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                        </tbody>
-                                                                                        <tfoot>
-                                                                                        <tr>
-                                                                                            <th rowspan="1" colspan="1">
-                                                                                                Assigned ID
-                                                                                            </th>
-                                                                                            <th rowspan="1" colspan="1">
-                                                                                                Contact
-                                                                                            </th>
-                                                                                            <th rowspan="1" colspan="1">
-                                                                                                Assigned
-                                                                                            </th>
-                                                                                            <th class="text-right"
-                                                                                                rowspan="1" colspan="1">
-                                                                                                Actions
-                                                                                            </th>
-                                                                                        </tr>
-                                                                                        </tfoot>
-                                                                                        <tbody>
-
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-12 col-md-5">
-                                                                                    <div class="dataTables_info"
-                                                                                         id="DataTables_Table_0_info"
-                                                                                         role="status"
-                                                                                         aria-live="polite">Showing 0 to
-                                                                                        0 of 0 entries
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-sm-12 col-md-7">
-                                                                                    <div class="dataTables_paginate paging_full_numbers"
-                                                                                         id="DataTables_Table_0_paginate">
-                                                                                        <ul class="pagination">
-                                                                                            <li class="paginate_button page-item first disabled"
-                                                                                                id="DataTables_Table_0_first">
-                                                                                                <a href="#"
-                                                                                                   aria-controls="DataTables_Table_0"
-                                                                                                   data-dt-idx="0"
-                                                                                                   tabindex="0"
-                                                                                                   class="page-link">First</a>
-                                                                                            </li>
-                                                                                            <li class="paginate_button page-item previous disabled"
-                                                                                                id="DataTables_Table_0_previous">
-                                                                                                <a href="#"
-                                                                                                   aria-controls="DataTables_Table_0"
-                                                                                                   data-dt-idx="1"
-                                                                                                   tabindex="0"
-                                                                                                   class="page-link">Prev</a>
-                                                                                            </li>
-                                                                                            <li class="paginate_button page-item next disabled"
-                                                                                                id="DataTables_Table_0_next">
-                                                                                                <a href="#"
-                                                                                                   aria-controls="DataTables_Table_0"
-                                                                                                   data-dt-idx="2"
-                                                                                                   tabindex="0"
-                                                                                                   class="page-link">Next</a>
-                                                                                            </li>
-                                                                                            <li class="paginate_button page-item last disabled"
-                                                                                                id="DataTables_Table_0_last">
-                                                                                                <a href="#"
-                                                                                                   aria-controls="DataTables_Table_0"
-                                                                                                   data-dt-idx="3"
-                                                                                                   tabindex="0"
-                                                                                                   class="page-link">Last</a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <!-- end content-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-primary card-header-icon">
+                                <div class="card-icon">
+                                    <i class="fa fa-book-open"></i>
                                 </div>
-                                <!--  end card  -->
+                                <h4 class="card-title">View Program</h4>
                             </div>
-                            <!-- end col-md-12 -->
+                            <div class="card-body">
+                                <div class="toolbar">
+                                    <a href="/finance/programs"
+                                       title="Back to programs list" class="btn btn-success">
+                                        <i class="fa fa-arrow-left"></i> Programs List
+                                    </a>
+
+                                    <a type="button"
+                                            class="btn btn-danger btn-sm m-b pull-right"
+                                            data-type="program" href="/finance/programs/delete/{{$program['id']}}"
+                                            data-message="Delete Company Program">
+                                        <i class="fa fa-trash"></i> Delete
+                                    </a>
+
+
+                                </div>
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-md-12 ml-auto mr-auto">
+                                        <div class="page-categories">
+
+                                            <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
+                                                role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active show" data-toggle="tab"
+                                                       href="#view-program-details" role="tablist">
+                                                        <i class="material-icons">info</i> Details
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab"
+                                                       href="#view-program-contacts" role="tablist">
+                                                        <i class="material-icons">assignment_ind</i> Assigned
+                                                        Contacts (0)
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <hr>
+                                            <div class="tab-content tab-space tab-subcategories">
+
+                                                <div class="tab-pane active show" id="view-program-details">
+                                                    <div class="card">
+                                                        <div class="card-body">
+
+                                                            <div class="row m-b word-break">
+                                                                <div class="col-sm-6">
+                                                                    <strong>Program ID:</strong> {{$program['id']}}
+                                                                </div>
+
+
+                                                                <div class="col-sm-6">
+                                                                    <strong>Name:</strong> {{$program['name']}}
+                                                                </div>
+
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row m-b word-break">
+                                                                <div class="col-sm-6">
+                                                                    <strong>Price:</strong> {{$program['price'].' '.$program['currency']}}
+                                                                </div>
+
+
+                                                                <div class="col-sm-6">
+                                                                    <strong>Recurring Payment:</strong> Every {{$program['recurring_every'].' '.$program['recurring_tenure']}}
+                                                                </div>
+
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row m-b word-break">
+                                                                <div class="col-sm-6">
+                                                                    <strong>Contracts:</strong>
+                                                                    <ul>
+                                                                        <li>
+                                                                            {{$program['contracts']}}
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+
+                                                                <div class="col-sm-6">
+                                                                    <strong>Notes:</strong> {{$program['notes']}}
+                                                                </div>
+
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row m-b word-break">
+                                                                <div class="col-sm-6">
+                                                                    <strong>Created:</strong> {{$program['created_at']}}
+                                                                </div>
+
+
+                                                                <div class="col-sm-6">
+                                                                    <strong>Created By:</strong> <span
+                                                                            class="label label-success">You</span>
+                                                                </div>
+
+                                                            </div>
+                                                            <hr>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane" id="view-program-contacts">
+                                                    <div class="card">
+                                                        <div class="card-body">
+
+
+                                                            <h2 class="text-center">Assigned Contacts</h2>
+                                                            <hr>
+                                                            <div class="material-datatables">
+                                                                <div id="DataTables_Table_0_wrapper"
+                                                                     class="dataTables_wrapper dt-bootstrap4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12 col-md-6">
+                                                                            <div class="dataTables_length"
+                                                                                 id="DataTables_Table_0_length">
+                                                                                <label>Show <select
+                                                                                            name="DataTables_Table_0_length"
+                                                                                            aria-controls="DataTables_Table_0"
+                                                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                                                        <option value="10">10
+                                                                                        </option>
+                                                                                        <option value="25">25
+                                                                                        </option>
+                                                                                        <option value="50">50
+                                                                                        </option>
+                                                                                        <option value="-1">All
+                                                                                        </option>
+                                                                                    </select> entries</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-6">
+                                                                            <div id="DataTables_Table_0_filter"
+                                                                                 class="dataTables_filter">
+                                                                                <label><input type="search"
+                                                                                              class="form-control form-control-sm"
+                                                                                              placeholder="Search records"
+                                                                                              aria-controls="DataTables_Table_0"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <table class="table table-striped table-no-bordered table-hover default-datatables dataTable dtr-inline"
+                                                                                   cellspacing="0" width="100%"
+                                                                                   style="width: 100%;"
+                                                                                   id="DataTables_Table_0"
+                                                                                   role="grid"
+                                                                                   aria-describedby="DataTables_Table_0_info">
+                                                                                <thead>
+                                                                                <tr role="row">
+                                                                                    <th class="sorting"
+                                                                                        tabindex="0"
+                                                                                        aria-controls="DataTables_Table_0"
+                                                                                        rowspan="1" colspan="1"
+                                                                                        style="width: 0px;"
+                                                                                        aria-label="Assigned ID: activate to sort column ascending">
+                                                                                        Assigned ID
+                                                                                    </th>
+                                                                                    <th class="sorting"
+                                                                                        tabindex="0"
+                                                                                        aria-controls="DataTables_Table_0"
+                                                                                        rowspan="1" colspan="1"
+                                                                                        style="width: 0px;"
+                                                                                        aria-label="Contact: activate to sort column ascending">
+                                                                                        Contact
+                                                                                    </th>
+                                                                                    <th class="sorting"
+                                                                                        tabindex="0"
+                                                                                        aria-controls="DataTables_Table_0"
+                                                                                        rowspan="1" colspan="1"
+                                                                                        style="width: 0px;"
+                                                                                        aria-label="Assigned: activate to sort column ascending">
+                                                                                        Assigned
+                                                                                    </th>
+                                                                                    <th class="text-right sorting"
+                                                                                        tabindex="0"
+                                                                                        aria-controls="DataTables_Table_0"
+                                                                                        rowspan="1" colspan="1"
+                                                                                        style="width: 0px;"
+                                                                                        aria-label="Actions: activate to sort column ascending">
+                                                                                        Actions
+                                                                                    </th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                <tr class="odd">
+                                                                                    <td valign="top" colspan="4"
+                                                                                        class="dataTables_empty">
+                                                                                        No data available in
+                                                                                        table
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                                <tfoot>
+                                                                                <tr>
+                                                                                    <th rowspan="1" colspan="1">
+                                                                                        Assigned ID
+                                                                                    </th>
+                                                                                    <th rowspan="1" colspan="1">
+                                                                                        Contact
+                                                                                    </th>
+                                                                                    <th rowspan="1" colspan="1">
+                                                                                        Assigned
+                                                                                    </th>
+                                                                                    <th class="text-right"
+                                                                                        rowspan="1" colspan="1">
+                                                                                        Actions
+                                                                                    </th>
+                                                                                </tr>
+                                                                                </tfoot>
+                                                                                <tbody>
+
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12 col-md-5">
+                                                                            <div class="dataTables_info"
+                                                                                 id="DataTables_Table_0_info"
+                                                                                 role="status"
+                                                                                 aria-live="polite">Showing 0 to
+                                                                                0 of 0 entries
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-7">
+                                                                            <div class="dataTables_paginate paging_full_numbers"
+                                                                                 id="DataTables_Table_0_paginate">
+                                                                                <ul class="pagination">
+                                                                                    <li class="paginate_button page-item first disabled"
+                                                                                        id="DataTables_Table_0_first">
+                                                                                        <a href="#"
+                                                                                           aria-controls="DataTables_Table_0"
+                                                                                           data-dt-idx="0"
+                                                                                           tabindex="0"
+                                                                                           class="page-link">First</a>
+                                                                                    </li>
+                                                                                    <li class="paginate_button page-item previous disabled"
+                                                                                        id="DataTables_Table_0_previous">
+                                                                                        <a href="#"
+                                                                                           aria-controls="DataTables_Table_0"
+                                                                                           data-dt-idx="1"
+                                                                                           tabindex="0"
+                                                                                           class="page-link">Prev</a>
+                                                                                    </li>
+                                                                                    <li class="paginate_button page-item next disabled"
+                                                                                        id="DataTables_Table_0_next">
+                                                                                        <a href="#"
+                                                                                           aria-controls="DataTables_Table_0"
+                                                                                           data-dt-idx="2"
+                                                                                           tabindex="0"
+                                                                                           class="page-link">Next</a>
+                                                                                    </li>
+                                                                                    <li class="paginate_button page-item last disabled"
+                                                                                        id="DataTables_Table_0_last">
+                                                                                        <a href="#"
+                                                                                           aria-controls="DataTables_Table_0"
+                                                                                           data-dt-idx="3"
+                                                                                           tabindex="0"
+                                                                                           class="page-link">Last</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- end content-->
                         </div>
-                        <!-- end row -->            </div>
-                </div>
-            </div>
-            <footer class="footer">
-                <div class="container-fluid">
-
-                    <div class="copyright float-left">
-                        <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
-                            Cookie Policy
-                        </a>
-                        |
-                        <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
-                            Privacy Policy
-                        </a>
+                        <!--  end card  -->
                     </div>
-                    <div class="copyright float-right">
-                        © 2020 Client Funnels
-                    </div>
+                    <!-- end col-md-12 -->
                 </div>
-            </footer>
+                <!-- end row -->            </div>
         </div>
-    </div>
 
+    <footer class="footer">
+        <div class="container-fluid">
+
+            <div class="copyright float-left">
+                <a href="#" title="View Our Cookie Policy" class="view-cookie-policy">
+                    Cookie Policy
+                </a>
+                |
+                <a href="#" title="View Our Privacy Policy" class="view-privacy-policy">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="copyright float-right">
+                © 2020 Client Funnels
+            </div>
+        </div>
+    </footer>
     <!--Modals -->
     <!-- Loading -->
     <div id="loading-modal" class="modal hmodal-success" tabindex="-1" role="dialog" data-backdrop="static"
