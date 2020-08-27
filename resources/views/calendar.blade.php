@@ -10,15 +10,15 @@
                         <div class="col-sm-12" id="page_messages"></div>
                     </div><div class="row">
 
-{{--                        <div class="col-md-6">--}}
-{{--                            <ul class="legend">--}}
-{{--                                <li><span class="completed"></span> Completed</li>--}}
-{{--                                <li><span class="cancelled"></span> Cancelled</li>--}}
-{{--                                <li><span class="active"></span> Active</li>--}}
-{{--                                <li><span class="waiting"></span> Waiting</li>--}}
-{{--                                <li><span class="rescheduled"></span> Rescheduled</li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
+                        <div class="col-md-6">
+                            <ul class="legend">
+                                <li><span class="completed"></span> Completed</li>
+                                <li><span class="cancelled"></span> Cancelled</li>
+                                <li><span class="active"></span> Active</li>
+                                <li><span class="waiting"></span> Waiting</li>
+                                <li><span class="rescheduled"></span> Rescheduled</li>
+                            </ul>
+                        </div>
                         <div class="col-md-6">
 
 
@@ -6298,7 +6298,7 @@ function enableTextSelection(element) {
                     </a>
                 </div>
                 <div class="copyright float-right">
-                    © 2020 Client Funnels
+                    © 2020 Silko Funnels
                 </div>
             </div>
         </footer>

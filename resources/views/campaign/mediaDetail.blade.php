@@ -222,7 +222,7 @@
                     </a>
                 </div>
                 <div class="copyright float-right">
-                    © 2020 Client Funnels
+                    © 2020 Silko Funnels
                 </div>
             </div>
         </footer>
@@ -656,7 +656,7 @@
                                             class="crisp-yzclt"><span class="crisp-5me80a"><span
                                                     class="crisp-bz13r8 crisp-i1yn7v"></span><span
                                                     data-has-avatar="true" class="crisp-1sd4dmd"><span
-                                                        class="crisp-191rfs5"><span class="crisp-pkd0me crisp-13qutdl">Welcome to Client Funnels Technical Support.</span><span
+                                                        class="crisp-191rfs5"><span class="crisp-pkd0me crisp-13qutdl">Welcome to Silko Funnels Technical Support.</span><span
                                                             data-id="online" class="crisp-h99wdo crisp-9dgo7z">Support is online.</span><span
                                                             data-id="away" class="crisp-h99wdo crisp-9dgo7z">Support is away.</span></span><span
                                                         class="crisp-z83vpo"><span
@@ -665,7 +665,7 @@
                                                                 class="crisp-2tz7y crisp-1mh9nm6"></span></span></span></span></span></span><span
                                             data-when="online" class="crisp-a1mko8"><span
                                                 class="crisp-vz5ota crisp-1jrqqbm"><span class="crisp-4snher"><span
-                                                        class="crisp-rvg3pe crisp-wcida4 crisp-13qutdl">Chat with Client Funnels Team</span></span></span></span><span
+                                                        class="crisp-rvg3pe crisp-wcida4 crisp-13qutdl">Chat with Silko Funnels Team</span></span></span></span><span
                                             data-when="away" class="crisp-a1mko8"><span data-pop="spotlight"
                                                                                         class="crisp-vz5ota crisp-1jrqqbm"><span
                                                     class="crisp-4snher"><span

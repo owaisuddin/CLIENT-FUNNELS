@@ -3058,7 +3058,7 @@
                         </a>
                     </div>
                     <div class="copyright float-right">
-                        © 2020 Client Funnels
+                        © 2020 Silko Funnels
                     </div>
                 </div>
             </footer>

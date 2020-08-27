@@ -1,9 +1,9 @@
 <div class="sidebar" data-color="rose" data-background-color="black">
     <div class="logo">
         <a href="/home" class="simple-text logo-mini">
-            CF				</a>
+            SF				</a>
         <a href="/home" class="simple-text logo-normal">
-            Client Funnels				</a>
+            Silko Funnels				</a>
     </div>
     <div class="sidebar-wrapper">
         <div class="user">

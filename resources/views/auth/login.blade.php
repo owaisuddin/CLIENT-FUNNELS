@@ -13,7 +13,7 @@
 
                             <div class="card card-login">
                                 <div class="card-header card-header-rose text-center">
-                                    <h4 class="card-title">Client Funnels Login</h4>
+                                    <h4 class="card-title">Silko Funnels Login</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="flash-message">
@@ -108,7 +108,7 @@
             <footer class="footer">
                 <div class="container">
                     <div class="copyright float-right">
-                        © 2020 Ninja The Tech
+                        © copyright: 2020 Silko Funnels
                     </div>
                 </div>
             </footer>
